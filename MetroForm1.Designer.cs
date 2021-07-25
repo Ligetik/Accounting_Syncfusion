@@ -48,6 +48,10 @@ namespace SyncfusionWinFormsApp1
             Syncfusion.WinForms.DataGrid.GridTextColumn gridTextColumn2 = new Syncfusion.WinForms.DataGrid.GridTextColumn();
             Syncfusion.WinForms.DataGrid.GridTextColumn gridTextColumn3 = new Syncfusion.WinForms.DataGrid.GridTextColumn();
             Syncfusion.WinForms.DataGrid.GridTextColumn gridTextColumn4 = new Syncfusion.WinForms.DataGrid.GridTextColumn();
+            Syncfusion.WinForms.DataGrid.GroupColumnDescription groupColumnDescription1 = new Syncfusion.WinForms.DataGrid.GroupColumnDescription();
+            Syncfusion.WinForms.DataGrid.GroupColumnDescription groupColumnDescription2 = new Syncfusion.WinForms.DataGrid.GroupColumnDescription();
+            Syncfusion.WinForms.DataGrid.SortColumnDescription sortColumnDescription1 = new Syncfusion.WinForms.DataGrid.SortColumnDescription();
+            Syncfusion.WinForms.DataGrid.SortColumnDescription sortColumnDescription2 = new Syncfusion.WinForms.DataGrid.SortColumnDescription();
             this.tabControlAdv1 = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.tabPageAdv1 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.sfButton2 = new Syncfusion.WinForms.Controls.SfButton();
@@ -192,7 +196,7 @@ namespace SyncfusionWinFormsApp1
             gridNumericColumn1.AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.ColumnHeader;
             gridNumericColumn1.Format = "##";
             gridNumericColumn1.HeaderStyle.FilterIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            gridNumericColumn1.HeaderText = "Код Организации";
+            gridNumericColumn1.HeaderText = "Код";
             gridNumericColumn1.MappingName = "Id Организация";
             gridTextColumn1.AllowTextWrapping = true;
             gridTextColumn1.AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.AllCells;
@@ -267,6 +271,7 @@ namespace SyncfusionWinFormsApp1
             gridTextColumn3.HeaderText = "Оператор";
             gridTextColumn3.MappingName = "Оператор";
             gridTextColumn4.AllowTextWrapping = true;
+            gridTextColumn4.AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.Fill;
             gridTextColumn4.HeaderStyle.FilterIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
             gridTextColumn4.HeaderText = "Заметки";
             gridTextColumn4.MappingName = "Заметки";
@@ -287,12 +292,20 @@ namespace SyncfusionWinFormsApp1
             this.sfDataGrid1.DataSource = this.организацияBindingSource;
             this.sfDataGrid1.EnableDataVirtualization = true;
             this.sfDataGrid1.Font = new System.Drawing.Font("Segoe UI", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            groupColumnDescription1.ColumnName = "Год";
+            groupColumnDescription2.ColumnName = "Квартал";
+            this.sfDataGrid1.GroupColumnDescriptions.Add(groupColumnDescription1);
+            this.sfDataGrid1.GroupColumnDescriptions.Add(groupColumnDescription2);
             this.sfDataGrid1.Location = new System.Drawing.Point(-1, 45);
             this.sfDataGrid1.Name = "sfDataGrid1";
             this.sfDataGrid1.PreviewRowHeight = 30;
             this.sfDataGrid1.ShowBusyIndicator = true;
             this.sfDataGrid1.ShowRowHeader = true;
             this.sfDataGrid1.Size = new System.Drawing.Size(1920, 1080);
+            sortColumnDescription1.ColumnName = "Год";
+            sortColumnDescription2.ColumnName = "Квартал";
+            this.sfDataGrid1.SortColumnDescriptions.Add(sortColumnDescription1);
+            this.sfDataGrid1.SortColumnDescriptions.Add(sortColumnDescription2);
             this.sfDataGrid1.Style.AddNewRowStyle.Font.Bold = true;
             this.sfDataGrid1.Style.AddNewRowStyle.Font.Facename = "Segoe UI";
             this.sfDataGrid1.Style.AddNewRowStyle.Font.Size = 12F;
