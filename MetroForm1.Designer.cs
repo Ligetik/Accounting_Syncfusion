@@ -54,22 +54,11 @@ namespace SyncfusionWinFormsApp1
             Syncfusion.WinForms.DataGrid.SortColumnDescription sortColumnDescription2 = new Syncfusion.WinForms.DataGrid.SortColumnDescription();
             Syncfusion.WinForms.DataGrid.GridNumericColumn gridNumericColumn2 = new Syncfusion.WinForms.DataGrid.GridNumericColumn();
             Syncfusion.WinForms.DataGrid.GridTextColumn gridTextColumn5 = new Syncfusion.WinForms.DataGrid.GridTextColumn();
-            Syncfusion.WinForms.DataGrid.GridComboBoxColumn gridComboBoxColumn10 = new Syncfusion.WinForms.DataGrid.GridComboBoxColumn();
-            Syncfusion.WinForms.DataGrid.GridComboBoxColumn gridComboBoxColumn11 = new Syncfusion.WinForms.DataGrid.GridComboBoxColumn();
-            Syncfusion.WinForms.DataGrid.GridComboBoxColumn gridComboBoxColumn12 = new Syncfusion.WinForms.DataGrid.GridComboBoxColumn();
-            Syncfusion.WinForms.DataGrid.GridComboBoxColumn gridComboBoxColumn13 = new Syncfusion.WinForms.DataGrid.GridComboBoxColumn();
-            Syncfusion.WinForms.DataGrid.GridComboBoxColumn gridComboBoxColumn14 = new Syncfusion.WinForms.DataGrid.GridComboBoxColumn();
-            Syncfusion.WinForms.DataGrid.GridComboBoxColumn gridComboBoxColumn15 = new Syncfusion.WinForms.DataGrid.GridComboBoxColumn();
-            Syncfusion.WinForms.DataGrid.GridComboBoxColumn gridComboBoxColumn16 = new Syncfusion.WinForms.DataGrid.GridComboBoxColumn();
-            Syncfusion.WinForms.DataGrid.GridComboBoxColumn gridComboBoxColumn17 = new Syncfusion.WinForms.DataGrid.GridComboBoxColumn();
-            Syncfusion.WinForms.DataGrid.GridComboBoxColumn gridComboBoxColumn18 = new Syncfusion.WinForms.DataGrid.GridComboBoxColumn();
             Syncfusion.WinForms.DataGrid.GridTextColumn gridTextColumn6 = new Syncfusion.WinForms.DataGrid.GridTextColumn();
             Syncfusion.WinForms.DataGrid.GridTextColumn gridTextColumn7 = new Syncfusion.WinForms.DataGrid.GridTextColumn();
+            Syncfusion.WinForms.DataGrid.GridComboBoxColumn gridComboBoxColumn10 = new Syncfusion.WinForms.DataGrid.GridComboBoxColumn();
+            Syncfusion.WinForms.DataGrid.GridDateTimeColumn gridDateTimeColumn1 = new Syncfusion.WinForms.DataGrid.GridDateTimeColumn();
             Syncfusion.WinForms.DataGrid.GridTextColumn gridTextColumn8 = new Syncfusion.WinForms.DataGrid.GridTextColumn();
-            Syncfusion.WinForms.DataGrid.GroupColumnDescription groupColumnDescription3 = new Syncfusion.WinForms.DataGrid.GroupColumnDescription();
-            Syncfusion.WinForms.DataGrid.GroupColumnDescription groupColumnDescription4 = new Syncfusion.WinForms.DataGrid.GroupColumnDescription();
-            Syncfusion.WinForms.DataGrid.SortColumnDescription sortColumnDescription3 = new Syncfusion.WinForms.DataGrid.SortColumnDescription();
-            Syncfusion.WinForms.DataGrid.SortColumnDescription sortColumnDescription4 = new Syncfusion.WinForms.DataGrid.SortColumnDescription();
             this.статусBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sqlDataSet1 = new SyncfusionWinFormsApp1.sqlDataSet();
             this.кварталBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -84,6 +73,8 @@ namespace SyncfusionWinFormsApp1
             this.sfButton1 = new Syncfusion.WinForms.Controls.SfButton();
             this.sfButtonExcel = new Syncfusion.WinForms.Controls.SfButton();
             this.tabPageAdv2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.sfDataGrid2 = new Syncfusion.WinForms.DataGrid.SfDataGrid();
+            this.нДФЛBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contextMenuStripEx1 = new Syncfusion.Windows.Forms.Tools.ContextMenuStripEx();
             this.подготовленоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -96,7 +87,9 @@ namespace SyncfusionWinFormsApp1
             this.организацияTableAdapter = new SyncfusionWinFormsApp1.sqlDataSetTableAdapters.ОрганизацияTableAdapter();
             this.кварталTableAdapter = new SyncfusionWinFormsApp1.sqlDataSetTableAdapters.КварталTableAdapter();
             this.статусTableAdapter = new SyncfusionWinFormsApp1.sqlDataSetTableAdapters.СтатусTableAdapter();
-            this.sfDataGrid2 = new Syncfusion.WinForms.DataGrid.SfDataGrid();
+            this._3_НДФЛTableAdapter = new SyncfusionWinFormsApp1.sqlDataSetTableAdapters._3_НДФЛTableAdapter();
+            this.декларацияBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.декларацияTableAdapter = new SyncfusionWinFormsApp1.sqlDataSetTableAdapters.ДекларацияTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.статусBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sqlDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.кварталBindingSource)).BeginInit();
@@ -107,8 +100,10 @@ namespace SyncfusionWinFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.sfDataGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.организацияBindingSource)).BeginInit();
             this.tabPageAdv2.SuspendLayout();
-            this.contextMenuStripEx1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sfDataGrid2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.нДФЛBindingSource)).BeginInit();
+            this.contextMenuStripEx1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.декларацияBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // статусBindingSource
@@ -417,6 +412,75 @@ namespace SyncfusionWinFormsApp1
             this.tabPageAdv2.Text = "3-НДФЛ";
             this.tabPageAdv2.ThemesEnabled = false;
             // 
+            // sfDataGrid2
+            // 
+            this.sfDataGrid2.AccessibleName = "Table";
+            this.sfDataGrid2.AddNewRowPosition = Syncfusion.WinForms.DataGrid.Enums.RowPosition.Bottom;
+            gridNumericColumn2.AllowDragging = true;
+            gridNumericColumn2.HeaderText = "Id Клиента";
+            gridNumericColumn2.MappingName = "Id Клиента";
+            gridTextColumn5.AllowDragging = true;
+            gridTextColumn5.HeaderText = "Фамилия";
+            gridTextColumn5.MappingName = "Фамилия";
+            gridTextColumn6.AllowDragging = true;
+            gridTextColumn6.HeaderText = "Имя";
+            gridTextColumn6.MappingName = "Имя";
+            gridTextColumn7.AllowDragging = true;
+            gridTextColumn7.HeaderText = "Отчество";
+            gridTextColumn7.MappingName = "Отчество";
+            gridComboBoxColumn10.AllowDragging = true;
+            gridComboBoxColumn10.DataSource = this.декларацияBindingSource;
+            gridComboBoxColumn10.DisplayMember = "Название";
+            gridComboBoxColumn10.HeaderText = "Декларация";
+            gridComboBoxColumn10.MappingName = "Декларация";
+            gridComboBoxColumn10.ValueMember = "Название";
+            gridDateTimeColumn1.AllowDragging = true;
+            gridDateTimeColumn1.HeaderText = "Дата";
+            gridDateTimeColumn1.MappingName = "Дата";
+            gridDateTimeColumn1.MaxDateTime = new System.DateTime(9999, 12, 31, 23, 59, 59, 999);
+            gridTextColumn8.AllowDragging = true;
+            gridTextColumn8.HeaderText = "Оператор";
+            gridTextColumn8.MappingName = "Оператор";
+            this.sfDataGrid2.Columns.Add(gridNumericColumn2);
+            this.sfDataGrid2.Columns.Add(gridTextColumn5);
+            this.sfDataGrid2.Columns.Add(gridTextColumn6);
+            this.sfDataGrid2.Columns.Add(gridTextColumn7);
+            this.sfDataGrid2.Columns.Add(gridComboBoxColumn10);
+            this.sfDataGrid2.Columns.Add(gridDateTimeColumn1);
+            this.sfDataGrid2.Columns.Add(gridTextColumn8);
+            this.sfDataGrid2.DataSource = this.нДФЛBindingSource;
+            this.sfDataGrid2.EnableDataVirtualization = true;
+            this.sfDataGrid2.Font = new System.Drawing.Font("Segoe UI", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sfDataGrid2.Location = new System.Drawing.Point(-1, 45);
+            this.sfDataGrid2.Name = "sfDataGrid2";
+            this.sfDataGrid2.PreviewRowHeight = 30;
+            this.sfDataGrid2.ShowBusyIndicator = true;
+            this.sfDataGrid2.ShowRowHeader = true;
+            this.sfDataGrid2.Size = new System.Drawing.Size(1920, 1080);
+            this.sfDataGrid2.Style.AddNewRowStyle.Font.Bold = true;
+            this.sfDataGrid2.Style.AddNewRowStyle.Font.Facename = "Segoe UI";
+            this.sfDataGrid2.Style.AddNewRowStyle.Font.Size = 12F;
+            this.sfDataGrid2.Style.CellStyle.Font.Facename = "Segoe UI";
+            this.sfDataGrid2.Style.CellStyle.Font.Size = 11F;
+            this.sfDataGrid2.Style.GroupDropAreaItemStyle.Font.Facename = "Segoe UI";
+            this.sfDataGrid2.Style.GroupDropAreaItemStyle.Font.Size = 12F;
+            this.sfDataGrid2.Style.GroupSummaryRowStyle.Font.Bold = true;
+            this.sfDataGrid2.Style.GroupSummaryRowStyle.Font.Facename = "Segoe UI";
+            this.sfDataGrid2.Style.GroupSummaryRowStyle.Font.Size = 12F;
+            this.sfDataGrid2.Style.HeaderStyle.Font.Facename = "Segoe UI";
+            this.sfDataGrid2.Style.HeaderStyle.Font.Size = 12F;
+            this.sfDataGrid2.Style.RowHeaderStyle.Font.Facename = "Segoe UI";
+            this.sfDataGrid2.Style.RowHeaderStyle.Font.Size = 12F;
+            this.sfDataGrid2.Style.StackedHeaderStyle.Font.Facename = "Segoe UI";
+            this.sfDataGrid2.Style.StackedHeaderStyle.Font.Size = 12F;
+            this.sfDataGrid2.TabIndex = 1;
+            this.sfDataGrid2.Text = "sfDataGrid2";
+            // 
+            // нДФЛBindingSource
+            // 
+            this.нДФЛBindingSource.DataMember = "3-НДФЛ";
+            this.нДФЛBindingSource.DataSource = this.sqlDataSet1;
+            // 
             // contextMenuStripEx1
             // 
             this.contextMenuStripEx1.ImageScalingSize = new System.Drawing.Size(18, 18);
@@ -489,144 +553,18 @@ namespace SyncfusionWinFormsApp1
             // 
             this.статусTableAdapter.ClearBeforeFill = true;
             // 
-            // sfDataGrid2
+            // _3_НДФЛTableAdapter
             // 
-            this.sfDataGrid2.AccessibleName = "Table";
-            this.sfDataGrid2.AddNewRowPosition = Syncfusion.WinForms.DataGrid.Enums.RowPosition.Bottom;
-            gridNumericColumn2.AllowEditing = false;
-            gridNumericColumn2.AllowFocus = false;
-            gridNumericColumn2.AllowTextWrapping = true;
-            gridNumericColumn2.AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.ColumnHeader;
-            gridNumericColumn2.Format = "##";
-            gridNumericColumn2.HeaderStyle.FilterIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            gridNumericColumn2.HeaderText = "Код";
-            gridNumericColumn2.MappingName = "Id Организация";
-            gridTextColumn5.AllowTextWrapping = true;
-            gridTextColumn5.AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.AllCells;
-            gridTextColumn5.HeaderStyle.FilterIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            gridTextColumn5.HeaderText = "Название организации";
-            gridTextColumn5.MappingName = "Название организации";
-            gridComboBoxColumn10.AllowTextWrapping = true;
-            gridComboBoxColumn10.DataSource = this.статусBindingSource;
-            gridComboBoxColumn10.DisplayMember = "Статусы";
-            gridComboBoxColumn10.HeaderText = "Налоги";
-            gridComboBoxColumn10.MappingName = "Налоги";
-            gridComboBoxColumn10.ValueMember = "Статусы";
-            gridComboBoxColumn10.Width = 130D;
-            gridComboBoxColumn11.AllowTextWrapping = true;
-            gridComboBoxColumn11.DataSource = this.статусBindingSource;
-            gridComboBoxColumn11.DisplayMember = "Статусы";
-            gridComboBoxColumn11.HeaderText = "СЗВ-М";
-            gridComboBoxColumn11.MappingName = "СЗВ-М";
-            gridComboBoxColumn11.StaysOpenOnEdit = true;
-            gridComboBoxColumn11.ValueMember = "Статусы";
-            gridComboBoxColumn11.Width = 130D;
-            gridComboBoxColumn12.DataSource = this.статусBindingSource;
-            gridComboBoxColumn12.DisplayMember = "Статусы";
-            gridComboBoxColumn12.HeaderText = "ФСС";
-            gridComboBoxColumn12.MappingName = "ФСС";
-            gridComboBoxColumn12.ValueMember = "Статусы";
-            gridComboBoxColumn12.Width = 130D;
-            gridComboBoxColumn13.DataSource = this.статусBindingSource;
-            gridComboBoxColumn13.DisplayMember = "Статусы";
-            gridComboBoxColumn13.HeaderText = "ЕНВД";
-            gridComboBoxColumn13.MappingName = "ЕНВД";
-            gridComboBoxColumn13.ValueMember = "Статусы";
-            gridComboBoxColumn13.Width = 130D;
-            gridComboBoxColumn14.DataSource = this.статусBindingSource;
-            gridComboBoxColumn14.DisplayMember = "Статусы";
-            gridComboBoxColumn14.HeaderText = "НДС";
-            gridComboBoxColumn14.MappingName = "НДС";
-            gridComboBoxColumn14.ValueMember = "Статусы";
-            gridComboBoxColumn14.Width = 130D;
-            gridComboBoxColumn15.DataSource = this.статусBindingSource;
-            gridComboBoxColumn15.DisplayMember = "Статусы";
-            gridComboBoxColumn15.HeaderText = "Прибыль";
-            gridComboBoxColumn15.MappingName = "Прибыль";
-            gridComboBoxColumn15.ValueMember = "Статусы";
-            gridComboBoxColumn15.Width = 130D;
-            gridComboBoxColumn16.DataSource = this.статусBindingSource;
-            gridComboBoxColumn16.DisplayMember = "Статусы";
-            gridComboBoxColumn16.HeaderText = "РСВ";
-            gridComboBoxColumn16.MappingName = "РСВ";
-            gridComboBoxColumn16.ValueMember = "Статусы";
-            gridComboBoxColumn16.Width = 130D;
-            gridComboBoxColumn17.DataSource = this.статусBindingSource;
-            gridComboBoxColumn17.DisplayMember = "Статусы";
-            gridComboBoxColumn17.HeaderText = "НДФЛ";
-            gridComboBoxColumn17.MappingName = "НДФЛ";
-            gridComboBoxColumn17.ValueMember = "Статусы";
-            gridComboBoxColumn17.Width = 130D;
-            gridComboBoxColumn18.AllowTextWrapping = true;
-            gridComboBoxColumn18.DataSource = this.кварталBindingSource;
-            gridComboBoxColumn18.DisplayMember = "Кварталы";
-            gridComboBoxColumn18.HeaderText = "Квартал";
-            gridComboBoxColumn18.MappingName = "Квартал";
-            gridComboBoxColumn18.StaysOpenOnEdit = true;
-            gridComboBoxColumn18.ValueMember = "Кварталы";
-            gridComboBoxColumn18.Width = 96D;
-            gridTextColumn6.AllowTextWrapping = true;
-            gridTextColumn6.HeaderStyle.FilterIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            gridTextColumn6.HeaderText = "Год";
-            gridTextColumn6.MappingName = "Год";
-            gridTextColumn7.AllowTextWrapping = true;
-            gridTextColumn7.HeaderStyle.FilterIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            gridTextColumn7.HeaderText = "Оператор";
-            gridTextColumn7.MappingName = "Оператор";
-            gridTextColumn8.AllowTextWrapping = true;
-            gridTextColumn8.AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.Fill;
-            gridTextColumn8.HeaderStyle.FilterIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            gridTextColumn8.HeaderText = "Заметки";
-            gridTextColumn8.MappingName = "Заметки";
-            this.sfDataGrid2.Columns.Add(gridNumericColumn2);
-            this.sfDataGrid2.Columns.Add(gridTextColumn5);
-            this.sfDataGrid2.Columns.Add(gridComboBoxColumn10);
-            this.sfDataGrid2.Columns.Add(gridComboBoxColumn11);
-            this.sfDataGrid2.Columns.Add(gridComboBoxColumn12);
-            this.sfDataGrid2.Columns.Add(gridComboBoxColumn13);
-            this.sfDataGrid2.Columns.Add(gridComboBoxColumn14);
-            this.sfDataGrid2.Columns.Add(gridComboBoxColumn15);
-            this.sfDataGrid2.Columns.Add(gridComboBoxColumn16);
-            this.sfDataGrid2.Columns.Add(gridComboBoxColumn17);
-            this.sfDataGrid2.Columns.Add(gridComboBoxColumn18);
-            this.sfDataGrid2.Columns.Add(gridTextColumn6);
-            this.sfDataGrid2.Columns.Add(gridTextColumn7);
-            this.sfDataGrid2.Columns.Add(gridTextColumn8);
-            this.sfDataGrid2.DataSource = this.организацияBindingSource;
-            this.sfDataGrid2.EnableDataVirtualization = true;
-            this.sfDataGrid2.Font = new System.Drawing.Font("Segoe UI", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            groupColumnDescription3.ColumnName = "Год";
-            groupColumnDescription4.ColumnName = "Квартал";
-            this.sfDataGrid2.GroupColumnDescriptions.Add(groupColumnDescription3);
-            this.sfDataGrid2.GroupColumnDescriptions.Add(groupColumnDescription4);
-            this.sfDataGrid2.Location = new System.Drawing.Point(-1, 45);
-            this.sfDataGrid2.Name = "sfDataGrid2";
-            this.sfDataGrid2.PreviewRowHeight = 30;
-            this.sfDataGrid2.ShowBusyIndicator = true;
-            this.sfDataGrid2.ShowRowHeader = true;
-            this.sfDataGrid2.Size = new System.Drawing.Size(1920, 1080);
-            sortColumnDescription3.ColumnName = "Год";
-            sortColumnDescription4.ColumnName = "Квартал";
-            this.sfDataGrid2.SortColumnDescriptions.Add(sortColumnDescription3);
-            this.sfDataGrid2.SortColumnDescriptions.Add(sortColumnDescription4);
-            this.sfDataGrid2.Style.AddNewRowStyle.Font.Bold = true;
-            this.sfDataGrid2.Style.AddNewRowStyle.Font.Facename = "Segoe UI";
-            this.sfDataGrid2.Style.AddNewRowStyle.Font.Size = 12F;
-            this.sfDataGrid2.Style.CellStyle.Font.Facename = "Segoe UI";
-            this.sfDataGrid2.Style.CellStyle.Font.Size = 11F;
-            this.sfDataGrid2.Style.GroupDropAreaItemStyle.Font.Facename = "Segoe UI";
-            this.sfDataGrid2.Style.GroupDropAreaItemStyle.Font.Size = 12F;
-            this.sfDataGrid2.Style.GroupSummaryRowStyle.Font.Bold = true;
-            this.sfDataGrid2.Style.GroupSummaryRowStyle.Font.Facename = "Segoe UI";
-            this.sfDataGrid2.Style.GroupSummaryRowStyle.Font.Size = 12F;
-            this.sfDataGrid2.Style.HeaderStyle.Font.Facename = "Segoe UI";
-            this.sfDataGrid2.Style.HeaderStyle.Font.Size = 12F;
-            this.sfDataGrid2.Style.RowHeaderStyle.Font.Facename = "Segoe UI";
-            this.sfDataGrid2.Style.RowHeaderStyle.Font.Size = 12F;
-            this.sfDataGrid2.Style.StackedHeaderStyle.Font.Facename = "Segoe UI";
-            this.sfDataGrid2.Style.StackedHeaderStyle.Font.Size = 12F;
-            this.sfDataGrid2.TabIndex = 1;
-            this.sfDataGrid2.Text = "sfDataGrid2";
+            this._3_НДФЛTableAdapter.ClearBeforeFill = true;
+            // 
+            // декларацияBindingSource
+            // 
+            this.декларацияBindingSource.DataMember = "Декларация";
+            this.декларацияBindingSource.DataSource = this.sqlDataSet1;
+            // 
+            // декларацияTableAdapter
+            // 
+            this.декларацияTableAdapter.ClearBeforeFill = true;
             // 
             // MetroForm1
             // 
@@ -654,8 +592,10 @@ namespace SyncfusionWinFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.sfDataGrid1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.организацияBindingSource)).EndInit();
             this.tabPageAdv2.ResumeLayout(false);
-            this.contextMenuStripEx1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sfDataGrid2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.нДФЛBindingSource)).EndInit();
+            this.contextMenuStripEx1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.декларацияBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -689,5 +629,9 @@ namespace SyncfusionWinFormsApp1
         private System.Windows.Forms.BindingSource статусBindingSource;
         private sqlDataSetTableAdapters.СтатусTableAdapter статусTableAdapter;
         private Syncfusion.WinForms.DataGrid.SfDataGrid sfDataGrid2;
+        private System.Windows.Forms.BindingSource нДФЛBindingSource;
+        private sqlDataSetTableAdapters._3_НДФЛTableAdapter _3_НДФЛTableAdapter;
+        private System.Windows.Forms.BindingSource декларацияBindingSource;
+        private sqlDataSetTableAdapters.ДекларацияTableAdapter декларацияTableAdapter;
     }
 }

@@ -63,6 +63,8 @@ namespace SyncfusionWinFormsApp1
         }
         private void MetroForm1_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet1.Декларация". При необходимости она может быть перемещена или удалена.
+            this.декларацияTableAdapter.Fill(this.sqlDataSet1.Декларация);
             try
             {
                 // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet1.Статус". При необходимости она может быть перемещена или удалена.
@@ -71,6 +73,8 @@ namespace SyncfusionWinFormsApp1
                 this.кварталTableAdapter.Fill(this.sqlDataSet.Квартал);
                 // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet.Организация". При необходимости она может быть перемещена или удалена.
                 this.организацияTableAdapter.Fill(this.sqlDataSet.Организация);
+                // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet1._3_НДФЛ". При необходимости она может быть перемещена или удалена.
+                this._3_НДФЛTableAdapter.Fill(this.sqlDataSet1._3_НДФЛ);
             }
             catch (Exception error)
             {
