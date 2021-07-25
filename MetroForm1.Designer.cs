@@ -257,6 +257,7 @@ namespace SyncfusionWinFormsApp1
             gridComboBoxColumn9.MappingName = "Квартал";
             gridComboBoxColumn9.StaysOpenOnEdit = true;
             gridComboBoxColumn9.ValueMember = "Кварталы";
+            gridComboBoxColumn9.Width = 96D;
             gridTextColumn2.AllowTextWrapping = true;
             gridTextColumn2.HeaderStyle.FilterIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
             gridTextColumn2.HeaderText = "Год";
