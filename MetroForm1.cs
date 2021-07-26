@@ -178,7 +178,7 @@ namespace SyncfusionWinFormsApp1
 
 
         #region ExcelExport DataGrid1
-        private void sfButtonExcel_Click(object sender, EventArgs e)
+        private void sfButtonExcel1_Click(object sender, EventArgs e)
         {
             var options = new ExcelExportingOptions();
             options.ExcelVersion = ExcelVersion.Excel2013;
@@ -398,6 +398,11 @@ namespace SyncfusionWinFormsApp1
             {
                 MessageBox.Show(error.Message);
             }
+        }
+
+        private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
