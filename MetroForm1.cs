@@ -63,8 +63,6 @@ namespace SyncfusionWinFormsApp1
         }
         private void MetroForm1_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet1.Декларация". При необходимости она может быть перемещена или удалена.
-            this.декларацияTableAdapter.Fill(this.sqlDataSet1.Декларация);
             try
             {
                 // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet1.Статус". При необходимости она может быть перемещена или удалена.
@@ -75,6 +73,8 @@ namespace SyncfusionWinFormsApp1
                 this.организацияTableAdapter.Fill(this.sqlDataSet.Организация);
                 // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet1._3_НДФЛ". При необходимости она может быть перемещена или удалена.
                 this._3_НДФЛTableAdapter.Fill(this.sqlDataSet1._3_НДФЛ);
+                // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet1.Декларация". При необходимости она может быть перемещена или удалена.
+                this.декларацияTableAdapter.Fill(this.sqlDataSet1.Декларация);
             }
             catch (Exception error)
             {
@@ -177,7 +177,7 @@ namespace SyncfusionWinFormsApp1
         //    }
 
 
-        #region ExcelExport DataGrid1
+        #region ExcelExport 
         private void sfButtonExcel1_Click(object sender, EventArgs e)
         {
             var options = new ExcelExportingOptions();
@@ -216,7 +216,44 @@ namespace SyncfusionWinFormsApp1
                 }
             }
         }
+        private void sfButtonExcel2_Click(object sender, EventArgs e)
+        {
+            var options = new ExcelExportingOptions();
+            options.ExcelVersion = ExcelVersion.Excel2013;
+            options.CellExporting += OnCellExporting;
+            var excelEngine = sfDataGrid2.ExportToExcel(sfDataGrid2.View, options);
+            var workBook = excelEngine.Excel.Workbooks[0];
+            workBook.ActiveSheet.Columns[0].NumberFormat = "##";
 
+            SaveFileDialog saveFilterDialog = new SaveFileDialog
+            {
+                FilterIndex = 2,
+                Filter = "Excel 97 to 2003 Files(*.xls)|*.xls|Excel 2007 to 2010 Files(*.xlsx)|*.xlsx|Excel 2013 File(*.xlsx)|*.xlsx"
+            };
+
+            if (saveFilterDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                using (Stream stream = saveFilterDialog.OpenFile())
+                {
+                    if (saveFilterDialog.FilterIndex == 1)
+                        workBook.Version = ExcelVersion.Excel97to2003;
+                    else if (saveFilterDialog.FilterIndex == 2)
+                        workBook.Version = ExcelVersion.Excel2010;
+                    else
+                        workBook.Version = ExcelVersion.Excel2013;
+                    workBook.SaveAs(stream);
+                }
+
+                //Message box confirmation to view the created workbook.
+                if (MessageBox.Show(this.sfDataGrid2, "Do you want to view the workbook?", "Workbook has been created",
+                                    MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+
+                    //Launching the Excel file using the default Application.[MS Excel Or Free ExcelViewer]
+                    System.Diagnostics.Process.Start(saveFilterDialog.FileName);
+                }
+            }
+        }
         private void OnCellExporting(object sender, DataGridCellExcelExportingEventArgs e)
         {
             if (e.ColumnName == "Налоги" || e.ColumnName == "СЗВ-М" || e.ColumnName == "ФСС" || e.ColumnName == "ЕНВД" ||
@@ -404,5 +441,6 @@ namespace SyncfusionWinFormsApp1
         {
            
         }
+
     }
 }
