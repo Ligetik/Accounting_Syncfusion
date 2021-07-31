@@ -30,7 +30,7 @@ namespace SyncfusionWinFormsApp1
         public MetroForm1()
         {
             InitializeComponent();
-
+            
             #region Form Styles
             this.Style.TitleBar.Height = (int)DpiAware.LogicalToDeviceUnits(38.0f);
             //this.Style.TitleBar.Height = 26;
@@ -298,9 +298,9 @@ namespace SyncfusionWinFormsApp1
 
         #endregion
 
-        private void sfButton1_Click(object sender, EventArgs e)
+        #region Printing
+        private void sfButtonPrinting1_Click(object sender, EventArgs e)
         {
-
             PrintPreviewDialog printdialog = new PrintPreviewDialog();
 
             //MemoryStream pdfstream = new MemoryStream();
@@ -341,17 +341,6 @@ namespace SyncfusionWinFormsApp1
                     options.ExcludeColumns.Add(columns.MappingName);
             }
 
-            //Header and footer-start 
-            //RectangleF bounds = new RectangleF(0, 0, document.Pages[0].GetClientSize().Width, 50);
-            //RectangleF bounds1 = new RectangleF(0, 20, document.Pages[0].GetClientSize().Width, 50);
-            //PdfPageTemplateElement header = new PdfPageTemplateElement(bounds);
-            //document.Template.Top = header;
-            //Syncfusion.Pdf.Graphics.PdfFont font = new PdfStandardFont(PdfFontFamily.Courier, 16f, PdfFontStyle.Regular);
-            //header.Graphics.DrawString("NAME OF THE COMPANY", font, PdfPens.Black, bounds);
-            //Syncfusion.Pdf.Graphics.PdfFont font1 = new PdfStandardFont(PdfFontFamily.Courier, 12f, PdfFontStyle.Regular);
-            //header.Graphics.DrawString("Name of the Report", font1, PdfPens.Black, bounds1);
-            //Header and footer-End 
-
             PdfViewerControl pdfviewer = new PdfViewerControl();
             var pdfGrid = sfDataGrid1.ExportToPdfGrid(sfDataGrid1.View, options);
             pdfGrid.Draw(page, new PointF());
@@ -363,9 +352,64 @@ namespace SyncfusionWinFormsApp1
             printdialog.Document = pdfviewer.PrintDocument;
             printdialog.PrintPreviewControl.Document.PrinterSettings.DefaultPageSettings.Landscape = pdfviewer.PrinterSettings.PageOrientation == Syncfusion.Windows.PdfViewer.PdfViewerPrintOrientation.Landscape;
             printdialog.ShowDialog();
-
         }
+        private void sfButtonPrinting2_Click(object sender, EventArgs e)
+        {
+            PrintPreviewDialog printdialog = new PrintPreviewDialog();
 
+            //MemoryStream pdfstream = new MemoryStream();
+
+            //start 
+            PdfExportingOptions options = new PdfExportingOptions();
+            //cellStyle = new PdfGridCellStyle();
+            //cellStyle.StringFormat = new PdfStringFormat() { Alignment = PdfTextAlignment.Right };
+            options.AutoColumnWidth = true;
+            options.AutoRowHeight = true;
+            options.RepeatHeaders = true;
+            options.ExportGroupSummary = true;
+            options.ExportFormat = true;
+            options.FitAllColumnsInOnePage = true;
+            options.ExportTableSummary = true;
+            options.CellExporting += options_CellExporting;
+            this.sfDataGrid2.AutoSizeController.ResetAutoSizeWidthForAllColumns();
+            this.sfDataGrid2.AutoSizeController.Refresh();
+
+            //Set document information. 
+            Syncfusion.Pdf.PdfDocument document = new Syncfusion.Pdf.PdfDocument();
+            document.PageSettings.Size = PdfPageSize.A3;
+            document.PageSettings.Orientation = PdfPageOrientation.Landscape;
+
+            // set pagewidth 
+            double width = 0;
+            foreach (var columns in sfDataGrid2.Columns)
+                width += columns.ActualWidth;
+            Graphics g = this.sfDataGrid2.CreateGraphics();
+            width = (float)width * 60 / g.DpiX;
+            g.Dispose();
+            document.PageSettings.Width = (float)width;
+            var page = document.Pages.Add();
+
+            foreach (var columns in sfDataGrid2.Columns)
+            {
+                if (!columns.Visible)
+                    options.ExcludeColumns.Add(columns.MappingName);
+            }
+
+            PdfViewerControl pdfviewer = new PdfViewerControl();
+            var pdfGrid = sfDataGrid2.ExportToPdfGrid(sfDataGrid2.View, options);
+            pdfGrid.Draw(page, new PointF());
+            document.Save(@"../../2.pdf");
+            pdfviewer.RenderingEngine = PdfRenderingEngine.SfPdf;
+            pdfviewer.PrinterSettings.PageSize = Syncfusion.Windows.PdfViewer.PdfViewerPrintSize.Fit;
+            pdfviewer.PrinterSettings.PageOrientation = Syncfusion.Windows.PdfViewer.PdfViewerPrintOrientation.Landscape;
+            pdfviewer.Load(@"../../2.pdf");
+            printdialog.Document = pdfviewer.PrintDocument;
+            printdialog.PrintPreviewControl.Document.PrinterSettings.DefaultPageSettings.Landscape = pdfviewer.PrinterSettings.PageOrientation == Syncfusion.Windows.PdfViewer.PdfViewerPrintOrientation.Landscape;
+            printdialog.ShowDialog();
+        }
+        #endregion
+
+        
         void options_CellExporting(object sender, DataGridCellPdfExportingEventArgs e)
         {
 
@@ -531,6 +575,7 @@ namespace SyncfusionWinFormsApp1
         {
            
         }
+
 
     }
 }
