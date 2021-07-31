@@ -18,12 +18,15 @@ using Syncfusion.Pdf.Graphics;
 using Syncfusion.Windows.Forms.PdfViewer;
 using Syncfusion.Pdf;
 using Syncfusion.WinForms.DataGrid;
+using Syncfusion.Pdf.Grid;
 
 namespace SyncfusionWinFormsApp1
 {
     public partial class MetroForm1 : SfForm
     {
         ContextMenuStrip recordContextMenu;
+        //PdfGridCellStyle cellStyle;
+        
         public MetroForm1()
         {
             InitializeComponent();
@@ -50,6 +53,7 @@ namespace SyncfusionWinFormsApp1
             this.sfDataGrid1.ShowBusyIndicator = true;
             #endregion
 
+            //cellStyle = new PdfGridCellStyle();
 
 
             #region RecordContextMenu
@@ -296,54 +300,29 @@ namespace SyncfusionWinFormsApp1
 
         private void sfButton1_Click(object sender, EventArgs e)
         {
-            //PdfDocumentView pdfDocumentView1 = new PdfDocumentView();
-
-            ////Create Memory Stream to save pdfdocument.
-            //MemoryStream pdfstream = new MemoryStream();
-
-            //PdfDocument pdfDoc = new PdfDocument();
-            //pdfDoc = sfDataGrid1.ExportToPdf();
-
-            ////Save the PDF file
-            //pdfDoc.Save(pdfstream);
-
-            ////Load the pdfstream to pdfDocumentView
-            //pdfDocumentView1.Load(pdfstream);
-
-            //PrintDialog printdialog = new PrintDialog();
-            //int pageCount = pdfDocumentView1.PageCount;
-            //printdialog.AllowPrintToFile = true;
-            //printdialog.AllowSomePages = true;
-            //printdialog.PrinterSettings.FromPage = 1;
-            //printdialog.PrinterSettings.ToPage = pageCount;
-            //printdialog.PrinterSettings.MaximumPage = pageCount;
-            //printdialog.PrinterSettings.MinimumPage = 1;
-
-            //if (printdialog.ShowDialog() == DialogResult.OK)
-            //{
-            //    printdialog.Document = pdfDocumentView1.PrintDocument;
-            //    printdialog.Document.Print();
-            //}
-
 
             PrintPreviewDialog printdialog = new PrintPreviewDialog();
 
-            MemoryStream pdfstream = new MemoryStream();
+            //MemoryStream pdfstream = new MemoryStream();
 
             //start 
             PdfExportingOptions options = new PdfExportingOptions();
+            //cellStyle = new PdfGridCellStyle();
+            //cellStyle.StringFormat = new PdfStringFormat() { Alignment = PdfTextAlignment.Right };
             options.AutoColumnWidth = true;
             options.AutoRowHeight = true;
             options.RepeatHeaders = true;
             options.ExportGroupSummary = true;
             options.ExportFormat = true;
-            options.FitAllColumnsInOnePage = false;
+            options.FitAllColumnsInOnePage = true;
             options.ExportTableSummary = true;
+            options.CellExporting += options_CellExporting;
             this.sfDataGrid1.AutoSizeController.ResetAutoSizeWidthForAllColumns();
             this.sfDataGrid1.AutoSizeController.Refresh();
 
             //Set document information. 
             Syncfusion.Pdf.PdfDocument document = new Syncfusion.Pdf.PdfDocument();
+            document.PageSettings.Size = PdfPageSize.A3;
             document.PageSettings.Orientation = PdfPageOrientation.Landscape;
 
             // set pagewidth 
@@ -363,14 +342,14 @@ namespace SyncfusionWinFormsApp1
             }
 
             //Header and footer-start 
-            RectangleF bounds = new RectangleF(0, 0, document.Pages[0].GetClientSize().Width, 50);
-            RectangleF bounds1 = new RectangleF(0, 20, document.Pages[0].GetClientSize().Width, 50);
-            PdfPageTemplateElement header = new PdfPageTemplateElement(bounds);
-            document.Template.Top = header;
-            Syncfusion.Pdf.Graphics.PdfFont font = new PdfStandardFont(PdfFontFamily.Courier, 16f, PdfFontStyle.Regular);
-            header.Graphics.DrawString("NAME OF THE COMPANY", font, PdfPens.Black, bounds);
-            Syncfusion.Pdf.Graphics.PdfFont font1 = new PdfStandardFont(PdfFontFamily.Courier, 12f, PdfFontStyle.Regular);
-            header.Graphics.DrawString("Name of the Report", font1, PdfPens.Black, bounds1);
+            //RectangleF bounds = new RectangleF(0, 0, document.Pages[0].GetClientSize().Width, 50);
+            //RectangleF bounds1 = new RectangleF(0, 20, document.Pages[0].GetClientSize().Width, 50);
+            //PdfPageTemplateElement header = new PdfPageTemplateElement(bounds);
+            //document.Template.Top = header;
+            //Syncfusion.Pdf.Graphics.PdfFont font = new PdfStandardFont(PdfFontFamily.Courier, 16f, PdfFontStyle.Regular);
+            //header.Graphics.DrawString("NAME OF THE COMPANY", font, PdfPens.Black, bounds);
+            //Syncfusion.Pdf.Graphics.PdfFont font1 = new PdfStandardFont(PdfFontFamily.Courier, 12f, PdfFontStyle.Regular);
+            //header.Graphics.DrawString("Name of the Report", font1, PdfPens.Black, bounds1);
             //Header and footer-End 
 
             PdfViewerControl pdfviewer = new PdfViewerControl();
@@ -387,11 +366,122 @@ namespace SyncfusionWinFormsApp1
 
         }
 
+        void options_CellExporting(object sender, DataGridCellPdfExportingEventArgs e)
+        {
+
+            if (e.CellType == ExportCellType.RecordCell)
+            {
+                if (e.CellValue == null)
+                {
+                    e.CellValue = string.Empty;
+
+                    if (e.CellValue.ToString() == "Сдано")
+                    {
+                        var cellStyle = new PdfGridCellStyle();
+                        cellStyle.BackgroundBrush = PdfBrushes.LightPink;
+                        cellStyle.TextBrush = PdfBrushes.White;
+                        e.PdfGridCell.Style = cellStyle;
+                    }
+                }
+            }                
+               
+            
+
+
+
+
+
+
+
+            //if (e.ColumnName == "Налоги" || e.ColumnName == "СЗВ-М" || e.ColumnName == "ФСС" || e.ColumnName == "ЕНВД" ||
+            //   e.ColumnName == "НДС" || e.ColumnName == "Прибыль" || e.ColumnName == "РСВ" || e.ColumnName == "НДФЛ"/* && e.CellValue != null*/)
+            //{
+
+            //string Cell_color = Convert.ToString(e.CellValue);
+            //if (e.CellType == ExportCellType.RecordCell)
+            //{
+            //    switch (Cell_color)
+            //    {
+            //        case "Подготовлено":
+            //            var cellStyle = new PdfGridCellStyle();
+            //            cellStyle.BackgroundBrush = PdfBrushes.LightPink;
+            //            cellStyle.TextBrush = PdfBrushes.White;
+            //            e.PdfGridCell.Style = cellStyle;
+            //            break;
+            //case "Нужно сдать":
+            //    e.PdfGridCell.Style.BackgroundBrush = PdfBrushes.LightPink;
+            //    e.PdfGridCell.Style.Borders.All = new PdfPen(PdfBrushes.DarkGray, 0.2f);
+            //    break;
+            //case "Сдано":
+            //    e.PdfGridCell.Style.BackgroundBrush = PdfBrushes.LightPink;
+            //    e.PdfGridCell.Style.Borders.All = new PdfPen(PdfBrushes.DarkGray, 0.2f);
+            //    break;
+            //case "Синий":
+            //    e.PdfGridCell.Style.BackgroundBrush = PdfBrushes.LightPink;
+            //    e.PdfGridCell.Style.Borders.All = new PdfPen(PdfBrushes.DarkGray, 0.2f);
+            //    break;
+            //case "Фиолетовый":
+            //    e.PdfGridCell.Style.BackgroundBrush = PdfBrushes.LightPink;
+            //    e.PdfGridCell.Style.Borders.All = new PdfPen(PdfBrushes.DarkGray, 0.2f);
+            //    break;
+            //default:
+            //    break;
+            //}
+            //}
+
+
+
+
+
+
+            //if (e.ColumnName == "Налоги" || e.ColumnName == "СЗВ-М" || e.ColumnName == "ФСС" || e.ColumnName == "ЕНВД" ||
+            //    e.ColumnName == "НДС" || e.ColumnName == "Прибыль" || e.ColumnName == "РСВ" || e.ColumnName == "НДФЛ" && e.CellValue != null)
+            //{
+
+            //    string Cell_color = Convert.ToString(e.CellValue);
+            //    if (e.CellType == ExportCellType.RecordCell)
+            //    {
+            //switch (Cell_color)
+            //{
+            //case "Подготовлено":
+
+            //    cellStyle.BackgroundBrush = PdfBrushes.LightPink;
+            //    cellStyle.Borders.All = new PdfPen(PdfBrushes.DarkGray, 0.2f);
+            //    e.PdfGridCell.Style = cellStyle;
+            //    break;
+            //case "Нужно сдать":
+            //    cellStyle.BackgroundBrush = PdfBrushes.LightPink;
+            //    cellStyle.Borders.All = new PdfPen(PdfBrushes.DarkGray, 0.2f);
+            //    e.PdfGridCell.Style = cellStyle;
+            //    break;
+            //case "Сдано":
+            //    cellStyle.BackgroundBrush = PdfBrushes.LightPink;
+            //    cellStyle.Borders.All = new PdfPen(PdfBrushes.DarkGray, 0.2f);
+            //    e.PdfGridCell.Style = cellStyle;
+            //    break;
+            //case "Синий":
+            //    cellStyle.BackgroundBrush = PdfBrushes.LightPink;
+            //    cellStyle.Borders.All = new PdfPen(PdfBrushes.DarkGray, 0.2f);
+            //    e.PdfGridCell.Style = cellStyle;
+            //    break;
+            //case "Фиолетовый":
+            //    cellStyle.BackgroundBrush = PdfBrushes.LightPink;
+            //    cellStyle.Borders.All = new PdfPen(PdfBrushes.DarkGray, 0.2f);
+            //    e.PdfGridCell.Style = cellStyle;
+            //    break;
+            //            default:
+            //        break;
+            //}
+
+            //}
+        }
+
         private void sfButtonSave_Click(object sender, EventArgs e)
         {
 
         }
 
+        #region SaveChanges
         private void sfDataGrid1_CurrentCellEndEdit(object sender, Syncfusion.WinForms.DataGrid.Events.CurrentCellEndEditEventArgs e)
         {
             try
@@ -421,7 +511,7 @@ namespace SyncfusionWinFormsApp1
                 MessageBox.Show(error.Message);
             }
         }
-
+        #endregion
         private void MetroForm1_FormClosing(object sender, FormClosingEventArgs e)
         {
             try
