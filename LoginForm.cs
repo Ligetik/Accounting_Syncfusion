@@ -35,9 +35,20 @@ namespace SyncfusionWinFormsApp1
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void textBoxLogin_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (e.KeyChar == '\r')
+            {
+                textBoxPass.Focus();
+            }
+        }
 
+        private void textBoxPass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r')
+            {
+                sfButtonSignIn.Focus();
+            }
         }
     }
 }
