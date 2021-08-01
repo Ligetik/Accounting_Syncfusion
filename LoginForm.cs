@@ -29,5 +29,15 @@ namespace SyncfusionWinFormsApp1
             this.Style.TitleBar.TextHorizontalAlignment = HorizontalAlignment.Center;
             this.Style.TitleBar.TextVerticalAlignment = System.Windows.Forms.VisualStyles.VerticalAlignment.Center;
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
