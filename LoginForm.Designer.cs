@@ -36,27 +36,28 @@ namespace SyncfusionWinFormsApp1
             this.labelAuth = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxPass = new System.Windows.Forms.TextBox();
-            this.labelLogin = new System.Windows.Forms.Label();
-            this.labelPass = new System.Windows.Forms.Label();
             this.sfButtonChangePass = new Syncfusion.WinForms.Controls.SfButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxLogin
             // 
             this.textBoxLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxLogin.Font = new System.Drawing.Font("Segoe UI", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxLogin.ForeColor = System.Drawing.Color.DimGray;
             this.textBoxLogin.Location = new System.Drawing.Point(90, 127);
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(150, 24);
-            this.textBoxLogin.TabIndex = 0;
+            this.textBoxLogin.TabIndex = 1;
+            this.textBoxLogin.Text = "Логин";
+            this.textBoxLogin.Enter += new System.EventHandler(this.textBoxLogin_Enter);
             this.textBoxLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLogin_KeyPress);
+            this.textBoxLogin.Leave += new System.EventHandler(this.textBoxLogin_Leave);
             // 
             // sfButtonSignIn
             // 
@@ -72,7 +73,7 @@ namespace SyncfusionWinFormsApp1
             this.sfButtonSignIn.Size = new System.Drawing.Size(178, 36);
             this.sfButtonSignIn.Style.BackColor = System.Drawing.Color.DodgerBlue;
             this.sfButtonSignIn.Style.ForeColor = System.Drawing.Color.White;
-            this.sfButtonSignIn.TabIndex = 2;
+            this.sfButtonSignIn.TabIndex = 3;
             this.sfButtonSignIn.Text = "Войти";
             this.sfButtonSignIn.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.sfButtonSignIn.UseVisualStyleBackColor = false;
@@ -92,7 +93,7 @@ namespace SyncfusionWinFormsApp1
             this.labelAuth.AutoSize = true;
             this.labelAuth.Font = new System.Drawing.Font("Segoe UI Semibold", 23.77358F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAuth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelAuth.Location = new System.Drawing.Point(62, 14);
+            this.labelAuth.Location = new System.Drawing.Point(62, 15);
             this.labelAuth.Name = "labelAuth";
             this.labelAuth.Size = new System.Drawing.Size(273, 47);
             this.labelAuth.TabIndex = 4;
@@ -106,40 +107,21 @@ namespace SyncfusionWinFormsApp1
             this.label1.Location = new System.Drawing.Point(-105, 74);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(681, 2);
-            this.label1.TabIndex = 6;
+            this.label1.TabIndex = 0;
             // 
             // textBoxPass
             // 
             this.textBoxPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPass.Font = new System.Drawing.Font("Segoe UI", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxPass.ForeColor = System.Drawing.Color.DimGray;
             this.textBoxPass.Location = new System.Drawing.Point(90, 189);
             this.textBoxPass.Name = "textBoxPass";
             this.textBoxPass.Size = new System.Drawing.Size(150, 24);
-            this.textBoxPass.TabIndex = 1;
+            this.textBoxPass.TabIndex = 2;
+            this.textBoxPass.Text = "Пароль";
+            this.textBoxPass.Enter += new System.EventHandler(this.textBoxPass_Enter);
             this.textBoxPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPass_KeyPress);
-            // 
-            // labelLogin
-            // 
-            this.labelLogin.AutoSize = true;
-            this.labelLogin.Font = new System.Drawing.Font("Segoe UI", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLogin.Location = new System.Drawing.Point(48, 105);
-            this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(65, 25);
-            this.labelLogin.TabIndex = 8;
-            this.labelLogin.Text = "Логин";
-            this.labelLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelPass
-            // 
-            this.labelPass.AutoSize = true;
-            this.labelPass.Font = new System.Drawing.Font("Segoe UI", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPass.Location = new System.Drawing.Point(48, 166);
-            this.labelPass.Name = "labelPass";
-            this.labelPass.Size = new System.Drawing.Size(78, 25);
-            this.labelPass.TabIndex = 9;
-            this.labelPass.Text = "Пароль";
-            this.labelPass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.textBoxPass.Leave += new System.EventHandler(this.textBoxPass_Leave);
             // 
             // sfButtonChangePass
             // 
@@ -155,30 +137,10 @@ namespace SyncfusionWinFormsApp1
             this.sfButtonChangePass.Size = new System.Drawing.Size(178, 36);
             this.sfButtonChangePass.Style.BackColor = System.Drawing.Color.White;
             this.sfButtonChangePass.Style.ForeColor = System.Drawing.Color.Gray;
-            this.sfButtonChangePass.TabIndex = 10;
+            this.sfButtonChangePass.TabIndex = 4;
             this.sfButtonChangePass.Text = "Сменить пароль";
             this.sfButtonChangePass.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.sfButtonChangePass.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SyncfusionWinFormsApp1.Properties.Resources.Login;
-            this.pictureBox1.Location = new System.Drawing.Point(62, 127);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(22, 22);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::SyncfusionWinFormsApp1.Properties.Resources.Password;
-            this.pictureBox2.Location = new System.Drawing.Point(62, 189);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(22, 22);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
             // 
             // label2
             // 
@@ -198,18 +160,36 @@ namespace SyncfusionWinFormsApp1
             this.label3.Size = new System.Drawing.Size(178, 2);
             this.label3.TabIndex = 14;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::SyncfusionWinFormsApp1.Properties.Resources.Password2;
+            this.pictureBox2.Location = new System.Drawing.Point(62, 189);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(22, 22);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SyncfusionWinFormsApp1.Properties.Resources.Login;
+            this.pictureBox1.Location = new System.Drawing.Point(62, 127);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(22, 22);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(296, 352);
+            this.ClientSize = new System.Drawing.Size(296, 368);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.sfButtonChangePass);
-            this.Controls.Add(this.labelPass);
-            this.Controls.Add(this.labelLogin);
             this.Controls.Add(this.textBoxPass);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelAuth);
@@ -224,10 +204,11 @@ namespace SyncfusionWinFormsApp1
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Style.MdiChild.IconHorizontalAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.Style.MdiChild.IconVerticalAlignment = System.Windows.Forms.VisualStyles.VerticalAlignment.Center;
+            this.Style.ShadowOpacity = ((byte)(100));
             this.Text = "Бухгалтерия";
             this.Load += new System.EventHandler(this.LoginForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,8 +222,6 @@ namespace SyncfusionWinFormsApp1
         private System.Windows.Forms.Label labelAuth;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxPass;
-        private System.Windows.Forms.Label labelLogin;
-        private System.Windows.Forms.Label labelPass;
         private Syncfusion.WinForms.Controls.SfButton sfButtonChangePass;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;

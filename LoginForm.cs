@@ -33,7 +33,7 @@ namespace SyncfusionWinFormsApp1
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-
+            this.ActiveControl = label1;
         }
 
         private void textBoxLogin_KeyPress(object sender, KeyPressEventArgs e)
@@ -69,7 +69,7 @@ namespace SyncfusionWinFormsApp1
 
                 if (dataTable.Rows.Count == 1)
                 {
-                    SfForm mainForm = new SfForm();
+                    MetroForm1 mainForm = new MetroForm1();
                     this.Hide();
                     mainForm.Show();
                 }
@@ -86,6 +86,42 @@ namespace SyncfusionWinFormsApp1
                 MessageBox.Show(error.Message);
             }
             
+        }
+
+        private void textBoxLogin_Enter(object sender, EventArgs e)
+        {
+            if (textBoxLogin.Text == "Логин")
+            {
+                textBoxLogin.Text = "";
+                textBoxLogin.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxLogin_Leave(object sender, EventArgs e)
+        {
+            if (textBoxLogin.Text == "")
+            {
+                textBoxLogin.Text = "Логин";
+                textBoxLogin.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void textBoxPass_Enter(object sender, EventArgs e)
+        {
+            if (textBoxPass.Text == "Пароль")
+            {
+                textBoxPass.Text = "";
+                textBoxPass.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxPass_Leave(object sender, EventArgs e)
+        {
+            if (textBoxPass.Text == "")
+            {
+                textBoxPass.Text = "Пароль";
+                textBoxPass.ForeColor = Color.DimGray;
+            }
         }
     }
 }
