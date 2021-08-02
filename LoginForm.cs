@@ -54,33 +54,38 @@ namespace SyncfusionWinFormsApp1
 
         private void sfButtonSignIn_Click(object sender, EventArgs e)
         {
-            string loginUser = loginTextBox.Text;
-            string passUser = passTextBox.Text;
-
-            DB db = new DB();
-
-            string query = "SELECT * FROM users WHERE login = '" + loginUser.Trim() + "' AND pass = '" + passUser.Trim() + "'";
-
-            SqlDataAdapter adapter = new SqlDataAdapter(query, db.GetSqlConnection());
-            DataTable dataTable = new DataTable();
-            adapter.Fill(dataTable);
-
-            if (dataTable.Rows.Count == 1)
+            try
             {
-                MainForm mainForm = new MainForm();
-                this.Hide();
-                mainForm.Show();
+                string loginUser = textBoxLogin.Text;
+                string passUser = textBoxPass.Text;
+
+                DB db = new DB();
+
+                string query = "SELECT * FROM users WHERE login = '" + loginUser.Trim() + "' AND pass = '" + passUser.Trim() + "'";
+
+                SqlDataAdapter adapter = new SqlDataAdapter(query, db.GetSqlConnection());
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+
+                if (dataTable.Rows.Count == 1)
+                {
+                    SfForm mainForm = new SfForm();
+                    this.Hide();
+                    mainForm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Неверный логин и пароль");
+                    textBoxLogin.Clear();
+                    textBoxPass.Clear();
+                    textBoxLogin.Focus();
+                }
             }
-            else
+            catch (Exception error)
             {
-                MessageBox.Show("Неверный логин и пароль");
+                MessageBox.Show(error.Message);
             }
+            
         }
-
-
-
-
-
-
     }
 }

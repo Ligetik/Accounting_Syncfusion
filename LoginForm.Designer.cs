@@ -113,7 +113,7 @@ namespace SyncfusionWinFormsApp1
             this.textBoxPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPass.Font = new System.Drawing.Font("Segoe UI", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxPass.Location = new System.Drawing.Point(90, 188);
+            this.textBoxPass.Location = new System.Drawing.Point(90, 189);
             this.textBoxPass.Name = "textBoxPass";
             this.textBoxPass.Size = new System.Drawing.Size(150, 24);
             this.textBoxPass.TabIndex = 1;
@@ -173,7 +173,7 @@ namespace SyncfusionWinFormsApp1
             // pictureBox2
             // 
             this.pictureBox2.Image = global::SyncfusionWinFormsApp1.Properties.Resources.Password;
-            this.pictureBox2.Location = new System.Drawing.Point(62, 188);
+            this.pictureBox2.Location = new System.Drawing.Point(62, 189);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(22, 22);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -202,7 +202,7 @@ namespace SyncfusionWinFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(296, 348);
+            this.ClientSize = new System.Drawing.Size(296, 352);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);

@@ -144,6 +144,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Resources\Syncfusion.SfDataGrid.WinForms.resx" />
+    <EmbeddedResource Include="Resources\Syncfusion.Shared.Base.resx" />
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
