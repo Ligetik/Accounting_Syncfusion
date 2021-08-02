@@ -50,5 +50,36 @@ namespace SyncfusionWinFormsApp1
                 sfButtonSignIn.Focus();
             }
         }
+
+        private void sfButtonSignIn_Click(object sender, EventArgs e)
+        {
+            string loginUser = loginTextBox.Text;
+            string passUser = passTextBox.Text;
+
+            DB db = new DB();
+
+            string query = "SELECT * FROM users WHERE login = '" + loginUser.Trim() + "' AND pass = '" + passUser.Trim() + "'";
+
+            SqlDataAdapter adapter = new SqlDataAdapter(query, db.GetSqlConnection());
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+
+            if (dataTable.Rows.Count == 1)
+            {
+                MainForm mainForm = new MainForm();
+                this.Hide();
+                mainForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Неверный логин и пароль");
+            }
+        }
+
+
+
+
+
+
     }
 }
