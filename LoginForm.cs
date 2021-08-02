@@ -36,22 +36,6 @@ namespace SyncfusionWinFormsApp1
             this.ActiveControl = label1;
         }
 
-        private void textBoxLogin_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == '\r')
-            {
-                textBoxPass.Focus();
-            }
-        }
-
-        private void textBoxPass_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == '\r')
-            {
-                sfButtonSignIn.Focus();
-            }
-        }
-
         private void sfButtonSignIn_Click(object sender, EventArgs e)
         {
             try
@@ -88,6 +72,22 @@ namespace SyncfusionWinFormsApp1
             
         }
 
+        #region TextBoxes Events
+        private void textBoxLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r')
+            {
+                textBoxPass.Focus();
+            }
+        }
+
+        private void textBoxPass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r')
+            {
+                sfButtonSignIn.Focus();
+            }
+        }
         private void textBoxLogin_Enter(object sender, EventArgs e)
         {
             if (textBoxLogin.Text == "Логин")
@@ -123,5 +123,6 @@ namespace SyncfusionWinFormsApp1
                 textBoxPass.ForeColor = Color.DimGray;
             }
         }
+        #endregion
     }
 }

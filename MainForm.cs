@@ -110,8 +110,8 @@ namespace SyncfusionWinFormsApp1
         
         private void sfDataGrid1_QueryCellStyle(object sender, Syncfusion.WinForms.DataGrid.Events.QueryCellStyleEventArgs e)
         {
-            if (e.ColumnIndex == 2 | e.ColumnIndex == 3 | e.ColumnIndex == 4 | e.ColumnIndex == 5 | e.ColumnIndex == 6 |
-                e.ColumnIndex == 7 | e.ColumnIndex == 8 | e.ColumnIndex == 9 | e.ColumnIndex == 10 && e.DisplayText != null)
+            if (e.ColumnIndex == 5 | e.ColumnIndex == 6 | e.ColumnIndex == 7 | e.ColumnIndex == 8 | e.ColumnIndex == 9 |
+                e.ColumnIndex == 10 | e.ColumnIndex == 11 | e.ColumnIndex == 12 && e.DisplayText != null)
             {
                 string Cell_color = Convert.ToString(e.DisplayText);
 
