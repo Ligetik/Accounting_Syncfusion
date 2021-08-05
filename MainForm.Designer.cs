@@ -235,6 +235,10 @@ namespace SyncfusionWinFormsApp1
             // 
             this.sfDataGrid1.AccessibleName = "Table";
             this.sfDataGrid1.AddNewRowPosition = Syncfusion.WinForms.DataGrid.Enums.RowPosition.Bottom;
+            this.sfDataGrid1.AllowDeleting = true;
+            this.sfDataGrid1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             gridNumericColumn1.AllowEditing = false;
             gridNumericColumn1.AllowFocus = false;
             gridNumericColumn1.AllowTextWrapping = true;
@@ -295,7 +299,7 @@ namespace SyncfusionWinFormsApp1
             gridComboBoxColumn7.Width = 130D;
             gridComboBoxColumn8.DataSource = this.статусBindingSource;
             gridComboBoxColumn8.DisplayMember = "Статусы";
-            gridComboBoxColumn8.HeaderText = "НДФЛ";
+            gridComboBoxColumn8.HeaderText = "6-НДФЛ";
             gridComboBoxColumn8.MappingName = "НДФЛ";
             gridComboBoxColumn8.ValueMember = "Статусы";
             gridComboBoxColumn8.Width = 130D;
@@ -369,7 +373,6 @@ namespace SyncfusionWinFormsApp1
             this.sfDataGrid1.Style.StackedHeaderStyle.Font.Size = 12F;
             this.sfDataGrid1.TabIndex = 0;
             this.sfDataGrid1.Text = "sfDataGrid1";
-            this.sfDataGrid1.ContextMenuOpening += new Syncfusion.WinForms.DataGrid.Events.ContextMenuOpeningEventHandler(this.sfDataGrid1_ContextMenuOpening);
             this.sfDataGrid1.QueryCellStyle += new Syncfusion.WinForms.DataGrid.Events.QueryCellStyleEventHandler(this.sfDataGrid1_QueryCellStyle);
             this.sfDataGrid1.CurrentCellEndEdit += new Syncfusion.WinForms.DataGrid.Events.CurrentCellEndEditEventHandler(this.sfDataGrid1_CurrentCellEndEdit);
             // 
@@ -466,39 +469,50 @@ namespace SyncfusionWinFormsApp1
             // 
             this.sfDataGrid2.AccessibleName = "Table";
             this.sfDataGrid2.AddNewRowPosition = Syncfusion.WinForms.DataGrid.Enums.RowPosition.Bottom;
+            this.sfDataGrid2.AllowResizingColumns = true;
+            this.sfDataGrid2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             gridNumericColumn2.AllowDragging = true;
+            gridNumericColumn2.AllowResizing = true;
             gridNumericColumn2.AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.ColumnHeader;
             gridNumericColumn2.Format = "##";
             gridNumericColumn2.HeaderText = "Код Клиента";
             gridNumericColumn2.MappingName = "Id Клиента";
             gridTextColumn5.AllowDragging = true;
+            gridTextColumn5.AllowResizing = true;
+            gridTextColumn5.AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.ColumnHeader;
             gridTextColumn5.HeaderText = "Фамилия";
             gridTextColumn5.MappingName = "Фамилия";
-            gridTextColumn5.Width = 200D;
             gridTextColumn6.AllowDragging = true;
+            gridTextColumn6.AllowResizing = true;
+            gridTextColumn6.AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.ColumnHeader;
             gridTextColumn6.HeaderText = "Имя";
             gridTextColumn6.MappingName = "Имя";
-            gridTextColumn6.Width = 200D;
             gridTextColumn7.AllowDragging = true;
+            gridTextColumn7.AllowResizing = true;
+            gridTextColumn7.AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.ColumnHeader;
             gridTextColumn7.HeaderText = "Отчество";
             gridTextColumn7.MappingName = "Отчество";
-            gridTextColumn7.Width = 200D;
             gridComboBoxColumn10.AllowDragging = true;
+            gridComboBoxColumn10.AllowResizing = true;
+            gridComboBoxColumn10.AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.ColumnHeader;
             gridComboBoxColumn10.DataSource = this.декларацияBindingSource;
             gridComboBoxColumn10.DisplayMember = "Название";
             gridComboBoxColumn10.HeaderText = "Декларация";
             gridComboBoxColumn10.MappingName = "Декларация";
             gridComboBoxColumn10.ValueMember = "Название";
-            gridComboBoxColumn10.Width = 130D;
             gridDateTimeColumn1.AllowDragging = true;
+            gridDateTimeColumn1.AllowResizing = true;
+            gridDateTimeColumn1.AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.ColumnHeader;
             gridDateTimeColumn1.HeaderText = "Дата";
             gridDateTimeColumn1.MappingName = "Дата";
             gridDateTimeColumn1.MaxDateTime = new System.DateTime(9999, 12, 31, 23, 59, 59, 999);
-            gridDateTimeColumn1.Width = 200D;
             gridTextColumn8.AllowDragging = true;
+            gridTextColumn8.AllowResizing = true;
+            gridTextColumn8.AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.ColumnHeader;
             gridTextColumn8.HeaderText = "Оператор";
             gridTextColumn8.MappingName = "Оператор";
-            gridTextColumn8.Width = 150D;
             this.sfDataGrid2.Columns.Add(gridNumericColumn2);
             this.sfDataGrid2.Columns.Add(gridTextColumn5);
             this.sfDataGrid2.Columns.Add(gridTextColumn6);
@@ -509,9 +523,8 @@ namespace SyncfusionWinFormsApp1
             this.sfDataGrid2.DataSource = this.нДФЛBindingSource;
             this.sfDataGrid2.EnableDataVirtualization = true;
             this.sfDataGrid2.Font = new System.Drawing.Font("Segoe UI", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sfDataGrid2.Location = new System.Drawing.Point(320, 45);
+            this.sfDataGrid2.Location = new System.Drawing.Point(6, 47);
             this.sfDataGrid2.Name = "sfDataGrid2";
-            this.sfDataGrid2.Padding = new System.Windows.Forms.Padding(100, 0, 100, 0);
             this.sfDataGrid2.PreviewRowHeight = 30;
             this.sfDataGrid2.ShowBusyIndicator = true;
             this.sfDataGrid2.ShowRowHeader = true;
@@ -535,6 +548,7 @@ namespace SyncfusionWinFormsApp1
             this.sfDataGrid2.Style.StackedHeaderStyle.Font.Size = 12F;
             this.sfDataGrid2.TabIndex = 1;
             this.sfDataGrid2.Text = "sfDataGrid2";
+            this.sfDataGrid2.CurrentCellEndEdit += new Syncfusion.WinForms.DataGrid.Events.CurrentCellEndEditEventHandler(this.sfDataGrid2_CurrentCellEndEdit);
             // 
             // нДФЛBindingSource
             // 
@@ -634,11 +648,13 @@ namespace SyncfusionWinFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1904, 1061);
+            this.ClientSize = new System.Drawing.Size(1064, 441);
             this.Controls.Add(this.tabControlAdv1);
             this.DoubleBuffered = true;
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1920, 1080);
+            this.MinimumSize = new System.Drawing.Size(640, 480);
             this.Name = "MetroForm1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Style.MdiChild.IconHorizontalAlignment = System.Windows.Forms.HorizontalAlignment.Center;

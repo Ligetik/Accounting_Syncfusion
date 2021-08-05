@@ -24,7 +24,7 @@ namespace SyncfusionWinFormsApp1
 {
     public partial class MetroForm1 : SfForm
     {
-        ContextMenuStrip recordContextMenu;
+        //ContextMenuStrip recordContextMenu;
         //PdfGridCellStyle cellStyle;
         
         public MetroForm1()
@@ -56,14 +56,14 @@ namespace SyncfusionWinFormsApp1
             //cellStyle = new PdfGridCellStyle();
 
 
-            #region RecordContextMenu
+            //#region RecordContextMenu
 
-            recordContextMenu = new ContextMenuStrip();
-            recordContextMenu.Items.Add("Подготовлено", Image.FromFile(@"../../Images/YellowSign.png"), OnPreparedClicked);
-            recordContextMenu.Items.Add("Нужно сдать", Image.FromFile(@"../../Images/RedSign.png"), OnNeededClicked);
-            recordContextMenu.Items.Add("Сдано", Image.FromFile(@"../../Images/GreenSign.png"), OnPassedClicked);
-            this.sfDataGrid1.RecordContextMenu = recordContextMenu;
-            #endregion
+            //recordContextMenu = new ContextMenuStrip();
+            //recordContextMenu.Items.Add("Подготовлено", Image.FromFile(@"../../Images/YellowSign.png"), OnPreparedClicked);
+            //recordContextMenu.Items.Add("Нужно сдать", Image.FromFile(@"../../Images/RedSign.png"), OnNeededClicked);
+            //recordContextMenu.Items.Add("Сдано", Image.FromFile(@"../../Images/GreenSign.png"), OnPassedClicked);
+            //this.sfDataGrid1.RecordContextMenu = recordContextMenu;
+            //#endregion
         }
         private void MetroForm1_Load(object sender, EventArgs e)
         {
@@ -92,20 +92,20 @@ namespace SyncfusionWinFormsApp1
 
         }
 
-        #region ContextMenu options
-        private void OnPreparedClicked(object sender, EventArgs e)
-        {
+        //#region ContextMenu options
+        //private void OnPreparedClicked(object sender, EventArgs e)
+        //{
 
-        }
-        private void OnNeededClicked(object sender, EventArgs e)
-        {
+        //}
+        //private void OnNeededClicked(object sender, EventArgs e)
+        //{
 
-        }
-        private void OnPassedClicked(object sender, EventArgs e)
-        {
+        //}
+        //private void OnPassedClicked(object sender, EventArgs e)
+        //{
 
-        }
-        #endregion
+        //}
+        //#endregion
 
         
         private void sfDataGrid1_QueryCellStyle(object sender, Syncfusion.WinForms.DataGrid.Events.QueryCellStyleEventArgs e)
@@ -148,24 +148,24 @@ namespace SyncfusionWinFormsApp1
             }
         }
 
-        #region ContextMenu Events
-        private void sfDataGrid1_ContextMenuOpening(object sender, Syncfusion.WinForms.DataGrid.Events.ContextMenuOpeningEventArgs e)
-        {
-            if (e.ColumnIndex == 2 || e.ColumnIndex == 3 || e.ColumnIndex == 12 || e.ColumnIndex == 13 ||
-                e.ColumnIndex == 14 || e.ColumnIndex == 15)
-            {
-                recordContextMenu.Items[0].Enabled = false;
-                recordContextMenu.Items[1].Enabled = false;
-                recordContextMenu.Items[2].Enabled = false;
-            }
-            else
-            {
-                recordContextMenu.Items[0].Enabled = true;
-                recordContextMenu.Items[1].Enabled = true;
-                recordContextMenu.Items[2].Enabled = true;
-            }
-        }
-        #endregion
+        //#region ContextMenu Events
+        //private void sfDataGrid1_ContextMenuOpening(object sender, Syncfusion.WinForms.DataGrid.Events.ContextMenuOpeningEventArgs e)
+        //{
+        //    if (e.ColumnIndex == 2 || e.ColumnIndex == 3 || e.ColumnIndex == 12 || e.ColumnIndex == 13 ||
+        //        e.ColumnIndex == 14 || e.ColumnIndex == 15)
+        //    {
+        //        recordContextMenu.Items[0].Enabled = false;
+        //        recordContextMenu.Items[1].Enabled = false;
+        //        recordContextMenu.Items[2].Enabled = false;
+        //    }
+        //    else
+        //    {
+        //        recordContextMenu.Items[0].Enabled = true;
+        //        recordContextMenu.Items[1].Enabled = true;
+        //        recordContextMenu.Items[2].Enabled = true;
+        //    }
+        //}
+        //#endregion
 
         //save//
         // try
@@ -322,7 +322,7 @@ namespace SyncfusionWinFormsApp1
 
             //Set document information. 
             Syncfusion.Pdf.PdfDocument document = new Syncfusion.Pdf.PdfDocument();
-            document.PageSettings.Size = PdfPageSize.A3;
+            document.PageSettings.Size = PdfPageSize.A4;
             document.PageSettings.Orientation = PdfPageOrientation.Landscape;
 
             // set pagewidth 
@@ -576,6 +576,28 @@ namespace SyncfusionWinFormsApp1
            
         }
 
+        private void sfDataGrid2_CurrentCellEndEdit(object sender, Syncfusion.WinForms.DataGrid.Events.CurrentCellEndEditEventArgs e)
+        {
+            int rowIndex = 5;
+            int columnIndex = sfDataGrid2.TableControl.ResolveToGridVisibleColumnIndex(7);
+            if (columnIndex < 0)
+                return;
+            var mappingName = sfDataGrid2.Columns[columnIndex].MappingName;
+            var recordIndex = sfDataGrid2.TableControl.ResolveToRecordIndex(rowIndex);
+            if (recordIndex < 0)
+                return;
+            object data;
+            if (sfDataGrid2.View.TopLevelGroup != null)
+            {
+                var record = sfDataGrid2.View.TopLevelGroup.DisplayElements[recordIndex];
+                if (!record.IsRecords)
+                    return;
+                data = (record as Syncfusion.Data.RecordEntry).Data;
+            }
+            else
+                data = sfDataGrid2.View.Records.GetItemAt(recordIndex);
 
+            this.sfDataGrid2.View.GetPropertyAccessProvider().SetValue(data, mappingName, "Алина");
+        }
     }
 }
