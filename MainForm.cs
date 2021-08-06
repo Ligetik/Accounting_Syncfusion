@@ -67,10 +67,7 @@ namespace SyncfusionWinFormsApp1
         }
         private void MetroForm1_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet1._3_НДФЛ1". При необходимости она может быть перемещена или удалена.
-            this._3_НДФЛ1TableAdapter.Fill(this.sqlDataSet1._3_НДФЛ1);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet1.Декларация1". При необходимости она может быть перемещена или удалена.
-            this.декларация1TableAdapter.Fill(this.sqlDataSet1.Декларация1);
+
             try
             {
                 // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet1.Статус". При необходимости она может быть перемещена или удалена.
@@ -79,10 +76,10 @@ namespace SyncfusionWinFormsApp1
                 this.кварталTableAdapter.Fill(this.sqlDataSet.Квартал);
                 // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet.Организация". При необходимости она может быть перемещена или удалена.
                 this.организацияTableAdapter.Fill(this.sqlDataSet.Организация);
-                // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet1._3_НДФЛ". При необходимости она может быть перемещена или удалена.
-                this._3_НДФЛTableAdapter.Fill(this.sqlDataSet1._3_НДФЛ);
-                // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet1.Декларация". При необходимости она может быть перемещена или удалена.
-                this.декларацияTableAdapter.Fill(this.sqlDataSet1.Декларация);
+                // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet1._3_НДФЛ1". При необходимости она может быть перемещена или удалена.
+                this._3_НДФЛ1TableAdapter.Fill(this.sqlDataSet1._3_НДФЛ1);
+                // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet1.Декларация1". При необходимости она может быть перемещена или удалена.
+                this.декларация1TableAdapter.Fill(this.sqlDataSet1.Декларация1);
             }
             catch (Exception error)
             {
@@ -483,7 +480,7 @@ namespace SyncfusionWinFormsApp1
         }
 
         #region SaveChanges
-        private void SaveChanges()
+        private void SaveChangesSfDataGrid1()
         {
             try
             {
@@ -495,20 +492,33 @@ namespace SyncfusionWinFormsApp1
                 MessageBox.Show(error.Message);
             }
         }
-
+        private void SaveChangesSfDataGrid2()
+        {
+            try
+            {
+                нДФЛ1BindingSource.EndEdit();
+                _3_НДФЛ1TableAdapter.Update(this.sqlDataSet1._3_НДФЛ1);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
+        }
         private void sfDataGrid1_CurrentCellEndEdit(object sender, Syncfusion.WinForms.DataGrid.Events.CurrentCellEndEditEventArgs e)
         {
-            SaveChanges();
+            SaveChangesSfDataGrid1();
         }
 
         private void Records_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
-            SaveChanges();
+            SaveChangesSfDataGrid1();
+            SaveChangesSfDataGrid2();
         }
         
         private void MetroForm1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            SaveChanges();
+            SaveChangesSfDataGrid1();
+            SaveChangesSfDataGrid2();
         }
         #endregion
         private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -518,7 +528,7 @@ namespace SyncfusionWinFormsApp1
 
         private void sfDataGrid2_CurrentCellEndEdit(object sender, Syncfusion.WinForms.DataGrid.Events.CurrentCellEndEditEventArgs e)
         {
-            SaveChanges();
+            SaveChangesSfDataGrid1();
 
             //for (int i = 0; i > /*sfDataGrid2.RowCount*/sfDataGrid2.View.Records.Count - 1; i++)
             //foreach (var record in records)
