@@ -67,22 +67,17 @@ namespace SyncfusionWinFormsApp1
         }
         private void MetroForm1_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet1._3_НДФЛ1". При необходимости она может быть перемещена или удалена.
-            this._3_НДФЛ1TableAdapter.Fill(this.sqlDataSet1._3_НДФЛ1);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet1.Декларация1". При необходимости она может быть перемещена или удалена.
-            this.декларация1TableAdapter.Fill(this.sqlDataSet1.Декларация1);
+
             try
             {
+                this.table
                 // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet1.Статус". При необходимости она может быть перемещена или удалена.
                 this.статусTableAdapter.Fill(this.sqlDataSet1.Статус);
                 // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet.Квартал". При необходимости она может быть перемещена или удалена.
                 this.кварталTableAdapter.Fill(this.sqlDataSet.Квартал);
                 // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet.Организация". При необходимости она может быть перемещена или удалена.
                 this.организацияTableAdapter.Fill(this.sqlDataSet.Организация);
-                // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet1._3_НДФЛ". При необходимости она может быть перемещена или удалена.
-                this._3_НДФЛTableAdapter.Fill(this.sqlDataSet1._3_НДФЛ);
-                // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet1.Декларация". При необходимости она может быть перемещена или удалена.
-                this.декларацияTableAdapter.Fill(this.sqlDataSet1.Декларация);
+
             }
             catch (Exception error)
             {
