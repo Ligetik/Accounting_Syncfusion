@@ -10,9 +10,9 @@
     <Shape ID="DesignTable:Квартал" ZOrder="21" X="22" Y="389" Height="104" Width="205" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="50" />
     <Shape ID="DesignTable:Статус" ZOrder="22" X="734" Y="243" Height="440" Width="193" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="385" />
     <Shape ID="DesignTable:3-НДФЛ" ZOrder="18" X="0" Y="119" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
-    <Shape ID="DesignTable:Декларация" ZOrder="8" X="0" Y="117" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
-    <Shape ID="DesignTable:3-НДФЛ1" ZOrder="9" X="242" Y="-2" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
-    <Shape ID="DesignTable:Декларация1" ZOrder="11" X="13" Y="-6" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
+    <Shape ID="DesignTable:Декларация" ZOrder="10" X="0" Y="117" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
+    <Shape ID="DesignTable:3-НДФЛ1" ZOrder="11" X="-14" Y="-5" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
+    <Shape ID="DesignTable:Декларация1" ZOrder="2" X="239" Y="-4" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:Квартал_Организация" ZOrder="23" LineWidth="11">
@@ -63,7 +63,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:Статус_Организация_НДС" ZOrder="7" LineWidth="11">
+    <Connector ID="DesignRelation:Статус_Организация_НДС" ZOrder="9" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>734</X>
@@ -87,7 +87,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:Статус_Организация_РСВ" ZOrder="6" LineWidth="11">
+    <Connector ID="DesignRelation:Статус_Организация_РСВ" ZOrder="8" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>734</X>
@@ -155,27 +155,19 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:Декларация1_3-НДФЛ1" ZOrder="10" LineWidth="11">
+    <Connector ID="DesignRelation:Декларация1_3-НДФЛ1" ZOrder="1" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>171</X>
-          <Y>76</Y>
+          <X>239</X>
+          <Y>39</Y>
         </Point>
         <Point>
-          <X>408</X>
-          <Y>76</Y>
-        </Point>
-        <Point>
-          <X>408</X>
-          <Y>6</Y>
-        </Point>
-        <Point>
-          <X>400</X>
-          <Y>6</Y>
+          <X>144</X>
+          <Y>39</Y>
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:Статус_Организация_СЗВ-М III" ZOrder="5" LineWidth="11">
+    <Connector ID="DesignRelation:Статус_Организация_СЗВ-М III" ZOrder="7" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>734</X>
@@ -187,7 +179,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:Статус_Организация_2НДФЛ" ZOrder="4" LineWidth="11">
+    <Connector ID="DesignRelation:Статус_Организация_2НДФЛ" ZOrder="6" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>734</X>
@@ -199,7 +191,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:Статус_Организация_УСН" ZOrder="3" LineWidth="11">
+    <Connector ID="DesignRelation:Статус_Организация_УСН" ZOrder="5" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>734</X>
@@ -211,7 +203,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:Статус_Организация_Баланс" ZOrder="2" LineWidth="11">
+    <Connector ID="DesignRelation:Статус_Организация_Баланс" ZOrder="4" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>734</X>
@@ -223,7 +215,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:Статус_Организация_Статистика" ZOrder="1" LineWidth="11">
+    <Connector ID="DesignRelation:Статус_Организация_Статистика" ZOrder="3" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>734</X>
