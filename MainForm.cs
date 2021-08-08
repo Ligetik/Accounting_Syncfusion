@@ -51,6 +51,7 @@ namespace SyncfusionWinFormsApp1
             #region DataGrid1 Styles
             this.sfDataGrid1.GroupCaptionTextFormat = "{ColumnName}: {Key}             Кол-во записей: {ItemsCount}";
             this.sfDataGrid1.ShowBusyIndicator = true;
+            
             #endregion
 
             //cellStyle = new PdfGridCellStyle();
@@ -79,7 +80,7 @@ namespace SyncfusionWinFormsApp1
                 // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet1._3_НДФЛ1". При необходимости она может быть перемещена или удалена.
                 this._3_НДФЛ1TableAdapter.Fill(this.sqlDataSet1._3_НДФЛ1);
                 // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet1.Декларация1". При необходимости она может быть перемещена или удалена.
-                this.декларация1TableAdapter.Fill(this.sqlDataSet1.Декларация1);
+                this.декларация1TableAdapter.Fill(this.sqlDataSet1.Декларация1);                
             }
             catch (Exception error)
             {
@@ -528,8 +529,9 @@ namespace SyncfusionWinFormsApp1
 
         private void sfDataGrid2_CurrentCellEndEdit(object sender, Syncfusion.WinForms.DataGrid.Events.CurrentCellEndEditEventArgs e)
         {
-            SaveChangesSfDataGrid1();
+            SaveChangesSfDataGrid2();
 
+             
             //for (int i = 0; i > /*sfDataGrid2.RowCount*/sfDataGrid2.View.Records.Count - 1; i++)
             //foreach (var record in records)
             //{
@@ -537,14 +539,14 @@ namespace SyncfusionWinFormsApp1
 
             //    int rowIndex = i;
             //    int columnIndex = sfDataGrid2.TableControl.ResolveToGridVisibleColumnIndex(7);
-            //    if (columnIndex < 0)
-            //        return;
-            //    var mappingName = sfDataGrid2.Columns[columnIndex].MappingName;
-            //    var recordIndex = sfDataGrid2.TableControl.ResolveToRecordIndex(rowIndex);
-            //    if (recordIndex < 0)
-            //        return;
-            //    object data;
-            //    if (sfDataGrid2.View.TopLevelGroup != null)
+            //if (columnIndex < 0)
+            //    return;
+            //var mappingName = sfDataGrid2.Columns[columnIndex].MappingName;
+            //var recordIndex = sfDataGrid2.TableControl.ResolveToRecordIndex(rowIndex);
+            //if (recordIndex < 0)
+            //    return;
+            //object data;
+            //if (sfDataGrid2.View.TopLevelGroup != null)
             //    {
             //        var record = sfDataGrid2.View.TopLevelGroup.DisplayElements[recordIndex];
             //        if (!record.IsRecords)
@@ -554,16 +556,25 @@ namespace SyncfusionWinFormsApp1
             //    else
             //        data = sfDataGrid2.View.Records.GetItemAt(recordIndex);
 
-            //    this.sfDataGrid2.View.GetPropertyAccessProvider().SetValue(data, mappingName, "Алина");
-            //}
+                //    this.sfDataGrid2.View.GetPropertyAccessProvider().SetValue(data, mappingName, "Алина");
+                //}
         }
 
         private void sfDataGrid1_GroupCollapsing(object sender, Syncfusion.WinForms.DataGrid.Events.GroupChangingEventArgs e)
         {
-            //if (e.Group.Key.Equals(4))
-            //{
-            //    sfDataGrid1.Columns["РСВ"].Visible = false;
-            //}
+            if (e.Group.Key.Equals("4"))
+            {
+                sfDataGrid1.Columns["РСВ"].Visible = true;
+            }
+        }
+
+        private void sfDataGrid1_GroupExpanding(object sender, Syncfusion.WinForms.DataGrid.Events.GroupChangingEventArgs e)
+        {
+            
+            if (e.Group.Key.Equals("4"))
+            {
+                sfDataGrid1.Columns["РСВ"].Visible = false;
+            }
         }
     }
 }
