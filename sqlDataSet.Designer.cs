@@ -62,6 +62,16 @@ namespace SyncfusionWinFormsApp1 {
         
         private global::System.Data.DataRelation _relationДекларация1_3_НДФЛ1;
         
+        private global::System.Data.DataRelation _relationСтатус_Организация_СЗВ_М_III;
+        
+        private global::System.Data.DataRelation relationСтатус_Организация_2НДФЛ;
+        
+        private global::System.Data.DataRelation relationСтатус_Организация_УСН;
+        
+        private global::System.Data.DataRelation relationСтатус_Организация_Баланс;
+        
+        private global::System.Data.DataRelation relationСтатус_Организация_Статистика;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -374,6 +384,11 @@ namespace SyncfusionWinFormsApp1 {
             this._relationСтатус_Организация_СЗВ_М_I = this.Relations["Статус_Организация_СЗВ-М I"];
             this._relationСтатус_Организация_СЗВ_М_II = this.Relations["Статус_Организация_СЗВ-М II"];
             this._relationДекларация1_3_НДФЛ1 = this.Relations["Декларация1_3-НДФЛ1"];
+            this._relationСтатус_Организация_СЗВ_М_III = this.Relations["Статус_Организация_СЗВ-М III"];
+            this.relationСтатус_Организация_2НДФЛ = this.Relations["Статус_Организация_2НДФЛ"];
+            this.relationСтатус_Организация_УСН = this.Relations["Статус_Организация_УСН"];
+            this.relationСтатус_Организация_Баланс = this.Relations["Статус_Организация_Баланс"];
+            this.relationСтатус_Организация_Статистика = this.Relations["Статус_Организация_Статистика"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -446,6 +461,26 @@ namespace SyncfusionWinFormsApp1 {
                         this.tableДекларация1.НазваниеColumn}, new global::System.Data.DataColumn[] {
                         this._table3_НДФЛ1.ДекларацияColumn}, false);
             this.Relations.Add(this._relationДекларация1_3_НДФЛ1);
+            this._relationСтатус_Организация_СЗВ_М_III = new global::System.Data.DataRelation("Статус_Организация_СЗВ-М III", new global::System.Data.DataColumn[] {
+                        this.tableСтатус.СтатусыColumn}, new global::System.Data.DataColumn[] {
+                        this.tableОрганизация._СЗВ_М_IIIColumn}, false);
+            this.Relations.Add(this._relationСтатус_Организация_СЗВ_М_III);
+            this.relationСтатус_Организация_2НДФЛ = new global::System.Data.DataRelation("Статус_Организация_2НДФЛ", new global::System.Data.DataColumn[] {
+                        this.tableСтатус.СтатусыColumn}, new global::System.Data.DataColumn[] {
+                        this.tableОрганизация._2НДФЛColumn}, false);
+            this.Relations.Add(this.relationСтатус_Организация_2НДФЛ);
+            this.relationСтатус_Организация_УСН = new global::System.Data.DataRelation("Статус_Организация_УСН", new global::System.Data.DataColumn[] {
+                        this.tableСтатус.СтатусыColumn}, new global::System.Data.DataColumn[] {
+                        this.tableОрганизация.УСНColumn}, false);
+            this.Relations.Add(this.relationСтатус_Организация_УСН);
+            this.relationСтатус_Организация_Баланс = new global::System.Data.DataRelation("Статус_Организация_Баланс", new global::System.Data.DataColumn[] {
+                        this.tableСтатус.СтатусыColumn}, new global::System.Data.DataColumn[] {
+                        this.tableОрганизация.БалансColumn}, false);
+            this.Relations.Add(this.relationСтатус_Организация_Баланс);
+            this.relationСтатус_Организация_Статистика = new global::System.Data.DataRelation("Статус_Организация_Статистика", new global::System.Data.DataColumn[] {
+                        this.tableСтатус.СтатусыColumn}, new global::System.Data.DataColumn[] {
+                        this.tableОрганизация.СтатистикаColumn}, false);
+            this.Relations.Add(this.relationСтатус_Организация_Статистика);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -603,6 +638,16 @@ namespace SyncfusionWinFormsApp1 {
             
             private global::System.Data.DataColumn _columnСЗВ_М_I;
             
+            private global::System.Data.DataColumn _columnСЗВ_М_III;
+            
+            private global::System.Data.DataColumn column2НДФЛ;
+            
+            private global::System.Data.DataColumn columnУСН;
+            
+            private global::System.Data.DataColumn columnБаланс;
+            
+            private global::System.Data.DataColumn columnСтатистика;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public ОрганизацияDataTable() {
@@ -758,6 +803,46 @@ namespace SyncfusionWinFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn _СЗВ_М_IIIColumn {
+                get {
+                    return this._columnСЗВ_М_III;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn _2НДФЛColumn {
+                get {
+                    return this.column2НДФЛ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn УСНColumn {
+                get {
+                    return this.columnУСН;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn БалансColumn {
+                get {
+                    return this.columnБаланс;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn СтатистикаColumn {
+                get {
+                    return this.columnСтатистика;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -793,7 +878,26 @@ namespace SyncfusionWinFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ОрганизацияRow AddОрганизацияRow(string Название_организации, СтатусRow parentСтатусRowByСтатус_Организация_Налоги, СтатусRow parentСтатусRowByСтатус_Организация_ФСС, СтатусRow parentСтатусRowByСтатус_Организация_ЕНВД, СтатусRow parentСтатусRowByСтатус_Организация_НДС, СтатусRow parentСтатусRowByСтатус_Организация_Прибыль, СтатусRow parentСтатусRowByСтатус_Организация_РСВ, СтатусRow parentСтатусRowByСтатус_Организация_НДФЛ, КварталRow parentКварталRowByКвартал_Организация, string Год, string Оператор, string Заметки, СтатусRow _parentСтатусRowByСтатус_Организация_СЗВ_М_II, СтатусRow _parentСтатусRowByСтатус_Организация_СЗВ_М_I) {
+            public ОрганизацияRow AddОрганизацияRow(
+                        string Название_организации, 
+                        СтатусRow parentСтатусRowByСтатус_Организация_Налоги, 
+                        СтатусRow parentСтатусRowByСтатус_Организация_ФСС, 
+                        СтатусRow parentСтатусRowByСтатус_Организация_ЕНВД, 
+                        СтатусRow parentСтатусRowByСтатус_Организация_НДС, 
+                        СтатусRow parentСтатусRowByСтатус_Организация_Прибыль, 
+                        СтатусRow parentСтатусRowByСтатус_Организация_РСВ, 
+                        СтатусRow parentСтатусRowByСтатус_Организация_НДФЛ, 
+                        КварталRow parentКварталRowByКвартал_Организация, 
+                        string Год, 
+                        string Оператор, 
+                        string Заметки, 
+                        СтатусRow _parentСтатусRowByСтатус_Организация_СЗВ_М_II, 
+                        СтатусRow _parentСтатусRowByСтатус_Организация_СЗВ_М_I, 
+                        СтатусRow _parentСтатусRowByСтатус_Организация_СЗВ_М_III, 
+                        СтатусRow parentСтатусRowByСтатус_Организация_2НДФЛ, 
+                        СтатусRow parentСтатусRowByСтатус_Организация_УСН, 
+                        СтатусRow parentСтатусRowByСтатус_Организация_Баланс, 
+                        СтатусRow parentСтатусRowByСтатус_Организация_Статистика) {
                 ОрганизацияRow rowОрганизацияRow = ((ОрганизацияRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -809,6 +913,11 @@ namespace SyncfusionWinFormsApp1 {
                         Год,
                         Оператор,
                         Заметки,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
                         null,
                         null};
                 if ((parentСтатусRowByСтатус_Организация_Налоги != null)) {
@@ -840,6 +949,21 @@ namespace SyncfusionWinFormsApp1 {
                 }
                 if ((_parentСтатусRowByСтатус_Организация_СЗВ_М_I != null)) {
                     columnValuesArray[14] = _parentСтатусRowByСтатус_Организация_СЗВ_М_I[0];
+                }
+                if ((_parentСтатусRowByСтатус_Организация_СЗВ_М_III != null)) {
+                    columnValuesArray[15] = _parentСтатусRowByСтатус_Организация_СЗВ_М_III[0];
+                }
+                if ((parentСтатусRowByСтатус_Организация_2НДФЛ != null)) {
+                    columnValuesArray[16] = parentСтатусRowByСтатус_Организация_2НДФЛ[0];
+                }
+                if ((parentСтатусRowByСтатус_Организация_УСН != null)) {
+                    columnValuesArray[17] = parentСтатусRowByСтатус_Организация_УСН[0];
+                }
+                if ((parentСтатусRowByСтатус_Организация_Баланс != null)) {
+                    columnValuesArray[18] = parentСтатусRowByСтатус_Организация_Баланс[0];
+                }
+                if ((parentСтатусRowByСтатус_Организация_Статистика != null)) {
+                    columnValuesArray[19] = parentСтатусRowByСтатус_Организация_Статистика[0];
                 }
                 rowОрганизацияRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowОрганизацияRow);
@@ -885,6 +1009,11 @@ namespace SyncfusionWinFormsApp1 {
                 this.columnЗаметки = base.Columns["Заметки"];
                 this._columnСЗВ_М_II = base.Columns["СЗВ-М II"];
                 this._columnСЗВ_М_I = base.Columns["СЗВ-М I"];
+                this._columnСЗВ_М_III = base.Columns["СЗВ-М III"];
+                this.column2НДФЛ = base.Columns["2НДФЛ"];
+                this.columnУСН = base.Columns["УСН"];
+                this.columnБаланс = base.Columns["Баланс"];
+                this.columnСтатистика = base.Columns["Статистика"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -924,6 +1053,20 @@ namespace SyncfusionWinFormsApp1 {
                 this._columnСЗВ_М_I.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnСЗВ_М_I");
                 this._columnСЗВ_М_I.ExtendedProperties.Add("Generator_UserColumnName", "СЗВ-М I");
                 base.Columns.Add(this._columnСЗВ_М_I);
+                this._columnСЗВ_М_III = new global::System.Data.DataColumn("СЗВ-М III", typeof(string), null, global::System.Data.MappingType.Element);
+                this._columnСЗВ_М_III.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnСЗВ_М_III");
+                this._columnСЗВ_М_III.ExtendedProperties.Add("Generator_UserColumnName", "СЗВ-М III");
+                base.Columns.Add(this._columnСЗВ_М_III);
+                this.column2НДФЛ = new global::System.Data.DataColumn("2НДФЛ", typeof(string), null, global::System.Data.MappingType.Element);
+                this.column2НДФЛ.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "column2НДФЛ");
+                this.column2НДФЛ.ExtendedProperties.Add("Generator_UserColumnName", "2НДФЛ");
+                base.Columns.Add(this.column2НДФЛ);
+                this.columnУСН = new global::System.Data.DataColumn("УСН", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnУСН);
+                this.columnБаланс = new global::System.Data.DataColumn("Баланс", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnБаланс);
+                this.columnСтатистика = new global::System.Data.DataColumn("Статистика", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnСтатистика);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId_Организация}, true));
                 this.columnId_Организация.AutoIncrement = true;
@@ -944,6 +1087,11 @@ namespace SyncfusionWinFormsApp1 {
                 this.columnЗаметки.MaxLength = 50;
                 this._columnСЗВ_М_II.MaxLength = 50;
                 this._columnСЗВ_М_I.MaxLength = 50;
+                this._columnСЗВ_М_III.MaxLength = 50;
+                this.column2НДФЛ.MaxLength = 50;
+                this.columnУСН.MaxLength = 50;
+                this.columnБаланс.MaxLength = 50;
+                this.columnСтатистика.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3064,6 +3212,86 @@ namespace SyncfusionWinFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string _СЗВ_М_III {
+                get {
+                    try {
+                        return ((string)(this[this.tableОрганизация._СЗВ_М_IIIColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'СЗВ-М III\' в таблице \'Организация\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableОрганизация._СЗВ_М_IIIColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string _2НДФЛ {
+                get {
+                    try {
+                        return ((string)(this[this.tableОрганизация._2НДФЛColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'2НДФЛ\' в таблице \'Организация\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableОрганизация._2НДФЛColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string УСН {
+                get {
+                    try {
+                        return ((string)(this[this.tableОрганизация.УСНColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'УСН\' в таблице \'Организация\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableОрганизация.УСНColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Баланс {
+                get {
+                    try {
+                        return ((string)(this[this.tableОрганизация.БалансColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Баланс\' в таблице \'Организация\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableОрганизация.БалансColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Статистика {
+                get {
+                    try {
+                        return ((string)(this[this.tableОрганизация.СтатистикаColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Статистика\' в таблице \'Организация\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableОрганизация.СтатистикаColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public КварталRow КварталRow {
                 get {
                     return ((КварталRow)(this.GetParentRow(this.Table.ParentRelations["Квартал_Организация"])));
@@ -3169,6 +3397,61 @@ namespace SyncfusionWinFormsApp1 {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["Статус_Организация_СЗВ-М II"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public СтатусRow _СтатусRowByСтатус_Организация_СЗВ_М_III {
+                get {
+                    return ((СтатусRow)(this.GetParentRow(this.Table.ParentRelations["Статус_Организация_СЗВ-М III"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Статус_Организация_СЗВ-М III"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public СтатусRow СтатусRowByСтатус_Организация_2НДФЛ {
+                get {
+                    return ((СтатусRow)(this.GetParentRow(this.Table.ParentRelations["Статус_Организация_2НДФЛ"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Статус_Организация_2НДФЛ"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public СтатусRow СтатусRowByСтатус_Организация_УСН {
+                get {
+                    return ((СтатусRow)(this.GetParentRow(this.Table.ParentRelations["Статус_Организация_УСН"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Статус_Организация_УСН"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public СтатусRow СтатусRowByСтатус_Организация_Баланс {
+                get {
+                    return ((СтатусRow)(this.GetParentRow(this.Table.ParentRelations["Статус_Организация_Баланс"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Статус_Организация_Баланс"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public СтатусRow СтатусRowByСтатус_Организация_Статистика {
+                get {
+                    return ((СтатусRow)(this.GetParentRow(this.Table.ParentRelations["Статус_Организация_Статистика"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Статус_Организация_Статистика"]);
                 }
             }
             
@@ -3339,6 +3622,66 @@ namespace SyncfusionWinFormsApp1 {
             public void Set_СЗВ_М_INull() {
                 this[this.tableОрганизация._СЗВ_М_IColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Is_СЗВ_М_IIINull() {
+                return this.IsNull(this.tableОрганизация._СЗВ_М_IIIColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Set_СЗВ_М_IIINull() {
+                this[this.tableОрганизация._СЗВ_М_IIIColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Is_2НДФЛNull() {
+                return this.IsNull(this.tableОрганизация._2НДФЛColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Set_2НДФЛNull() {
+                this[this.tableОрганизация._2НДФЛColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsУСНNull() {
+                return this.IsNull(this.tableОрганизация.УСНColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetУСНNull() {
+                this[this.tableОрганизация.УСНColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsБалансNull() {
+                return this.IsNull(this.tableОрганизация.БалансColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetБалансNull() {
+                this[this.tableОрганизация.БалансColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsСтатистикаNull() {
+                return this.IsNull(this.tableОрганизация.СтатистикаColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetСтатистикаNull() {
+                this[this.tableОрганизация.СтатистикаColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -3499,6 +3842,61 @@ namespace SyncfusionWinFormsApp1 {
                 }
                 else {
                     return ((ОрганизацияRow[])(base.GetChildRows(this.Table.ChildRelations["Статус_Организация_СЗВ-М II"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ОрганизацияRow[] _GetОрганизацияRowsByСтатус_Организация_СЗВ_М_III() {
+                if ((this.Table.ChildRelations["Статус_Организация_СЗВ-М III"] == null)) {
+                    return new ОрганизацияRow[0];
+                }
+                else {
+                    return ((ОрганизацияRow[])(base.GetChildRows(this.Table.ChildRelations["Статус_Организация_СЗВ-М III"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ОрганизацияRow[] GetОрганизацияRowsByСтатус_Организация_2НДФЛ() {
+                if ((this.Table.ChildRelations["Статус_Организация_2НДФЛ"] == null)) {
+                    return new ОрганизацияRow[0];
+                }
+                else {
+                    return ((ОрганизацияRow[])(base.GetChildRows(this.Table.ChildRelations["Статус_Организация_2НДФЛ"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ОрганизацияRow[] GetОрганизацияRowsByСтатус_Организация_УСН() {
+                if ((this.Table.ChildRelations["Статус_Организация_УСН"] == null)) {
+                    return new ОрганизацияRow[0];
+                }
+                else {
+                    return ((ОрганизацияRow[])(base.GetChildRows(this.Table.ChildRelations["Статус_Организация_УСН"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ОрганизацияRow[] GetОрганизацияRowsByСтатус_Организация_Баланс() {
+                if ((this.Table.ChildRelations["Статус_Организация_Баланс"] == null)) {
+                    return new ОрганизацияRow[0];
+                }
+                else {
+                    return ((ОрганизацияRow[])(base.GetChildRows(this.Table.ChildRelations["Статус_Организация_Баланс"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ОрганизацияRow[] GetОрганизацияRowsByСтатус_Организация_Статистика() {
+                if ((this.Table.ChildRelations["Статус_Организация_Статистика"] == null)) {
+                    return new ОрганизацияRow[0];
+                }
+                else {
+                    return ((ОрганизацияRow[])(base.GetChildRows(this.Table.ChildRelations["Статус_Организация_Статистика"])));
                 }
             }
         }
@@ -4365,16 +4763,46 @@ namespace SyncfusionWinFormsApp1.sqlDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Заметки", "Заметки");
             tableMapping.ColumnMappings.Add("СЗВ-М II", "СЗВ-М II");
             tableMapping.ColumnMappings.Add("СЗВ-М I", "СЗВ-М I");
+            tableMapping.ColumnMappings.Add("СЗВ-М III", "СЗВ-М III");
+            tableMapping.ColumnMappings.Add("2НДФЛ", "2НДФЛ");
+            tableMapping.ColumnMappings.Add("УСН", "УСН");
+            tableMapping.ColumnMappings.Add("Баланс", "Баланс");
+            tableMapping.ColumnMappings.Add("Статистика", "Статистика");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Организация] WHERE (([Id Организация] = @Original_Id_Организация) AND ((@IsNull_Название_организации = 1 AND [Название организации] IS NULL) OR ([Название организации] = @Original_Название_организации)) AND ((@IsNull_Налоги = 1 AND [Налоги] IS NULL) OR ([Налоги] = @Original_Налоги)) AND ((@IsNull_ФСС = 1 AND [ФСС] IS NULL) OR ([ФСС] = @Original_ФСС)) AND ((@IsNull_ЕНВД = 1 AND [ЕНВД] IS NULL) OR ([ЕНВД] = @Original_ЕНВД)) AND ((@IsNull_НДС = 1 AND [НДС] IS NULL) OR ([НДС] = @Original_НДС)) AND ((@IsNull_Прибыль = 1 AND [Прибыль] IS NULL) OR ([Прибыль] = @Original_Прибыль)) AND ((@IsNull_РСВ = 1 AND [РСВ] IS NULL) OR ([РСВ] = @Original_РСВ)) AND ((@IsNull_НДФЛ = 1 AND [НДФЛ] IS NULL) OR ([НДФЛ] = @Original_НДФЛ)) AND ((@IsNull_Квартал = 1 AND [Квартал] IS NULL) OR ([Квартал] = @Original_Квартал)) AND ((@IsNull_Год = 1 AND [Год] IS NULL) OR ([Год] = @Original_Год)) AND ((@IsNull_Оператор = 1 AND [Оператор] IS NULL) OR ([Оператор] = @Original_Оператор)) AND ((@IsNull_Заметки = 1 AND [Заметки] IS NULL) OR ([Заметки] = @Original_Заметки)) AND ((@p3 = 1 AND [СЗВ-М II] IS NULL) OR ([СЗВ-М II] = @p2)) AND ((@p6 = 1 AND [СЗВ-М I] IS NULL) OR ([СЗВ-М I] = @p5)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Организация] WHERE (([Id Организация] = @Original_Id_Организация) AN" +
+                "D ((@IsNull_Название_организации = 1 AND [Название организации] IS NULL) OR ([На" +
+                "звание организации] = @Original_Название_организации)) AND ((@IsNull_Налоги = 1 " +
+                "AND [Налоги] IS NULL) OR ([Налоги] = @Original_Налоги)) AND ((@p3 = 1 AND [СЗВ-М" +
+                " I] IS NULL) OR ([СЗВ-М I] = @p2)) AND ((@p6 = 1 AND [СЗВ-М II] IS NULL) OR ([СЗ" +
+                "В-М II] = @p5)) AND ((@p9 = 1 AND [СЗВ-М III] IS NULL) OR ([СЗВ-М III] = @p8)) A" +
+                "ND ((@IsNull_ФСС = 1 AND [ФСС] IS NULL) OR ([ФСС] = @Original_ФСС)) AND ((@IsNul" +
+                "l_ЕНВД = 1 AND [ЕНВД] IS NULL) OR ([ЕНВД] = @Original_ЕНВД)) AND ((@IsNull_НДС =" +
+                " 1 AND [НДС] IS NULL) OR ([НДС] = @Original_НДС)) AND ((@IsNull_Прибыль = 1 AND " +
+                "[Прибыль] IS NULL) OR ([Прибыль] = @Original_Прибыль)) AND ((@IsNull_РСВ = 1 AND" +
+                " [РСВ] IS NULL) OR ([РСВ] = @Original_РСВ)) AND ((@IsNull_НДФЛ = 1 AND [НДФЛ] IS" +
+                " NULL) OR ([НДФЛ] = @Original_НДФЛ)) AND ((@p12 = 1 AND [2НДФЛ] IS NULL) OR ([2Н" +
+                "ДФЛ] = @p11)) AND ((@IsNull_УСН = 1 AND [УСН] IS NULL) OR ([УСН] = @Original_УСН" +
+                ")) AND ((@IsNull_Баланс = 1 AND [Баланс] IS NULL) OR ([Баланс] = @Original_Балан" +
+                "с)) AND ((@IsNull_Статистика = 1 AND [Статистика] IS NULL) OR ([Статистика] = @O" +
+                "riginal_Статистика)) AND ((@IsNull_Квартал = 1 AND [Квартал] IS NULL) OR ([Кварт" +
+                "ал] = @Original_Квартал)) AND ((@IsNull_Год = 1 AND [Год] IS NULL) OR ([Год] = @" +
+                "Original_Год)) AND ((@IsNull_Оператор = 1 AND [Оператор] IS NULL) OR ([Оператор]" +
+                " = @Original_Оператор)) AND ((@IsNull_Заметки = 1 AND [Заметки] IS NULL) OR ([За" +
+                "метки] = @Original_Заметки)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Организация", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id Организация", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Название_организации", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Название организации", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Название_организации", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Название организации", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Налоги", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Налоги", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Налоги", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Налоги", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М I", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p2", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М I", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p6", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М II", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p5", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М II", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p9", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М III", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p8", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М III", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ФСС", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ФСС", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ФСС", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ФСС", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ЕНВД", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ЕНВД", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -4387,6 +4815,14 @@ namespace SyncfusionWinFormsApp1.sqlDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_РСВ", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "РСВ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_НДФЛ", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "НДФЛ", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_НДФЛ", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "НДФЛ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p12", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "2НДФЛ", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p11", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "2НДФЛ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_УСН", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "УСН", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_УСН", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "УСН", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Баланс", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Баланс", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Баланс", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Баланс", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Статистика", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Статистика", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Статистика", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Статистика", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Квартал", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Квартал", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Квартал", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Квартал", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Год", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Год", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -4395,75 +4831,93 @@ namespace SyncfusionWinFormsApp1.sqlDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Оператор", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Оператор", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Заметки", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Заметки", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Заметки", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Заметки", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М II", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p2", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М II", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p6", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М I", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p5", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М I", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Организация] ([Id Организация], [Название организации], [Налоги], [ФСС], [ЕНВД], [НДС], [Прибыль], [РСВ], [НДФЛ], [Квартал], [Год], [Оператор], [Заметки], [СЗВ-М II], [СЗВ-М I]) VALUES (@Id_Организация, @Название_организации, @Налоги, @ФСС, @ЕНВД, @НДС, @Прибыль, @РСВ, @НДФЛ, @Квартал, @Год, @Оператор, @Заметки, @p1, @p4);
-SELECT [Id Организация], [Название организации], Налоги, ФСС, ЕНВД, НДС, Прибыль, РСВ, НДФЛ, Квартал, Год, Оператор, Заметки, [СЗВ-М II], [СЗВ-М I] FROM Организация WHERE ([Id Организация] = @Id_Организация)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Организация] ([Id Организация], [Название организации], [Налоги], [СЗВ-М I], [СЗВ-М II], [СЗВ-М III], [ФСС], [ЕНВД], [НДС], [Прибыль], [РСВ], [НДФЛ], [2НДФЛ], [УСН], [Баланс], [Статистика], [Квартал], [Год], [Оператор], [Заметки]) VALUES (@Id_Организация, @Название_организации, @Налоги, @p1, @p4, @p7, @ФСС, @ЕНВД, @НДС, @Прибыль, @РСВ, @НДФЛ, @p10, @УСН, @Баланс, @Статистика, @Квартал, @Год, @Оператор, @Заметки);
+SELECT [Id Организация], [Название организации], Налоги, [СЗВ-М I], [СЗВ-М II], [СЗВ-М III], ФСС, ЕНВД, НДС, Прибыль, РСВ, НДФЛ, [2НДФЛ], УСН, Баланс, Статистика, Квартал, Год, Оператор, Заметки FROM Организация WHERE ([Id Организация] = @Id_Организация)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Организация", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id Организация", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Название_организации", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Название организации", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Налоги", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Налоги", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p1", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М I", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p4", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М II", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p7", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М III", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ФСС", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ФСС", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ЕНВД", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ЕНВД", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@НДС", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "НДС", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Прибыль", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Прибыль", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@РСВ", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "РСВ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@НДФЛ", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "НДФЛ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p10", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "2НДФЛ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@УСН", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "УСН", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Баланс", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Баланс", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Статистика", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Статистика", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Квартал", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Квартал", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Год", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Год", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Оператор", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Оператор", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Заметки", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Заметки", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p1", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М II", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p4", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М I", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [Организация] SET [Id Организация] = @Id_Организация, [Название организаци" +
-                "и] = @Название_организации, [Налоги] = @Налоги, [ФСС] = @ФСС, [ЕНВД] = @ЕНВД, [Н" +
-                "ДС] = @НДС, [Прибыль] = @Прибыль, [РСВ] = @РСВ, [НДФЛ] = @НДФЛ, [Квартал] = @Ква" +
-                "ртал, [Год] = @Год, [Оператор] = @Оператор, [Заметки] = @Заметки, [СЗВ-М II] = @" +
-                "p1, [СЗВ-М I] = @p4 WHERE (([Id Организация] = @Original_Id_Организация) AND ((@" +
-                "IsNull_Название_организации = 1 AND [Название организации] IS NULL) OR ([Названи" +
-                "е организации] = @Original_Название_организации)) AND ((@IsNull_Налоги = 1 AND [" +
-                "Налоги] IS NULL) OR ([Налоги] = @Original_Налоги)) AND ((@IsNull_ФСС = 1 AND [ФС" +
-                "С] IS NULL) OR ([ФСС] = @Original_ФСС)) AND ((@IsNull_ЕНВД = 1 AND [ЕНВД] IS NUL" +
-                "L) OR ([ЕНВД] = @Original_ЕНВД)) AND ((@IsNull_НДС = 1 AND [НДС] IS NULL) OR ([Н" +
-                "ДС] = @Original_НДС)) AND ((@IsNull_Прибыль = 1 AND [Прибыль] IS NULL) OR ([Приб" +
-                "ыль] = @Original_Прибыль)) AND ((@IsNull_РСВ = 1 AND [РСВ] IS NULL) OR ([РСВ] = " +
-                "@Original_РСВ)) AND ((@IsNull_НДФЛ = 1 AND [НДФЛ] IS NULL) OR ([НДФЛ] = @Origina" +
-                "l_НДФЛ)) AND ((@IsNull_Квартал = 1 AND [Квартал] IS NULL) OR ([Квартал] = @Origi" +
-                "nal_Квартал)) AND ((@IsNull_Год = 1 AND [Год] IS NULL) OR ([Год] = @Original_Год" +
-                ")) AND ((@IsNull_Оператор = 1 AND [Оператор] IS NULL) OR ([Оператор] = @Original" +
-                "_Оператор)) AND ((@IsNull_Заметки = 1 AND [Заметки] IS NULL) OR ([Заметки] = @Or" +
-                "iginal_Заметки)) AND ((@p3 = 1 AND [СЗВ-М II] IS NULL) OR ([СЗВ-М II] = @p2)) AN" +
-                "D ((@p6 = 1 AND [СЗВ-М I] IS NULL) OR ([СЗВ-М I] = @p5)));\r\nSELECT [Id Организац" +
-                "ия], [Название организации], Налоги, ФСС, ЕНВД, НДС, Прибыль, РСВ, НДФЛ, Квартал" +
-                ", Год, Оператор, Заметки, [СЗВ-М II], [СЗВ-М I] FROM Организация WHERE ([Id Орга" +
-                "низация] = @Id_Организация)";
+                "и] = @Название_организации, [Налоги] = @Налоги, [СЗВ-М I] = @p1, [СЗВ-М II] = @p" +
+                "4, [СЗВ-М III] = @p7, [ФСС] = @ФСС, [ЕНВД] = @ЕНВД, [НДС] = @НДС, [Прибыль] = @П" +
+                "рибыль, [РСВ] = @РСВ, [НДФЛ] = @НДФЛ, [2НДФЛ] = @p10, [УСН] = @УСН, [Баланс] = @" +
+                "Баланс, [Статистика] = @Статистика, [Квартал] = @Квартал, [Год] = @Год, [Операто" +
+                "р] = @Оператор, [Заметки] = @Заметки WHERE (([Id Организация] = @Original_Id_Орг" +
+                "анизация) AND ((@IsNull_Название_организации = 1 AND [Название организации] IS N" +
+                "ULL) OR ([Название организации] = @Original_Название_организации)) AND ((@IsNull" +
+                "_Налоги = 1 AND [Налоги] IS NULL) OR ([Налоги] = @Original_Налоги)) AND ((@p3 = " +
+                "1 AND [СЗВ-М I] IS NULL) OR ([СЗВ-М I] = @p2)) AND ((@p6 = 1 AND [СЗВ-М II] IS N" +
+                "ULL) OR ([СЗВ-М II] = @p5)) AND ((@p9 = 1 AND [СЗВ-М III] IS NULL) OR ([СЗВ-М II" +
+                "I] = @p8)) AND ((@IsNull_ФСС = 1 AND [ФСС] IS NULL) OR ([ФСС] = @Original_ФСС)) " +
+                "AND ((@IsNull_ЕНВД = 1 AND [ЕНВД] IS NULL) OR ([ЕНВД] = @Original_ЕНВД)) AND ((@" +
+                "IsNull_НДС = 1 AND [НДС] IS NULL) OR ([НДС] = @Original_НДС)) AND ((@IsNull_Приб" +
+                "ыль = 1 AND [Прибыль] IS NULL) OR ([Прибыль] = @Original_Прибыль)) AND ((@IsNull" +
+                "_РСВ = 1 AND [РСВ] IS NULL) OR ([РСВ] = @Original_РСВ)) AND ((@IsNull_НДФЛ = 1 A" +
+                "ND [НДФЛ] IS NULL) OR ([НДФЛ] = @Original_НДФЛ)) AND ((@p12 = 1 AND [2НДФЛ] IS N" +
+                "ULL) OR ([2НДФЛ] = @p11)) AND ((@IsNull_УСН = 1 AND [УСН] IS NULL) OR ([УСН] = @" +
+                "Original_УСН)) AND ((@IsNull_Баланс = 1 AND [Баланс] IS NULL) OR ([Баланс] = @Or" +
+                "iginal_Баланс)) AND ((@IsNull_Статистика = 1 AND [Статистика] IS NULL) OR ([Стат" +
+                "истика] = @Original_Статистика)) AND ((@IsNull_Квартал = 1 AND [Квартал] IS NULL" +
+                ") OR ([Квартал] = @Original_Квартал)) AND ((@IsNull_Год = 1 AND [Год] IS NULL) O" +
+                "R ([Год] = @Original_Год)) AND ((@IsNull_Оператор = 1 AND [Оператор] IS NULL) OR" +
+                " ([Оператор] = @Original_Оператор)) AND ((@IsNull_Заметки = 1 AND [Заметки] IS N" +
+                "ULL) OR ([Заметки] = @Original_Заметки)));\r\nSELECT [Id Организация], [Название о" +
+                "рганизации], Налоги, [СЗВ-М I], [СЗВ-М II], [СЗВ-М III], ФСС, ЕНВД, НДС, Прибыль" +
+                ", РСВ, НДФЛ, [2НДФЛ], УСН, Баланс, Статистика, Квартал, Год, Оператор, Заметки F" +
+                "ROM Организация WHERE ([Id Организация] = @Id_Организация)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Организация", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id Организация", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Название_организации", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Название организации", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Налоги", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Налоги", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p1", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М I", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p4", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М II", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p7", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М III", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ФСС", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ФСС", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ЕНВД", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ЕНВД", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@НДС", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "НДС", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Прибыль", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Прибыль", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@РСВ", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "РСВ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@НДФЛ", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "НДФЛ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p10", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "2НДФЛ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@УСН", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "УСН", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Баланс", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Баланс", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Статистика", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Статистика", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Квартал", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Квартал", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Год", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Год", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Оператор", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Оператор", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Заметки", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Заметки", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p1", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М II", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p4", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М I", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Организация", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id Организация", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Название_организации", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Название организации", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Название_организации", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Название организации", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Налоги", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Налоги", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Налоги", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Налоги", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М I", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p2", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М I", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p6", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М II", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p5", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М II", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p9", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М III", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p8", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М III", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ФСС", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ФСС", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ФСС", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ФСС", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ЕНВД", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ЕНВД", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -4476,6 +4930,14 @@ SELECT [Id Организация], [Название организации], �
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_РСВ", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "РСВ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_НДФЛ", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "НДФЛ", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_НДФЛ", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "НДФЛ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p12", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "2НДФЛ", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p11", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "2НДФЛ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_УСН", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "УСН", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_УСН", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "УСН", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Баланс", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Баланс", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Баланс", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Баланс", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Статистика", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Статистика", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Статистика", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Статистика", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Квартал", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Квартал", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Квартал", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Квартал", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Год", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Год", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -4484,10 +4946,6 @@ SELECT [Id Организация], [Название организации], �
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Оператор", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Оператор", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Заметки", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Заметки", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Заметки", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Заметки", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М II", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p2", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М II", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p6", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М I", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p5", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СЗВ-М I", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4503,9 +4961,7 @@ SELECT [Id Организация], [Название организации], �
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT   [Id Организация], [Название организации], Налоги, ФСС, ЕНВД, НДС, Прибыл" +
-                "ь, РСВ, НДФЛ, Квартал, Год, Оператор, Заметки, [СЗВ-М II], [СЗВ-М I]\r\nFROM      " +
-                "Организация";
+            this._commandCollection[0].CommandText = "SELECT   Организация.*\r\nFROM      Организация";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4566,7 +5022,27 @@ SELECT [Id Организация], [Название организации], �
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id_Организация, string Original_Название_организации, string Original_Налоги, string Original_ФСС, string Original_ЕНВД, string Original_НДС, string Original_Прибыль, string Original_РСВ, string Original_НДФЛ, string Original_Квартал, string Original_Год, string Original_Оператор, string Original_Заметки, string p2, string p5) {
+        public virtual int Delete(
+                    int Original_Id_Организация, 
+                    string Original_Название_организации, 
+                    string Original_Налоги, 
+                    string p2, 
+                    string p5, 
+                    string p8, 
+                    string Original_ФСС, 
+                    string Original_ЕНВД, 
+                    string Original_НДС, 
+                    string Original_Прибыль, 
+                    string Original_РСВ, 
+                    string Original_НДФЛ, 
+                    string p11, 
+                    string Original_УСН, 
+                    string Original_Баланс, 
+                    string Original_Статистика, 
+                    string Original_Квартал, 
+                    string Original_Год, 
+                    string Original_Оператор, 
+                    string Original_Заметки) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id_Организация));
             if ((Original_Название_организации == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -4584,101 +5060,141 @@ SELECT [Id Организация], [Название организации], �
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Налоги));
             }
-            if ((Original_ФСС == null)) {
+            if ((p2 == null)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_ФСС));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(p2));
             }
-            if ((Original_ЕНВД == null)) {
+            if ((p5 == null)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_ЕНВД));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(p5));
             }
-            if ((Original_НДС == null)) {
+            if ((p8 == null)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_НДС));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(p8));
             }
-            if ((Original_Прибыль == null)) {
+            if ((Original_ФСС == null)) {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_Прибыль));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_ФСС));
             }
-            if ((Original_РСВ == null)) {
+            if ((Original_ЕНВД == null)) {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_РСВ));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_ЕНВД));
             }
-            if ((Original_НДФЛ == null)) {
+            if ((Original_НДС == null)) {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_НДФЛ));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_НДС));
             }
-            if ((Original_Квартал == null)) {
+            if ((Original_Прибыль == null)) {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_Квартал));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_Прибыль));
             }
-            if ((Original_Год == null)) {
+            if ((Original_РСВ == null)) {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_Год));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_РСВ));
             }
-            if ((Original_Оператор == null)) {
+            if ((Original_НДФЛ == null)) {
                 this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((string)(Original_Оператор));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((string)(Original_НДФЛ));
             }
-            if ((Original_Заметки == null)) {
+            if ((p11 == null)) {
                 this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[24].Value = ((string)(Original_Заметки));
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((string)(p11));
             }
-            if ((p2 == null)) {
+            if ((Original_УСН == null)) {
                 this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[26].Value = ((string)(p2));
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((string)(Original_УСН));
             }
-            if ((p5 == null)) {
+            if ((Original_Баланс == null)) {
                 this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[28].Value = ((string)(p5));
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((string)(Original_Баланс));
+            }
+            if ((Original_Статистика == null)) {
+                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[30].Value = ((string)(Original_Статистика));
+            }
+            if ((Original_Квартал == null)) {
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[32].Value = ((string)(Original_Квартал));
+            }
+            if ((Original_Год == null)) {
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[34].Value = ((string)(Original_Год));
+            }
+            if ((Original_Оператор == null)) {
+                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[36].Value = ((string)(Original_Оператор));
+            }
+            if ((Original_Заметки == null)) {
+                this.Adapter.DeleteCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[38].Value = ((string)(Original_Заметки));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4700,7 +5216,27 @@ SELECT [Id Организация], [Название организации], �
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Id_Организация, string Название_организации, string Налоги, string ФСС, string ЕНВД, string НДС, string Прибыль, string РСВ, string НДФЛ, string Квартал, string Год, string Оператор, string Заметки, string p1, string p4) {
+        public virtual int Insert(
+                    int Id_Организация, 
+                    string Название_организации, 
+                    string Налоги, 
+                    string p1, 
+                    string p4, 
+                    string p7, 
+                    string ФСС, 
+                    string ЕНВД, 
+                    string НДС, 
+                    string Прибыль, 
+                    string РСВ, 
+                    string НДФЛ, 
+                    string p10, 
+                    string УСН, 
+                    string Баланс, 
+                    string Статистика, 
+                    string Квартал, 
+                    string Год, 
+                    string Оператор, 
+                    string Заметки) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id_Организация));
             if ((Название_организации == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -4714,77 +5250,107 @@ SELECT [Id Организация], [Название организации], �
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Налоги));
             }
-            if ((ФСС == null)) {
+            if ((p1 == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(ФСС));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(p1));
             }
-            if ((ЕНВД == null)) {
+            if ((p4 == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(ЕНВД));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(p4));
             }
-            if ((НДС == null)) {
+            if ((p7 == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(НДС));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(p7));
             }
-            if ((Прибыль == null)) {
+            if ((ФСС == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Прибыль));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(ФСС));
             }
-            if ((РСВ == null)) {
+            if ((ЕНВД == null)) {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(РСВ));
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(ЕНВД));
             }
-            if ((НДФЛ == null)) {
+            if ((НДС == null)) {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(НДФЛ));
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(НДС));
             }
-            if ((Квартал == null)) {
+            if ((Прибыль == null)) {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(Квартал));
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(Прибыль));
             }
-            if ((Год == null)) {
+            if ((РСВ == null)) {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(Год));
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(РСВ));
             }
-            if ((Оператор == null)) {
+            if ((НДФЛ == null)) {
                 this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(Оператор));
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(НДФЛ));
             }
-            if ((Заметки == null)) {
+            if ((p10 == null)) {
                 this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(Заметки));
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(p10));
             }
-            if ((p1 == null)) {
+            if ((УСН == null)) {
                 this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(p1));
+                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(УСН));
             }
-            if ((p4 == null)) {
+            if ((Баланс == null)) {
                 this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(p4));
+                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(Баланс));
+            }
+            if ((Статистика == null)) {
+                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[15].Value = ((string)(Статистика));
+            }
+            if ((Квартал == null)) {
+                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[16].Value = ((string)(Квартал));
+            }
+            if ((Год == null)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((string)(Год));
+            }
+            if ((Оператор == null)) {
+                this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[18].Value = ((string)(Оператор));
+            }
+            if ((Заметки == null)) {
+                this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[19].Value = ((string)(Заметки));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4810,33 +5376,43 @@ SELECT [Id Организация], [Название организации], �
                     int Id_Организация, 
                     string Название_организации, 
                     string Налоги, 
+                    string p1, 
+                    string p4, 
+                    string p7, 
                     string ФСС, 
                     string ЕНВД, 
                     string НДС, 
                     string Прибыль, 
                     string РСВ, 
                     string НДФЛ, 
+                    string p10, 
+                    string УСН, 
+                    string Баланс, 
+                    string Статистика, 
                     string Квартал, 
                     string Год, 
                     string Оператор, 
                     string Заметки, 
-                    string p1, 
-                    string p4, 
                     int Original_Id_Организация, 
                     string Original_Название_организации, 
                     string Original_Налоги, 
+                    string p2, 
+                    string p5, 
+                    string p8, 
                     string Original_ФСС, 
                     string Original_ЕНВД, 
                     string Original_НДС, 
                     string Original_Прибыль, 
                     string Original_РСВ, 
                     string Original_НДФЛ, 
+                    string p11, 
+                    string Original_УСН, 
+                    string Original_Баланс, 
+                    string Original_Статистика, 
                     string Original_Квартал, 
                     string Original_Год, 
                     string Original_Оператор, 
-                    string Original_Заметки, 
-                    string p2, 
-                    string p5) {
+                    string Original_Заметки) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id_Организация));
             if ((Название_организации == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -4850,190 +5426,260 @@ SELECT [Id Организация], [Название организации], �
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Налоги));
             }
-            if ((ФСС == null)) {
+            if ((p1 == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(ФСС));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(p1));
             }
-            if ((ЕНВД == null)) {
+            if ((p4 == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(ЕНВД));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(p4));
             }
-            if ((НДС == null)) {
+            if ((p7 == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(НДС));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(p7));
             }
-            if ((Прибыль == null)) {
+            if ((ФСС == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Прибыль));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(ФСС));
             }
-            if ((РСВ == null)) {
+            if ((ЕНВД == null)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(РСВ));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(ЕНВД));
             }
-            if ((НДФЛ == null)) {
+            if ((НДС == null)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(НДФЛ));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(НДС));
             }
-            if ((Квартал == null)) {
+            if ((Прибыль == null)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Квартал));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Прибыль));
             }
-            if ((Год == null)) {
+            if ((РСВ == null)) {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Год));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(РСВ));
             }
-            if ((Оператор == null)) {
+            if ((НДФЛ == null)) {
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Оператор));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(НДФЛ));
             }
-            if ((Заметки == null)) {
+            if ((p10 == null)) {
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Заметки));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(p10));
             }
-            if ((p1 == null)) {
+            if ((УСН == null)) {
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(p1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(УСН));
             }
-            if ((p4 == null)) {
+            if ((Баланс == null)) {
                 this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(p4));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Баланс));
             }
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_Id_Организация));
-            if ((Original_Название_организации == null)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+            if ((Статистика == null)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Статистика));
+            }
+            if ((Квартал == null)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Квартал));
+            }
+            if ((Год == null)) {
                 this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Название_организации));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Год));
             }
-            if ((Original_Налоги == null)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+            if ((Оператор == null)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Оператор));
+            }
+            if ((Заметки == null)) {
                 this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Налоги));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Заметки));
             }
-            if ((Original_ФСС == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_ФСС));
-            }
-            if ((Original_ЕНВД == null)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_Id_Организация));
+            if ((Original_Название_организации == null)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_ЕНВД));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_Название_организации));
             }
-            if ((Original_НДС == null)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_НДС));
-            }
-            if ((Original_Прибыль == null)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+            if ((Original_Налоги == null)) {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_Прибыль));
-            }
-            if ((Original_РСВ == null)) {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_РСВ));
-            }
-            if ((Original_НДФЛ == null)) {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(Original_НДФЛ));
-            }
-            if ((Original_Квартал == null)) {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(Original_Квартал));
-            }
-            if ((Original_Год == null)) {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(Original_Год));
-            }
-            if ((Original_Оператор == null)) {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(Original_Оператор));
-            }
-            if ((Original_Заметки == null)) {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((string)(Original_Заметки));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_Налоги));
             }
             if ((p2 == null)) {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((string)(p2));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(p2));
             }
             if ((p5 == null)) {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((string)(p5));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(p5));
+            }
+            if ((p8 == null)) {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(p8));
+            }
+            if ((Original_ФСС == null)) {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_ФСС));
+            }
+            if ((Original_ЕНВД == null)) {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_ЕНВД));
+            }
+            if ((Original_НДС == null)) {
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(Original_НДС));
+            }
+            if ((Original_Прибыль == null)) {
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(Original_Прибыль));
+            }
+            if ((Original_РСВ == null)) {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(Original_РСВ));
+            }
+            if ((Original_НДФЛ == null)) {
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((string)(Original_НДФЛ));
+            }
+            if ((p11 == null)) {
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((string)(p11));
+            }
+            if ((Original_УСН == null)) {
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((string)(Original_УСН));
+            }
+            if ((Original_Баланс == null)) {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((string)(Original_Баланс));
+            }
+            if ((Original_Статистика == null)) {
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((string)(Original_Статистика));
+            }
+            if ((Original_Квартал == null)) {
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((string)(Original_Квартал));
+            }
+            if ((Original_Год == null)) {
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[54].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((string)(Original_Год));
+            }
+            if ((Original_Оператор == null)) {
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[56].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((string)(Original_Оператор));
+            }
+            if ((Original_Заметки == null)) {
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[58].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[58].Value = ((string)(Original_Заметки));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5058,34 +5704,44 @@ SELECT [Id Организация], [Название организации], �
         public virtual int Update(
                     string Название_организации, 
                     string Налоги, 
+                    string p1, 
+                    string p4, 
+                    string p7, 
                     string ФСС, 
                     string ЕНВД, 
                     string НДС, 
                     string Прибыль, 
                     string РСВ, 
                     string НДФЛ, 
+                    string p10, 
+                    string УСН, 
+                    string Баланс, 
+                    string Статистика, 
                     string Квартал, 
                     string Год, 
                     string Оператор, 
                     string Заметки, 
-                    string p1, 
-                    string p4, 
                     int Original_Id_Организация, 
                     string Original_Название_организации, 
                     string Original_Налоги, 
+                    string p2, 
+                    string p5, 
+                    string p8, 
                     string Original_ФСС, 
                     string Original_ЕНВД, 
                     string Original_НДС, 
                     string Original_Прибыль, 
                     string Original_РСВ, 
                     string Original_НДФЛ, 
+                    string p11, 
+                    string Original_УСН, 
+                    string Original_Баланс, 
+                    string Original_Статистика, 
                     string Original_Квартал, 
                     string Original_Год, 
                     string Original_Оператор, 
-                    string Original_Заметки, 
-                    string p2, 
-                    string p5) {
-            return this.Update(Original_Id_Организация, Название_организации, Налоги, ФСС, ЕНВД, НДС, Прибыль, РСВ, НДФЛ, Квартал, Год, Оператор, Заметки, p1, p4, Original_Id_Организация, Original_Название_организации, Original_Налоги, Original_ФСС, Original_ЕНВД, Original_НДС, Original_Прибыль, Original_РСВ, Original_НДФЛ, Original_Квартал, Original_Год, Original_Оператор, Original_Заметки, p2, p5);
+                    string Original_Заметки) {
+            return this.Update(Original_Id_Организация, Название_организации, Налоги, p1, p4, p7, ФСС, ЕНВД, НДС, Прибыль, РСВ, НДФЛ, p10, УСН, Баланс, Статистика, Квартал, Год, Оператор, Заметки, Original_Id_Организация, Original_Название_организации, Original_Налоги, p2, p5, p8, Original_ФСС, Original_ЕНВД, Original_НДС, Original_Прибыль, Original_РСВ, Original_НДФЛ, p11, Original_УСН, Original_Баланс, Original_Статистика, Original_Квартал, Original_Год, Original_Оператор, Original_Заметки);
         }
     }
     
