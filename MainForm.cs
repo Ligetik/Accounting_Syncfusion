@@ -87,6 +87,7 @@ namespace SyncfusionWinFormsApp1
 
                 MessageBox.Show(error.Message);
             }
+           
 
             //this.sfDataGrid1.Columns.Add(new GridComboBoxColumn() { MappingName = "Квартал", HeaderText = "Квартал" });
             //(this.sfDataGrid1.Columns["Кварталы"] as GridComboBoxColumn).DataSource = sqlDataSet;
@@ -112,8 +113,7 @@ namespace SyncfusionWinFormsApp1
         private void sfDataGrid1_QueryCellStyle(object sender, Syncfusion.WinForms.DataGrid.Events.QueryCellStyleEventArgs e)
         {
             if (e.ColumnIndex == 5 | e.ColumnIndex == 6 | e.ColumnIndex == 7 | e.ColumnIndex == 8 | e.ColumnIndex == 9 |
-                e.ColumnIndex == 10 | e.ColumnIndex == 11 | e.ColumnIndex == 12 | e.ColumnIndex == 13 | e.ColumnIndex == 14 |
-                e.ColumnIndex == 15 | e.ColumnIndex == 16 | e.ColumnIndex == 17 | e.ColumnIndex == 18 && e.DisplayText != null)
+                e.ColumnIndex == 10 | e.ColumnIndex == 11 | e.ColumnIndex == 12 | e.ColumnIndex == 13 && e.DisplayText != null)
             {
                 string Cell_color = Convert.ToString(e.DisplayText);
 
@@ -305,8 +305,6 @@ namespace SyncfusionWinFormsApp1
         {
             try
             {
-                this.sfDataGrid1.ExpandAllGroup();
-
                 PrintPreviewDialog printdialog = new PrintPreviewDialog();
 
                 //MemoryStream pdfstream = new MemoryStream();
@@ -358,8 +356,6 @@ namespace SyncfusionWinFormsApp1
                 printdialog.Document = pdfviewer.PrintDocument;
                 printdialog.PrintPreviewControl.Document.PrinterSettings.DefaultPageSettings.Landscape = pdfviewer.PrinterSettings.PageOrientation == Syncfusion.Windows.PdfViewer.PdfViewerPrintOrientation.Landscape;
                 printdialog.ShowDialog();
-
-                this.sfDataGrid1.CollapseAllGroup();
             }
             catch (Exception error)
             {
@@ -479,6 +475,10 @@ namespace SyncfusionWinFormsApp1
         }
         #endregion
 
+        private void sfButtonSave_Click(object sender, EventArgs e)
+        {
+
+        }
 
         #region SaveChanges
         private void SaveChangesSfDataGrid1()
@@ -564,10 +564,7 @@ namespace SyncfusionWinFormsApp1
         {
             if (e.Group.Key.Equals("4"))
             {
-                sfDataGrid1.Columns["2НДФЛ"].Visible = false;
-                sfDataGrid1.Columns["УСН"].Visible = false;
-                sfDataGrid1.Columns["Статистика"].Visible = false;
-                sfDataGrid1.Columns["Баланс"].Visible = false;
+                sfDataGrid1.Columns["РСВ"].Visible = true;
             }
         }
 
@@ -576,10 +573,7 @@ namespace SyncfusionWinFormsApp1
             
             if (e.Group.Key.Equals("4"))
             {
-                sfDataGrid1.Columns["2НДФЛ"].Visible = true;
-                sfDataGrid1.Columns["УСН"].Visible = true;
-                sfDataGrid1.Columns["Статистика"].Visible = true;
-                sfDataGrid1.Columns["Баланс"].Visible = true;
+                sfDataGrid1.Columns["РСВ"].Visible = false;
             }
         }
     }
