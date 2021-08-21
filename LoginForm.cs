@@ -1,4 +1,5 @@
-﻿using Syncfusion.WinForms.Controls;
+﻿using Syncfusion.Windows.Forms;
+using Syncfusion.WinForms.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,19 +30,20 @@ namespace SyncfusionWinFormsApp1
             this.Style.TitleBar.Font = this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Style.TitleBar.TextHorizontalAlignment = HorizontalAlignment.Center;
             this.Style.TitleBar.TextVerticalAlignment = System.Windows.Forms.VisualStyles.VerticalAlignment.Center;
+            MessageBoxAdv.MessageBoxStyle = MessageBoxAdv.Style.Metro;
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            this.ActiveControl = label1;
+            this.ActiveControl = LineBlue;
         }
 
         private void sfButtonSignIn_Click(object sender, EventArgs e)
         {
             try
             {
-                string loginUser = textBoxLogin.Text;
-                string passUser = textBoxPass.Text;
+                string loginUser = textBoxLoginAuth.Text;
+                string passUser = textBoxPassAuth.Text;
 
                 DB db = new DB();
 
@@ -59,25 +61,27 @@ namespace SyncfusionWinFormsApp1
                 }
                 else
                 {
-                    MessageBox.Show("Неверный логин и пароль");
-                    textBoxLogin.Clear();
-                    textBoxPass.Clear();
-                    textBoxLogin.Focus();
+                    MessageBoxAdv.Show("Неверный логин и пароль");
+                    textBoxLoginAuth.Clear();
+                    textBoxPassAuth.Clear();
+                    textBoxLoginAuth.Focus();
                 }
             }
             catch (Exception error)
             {
-                MessageBox.Show(error.Message);
+                MessageBoxAdv.Show(error.Message);
             }
             
         }
 
         #region TextBoxes Events
+
+        #region Auth
         private void textBoxLogin_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == '\r')
             {
-                textBoxPass.Focus();
+                textBoxPassAuth.Focus();
             }
         }
 
@@ -90,39 +94,278 @@ namespace SyncfusionWinFormsApp1
         }
         private void textBoxLogin_Enter(object sender, EventArgs e)
         {
-            if (textBoxLogin.Text == "Логин")
+            if (textBoxLoginAuth.Text == "Логин")
             {
-                textBoxLogin.Text = "";
-                textBoxLogin.ForeColor = Color.Black;
+                textBoxLoginAuth.Text = "";
+                textBoxLoginAuth.ForeColor = Color.Black;
             }
         }
 
         private void textBoxLogin_Leave(object sender, EventArgs e)
         {
-            if (textBoxLogin.Text == "")
+            if (textBoxLoginAuth.Text == "")
             {
-                textBoxLogin.Text = "Логин";
-                textBoxLogin.ForeColor = Color.DimGray;
+                textBoxLoginAuth.Text = "Логин";
+                textBoxLoginAuth.ForeColor = Color.DimGray;
             }
         }
 
         private void textBoxPass_Enter(object sender, EventArgs e)
         {
-            if (textBoxPass.Text == "Пароль")
+            if (textBoxPassAuth.Text == "Пароль")
             {
-                textBoxPass.Text = "";
-                textBoxPass.ForeColor = Color.Black;
+                textBoxPassAuth.Text = "";
+                textBoxPassAuth.ForeColor = Color.Black;
             }
         }
 
         private void textBoxPass_Leave(object sender, EventArgs e)
         {
-            if (textBoxPass.Text == "")
+            if (textBoxPassAuth.Text == "")
             {
-                textBoxPass.Text = "Пароль";
-                textBoxPass.ForeColor = Color.DimGray;
+                textBoxPassAuth.Text = "Пароль";
+                textBoxPassAuth.ForeColor = Color.DimGray;
             }
         }
         #endregion
+
+        #region Change
+        private void textBoxLoginChange_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r')
+            {
+                textBoxPassChange.Focus();
+            }
+        }
+
+        private void textBoxPassChange_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r')
+            {
+                textBoxNewPassChange.Focus();
+            }
+        }
+        private void textBoxNewPassChange_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r')
+            {
+                textBoxConfPassChange.Focus();
+            }
+        }
+        private void textBoxConfPassChange_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r')
+            {
+                sfButtonSaveChanges.Focus();
+            }
+        }
+        private void textBoxLoginChange_Enter(object sender, EventArgs e)
+        {
+            if (textBoxLoginChange.Text == "Логин")
+            {
+                textBoxLoginChange.Text = "";
+                textBoxLoginChange.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxPassChange_Enter(object sender, EventArgs e)
+        {
+            if (textBoxPassChange.Text == "Текущий пароль")
+            {
+                textBoxPassChange.Text = "";
+                textBoxPassChange.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxNewPassChange_Enter(object sender, EventArgs e)
+        {
+            if (textBoxNewPassChange.Text == "Новый пароль")
+            {
+                textBoxNewPassChange.Text = "";
+                textBoxNewPassChange.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxConfPassChange_Enter(object sender, EventArgs e)
+        {
+            if (textBoxConfPassChange.Text == "Подтвердить пароль")
+            {
+                textBoxConfPassChange.Text = "";
+                textBoxConfPassChange.ForeColor = Color.Black;
+            }
+        }
+        private void textBoxLoginChange_Leave(object sender, EventArgs e)
+        {
+            if (textBoxLoginChange.Text == "")
+            {
+                textBoxLoginChange.Text = "Логин";
+                textBoxLoginChange.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void textBoxPassChange_Leave(object sender, EventArgs e)
+        {
+            if (textBoxPassChange.Text == "")
+            {
+                textBoxPassChange.Text = "Текущий пароль";
+                textBoxPassChange.ForeColor = Color.DimGray;
+            }
+        }
+        private void textBoxNewPassChange_Leave(object sender, EventArgs e)
+        {
+            if (textBoxNewPassChange.Text == "")
+            {
+                textBoxNewPassChange.Text = "Новый пароль";
+                textBoxNewPassChange.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void textBoxConfPassChange_Leave(object sender, EventArgs e)
+        {
+            if (textBoxConfPassChange.Text == "")
+            {
+                textBoxConfPassChange.Text = "Подтвердить пароль";
+                textBoxConfPassChange.ForeColor = Color.DimGray;
+            }
+        }
+
+        #endregion
+
+        #endregion
+
+        private void sfButtonChangePass_Click(object sender, EventArgs e)
+        {
+            //auth
+            labelAuth.Visible = false;           
+
+            pictureBoxLoginAuth.Visible = false;
+            textBoxLoginAuth.Visible = false;
+            LineBlueAuth1.Visible = false;
+
+            pictureBoxPassAuth.Visible = false;
+            textBoxPassAuth.Visible = false;
+            LineBlueAuth2.Visible = false;
+
+            sfButtonSignIn.Visible = false;
+            sfButtonChangePass.Visible = false;
+
+            //change
+            labelChange.Visible = true;
+
+            pictureBoxLoginChange.Visible = true;
+            textBoxLoginChange.Visible = true;
+            LineBlueChange1.Visible = true;
+
+            pictureBoxPassChange.Visible = true;
+            textBoxPassChange.Visible = true;
+            LineBlueChange2.Visible = true;
+
+            pictureBoxNewPassChange.Visible = true;
+            textBoxNewPassChange.Visible = true;
+            LineBlueChange3.Visible = true;
+
+            pictureBoxConfPassChange.Visible = true;
+            textBoxConfPassChange.Visible = true;
+            LineBlueChange4.Visible = true;
+
+            sfButtonSaveChanges.Visible = true;
+            sfButtonCancel.Visible = true;
+        }
+
+        private void sfButtonCancel_Click(object sender, EventArgs e)
+        {
+            //auth
+            labelAuth.Visible = true;
+
+            pictureBoxLoginAuth.Visible = true;
+            textBoxLoginAuth.Visible = true;
+            LineBlueAuth1.Visible = true;
+
+            pictureBoxPassAuth.Visible = true;
+            textBoxPassAuth.Visible = true;
+            LineBlueAuth2.Visible = true;
+
+            sfButtonSignIn.Visible = true;
+            sfButtonChangePass.Visible = true;
+
+            //change
+            labelChange.Visible = false;
+
+            pictureBoxLoginChange.Visible = false;
+            textBoxLoginChange.Visible = false;
+            LineBlueChange1.Visible = false;
+
+            pictureBoxPassChange.Visible = false;
+            textBoxPassChange.Visible = false;
+            LineBlueChange2.Visible = false;
+
+            pictureBoxNewPassChange.Visible = false;
+            textBoxNewPassChange.Visible = false;
+            LineBlueChange3.Visible = false;
+
+            pictureBoxConfPassChange.Visible = false;
+            textBoxConfPassChange.Visible = false;
+            LineBlueChange4.Visible = false;
+
+            sfButtonSaveChanges.Visible = false;
+            sfButtonCancel.Visible = false;
+
+
+            textBoxLoginChange.Clear();
+            textBoxPassChange.Clear();
+            textBoxNewPassChange.Clear();
+            textBoxConfPassChange.Clear();
+            textBoxLoginChange.Text = "Логин";
+            textBoxPassChange.Text = "Текущий пароль";
+            textBoxNewPassChange.Text = "Новый пароль";
+            textBoxConfPassChange.Text = "Подтвердить пароль";
+            textBoxLoginAuth.Focus();
+        }
+
+        private void sfButtonSaveChanges_Click(object sender, EventArgs e)
+        {
+            DB dB = new DB();
+
+            string newPassUser = textBoxNewPassChange.Text;
+            string confirmPassUser = textBoxConfPassChange.Text;
+            string loginUser = textBoxLoginChange.Text;
+            string passUser = textBoxPassChange.Text;
+
+            try
+            {
+                if (newPassUser == confirmPassUser)
+                {
+                    string sqlExpression = "UPDATE users SET pass = '" + confirmPassUser.Trim() + "'WHERE login = '" + loginUser.Trim()
+                        + "' AND pass = '" + passUser.Trim() + "'";
+
+                    string connectionString = @"Data Source=DESKTOP-7VG9T54;Initial Catalog=sql;Integrated Security=True";
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+                        SqlCommand command = new SqlCommand(sqlExpression, connection);
+
+                        int number = command.ExecuteNonQuery();
+
+                        if (number > 0)
+                        {
+                            MessageBoxAdv.Show("Ваш пароль изменён");
+                        }
+
+                        else
+                        {
+                            MessageBoxAdv.Show("Неверный логин и пароль, попробуйте ещё раз");
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBoxAdv.Show("Ваш пароль новый пароль не совпадает, попробуйте ещё раз");
+                }
+            }
+            catch (Exception f)
+            {
+                MessageBox.Show(f.Message);
+            }
+        }
     }
 }
