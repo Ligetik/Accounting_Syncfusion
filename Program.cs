@@ -17,7 +17,7 @@ namespace SyncfusionWinFormsApp1
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NDc3ODU3QDMxMzkyZTMyMmUzMFZBS2l3VHBISFAxUDR0ZW96N25oeWFyTE43b0tNRG5ubXRoTXo4bVpWaVU9");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new MetroForm1());
         }
     }
 }

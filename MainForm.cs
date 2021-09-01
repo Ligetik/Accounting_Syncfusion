@@ -564,7 +564,7 @@ namespace SyncfusionWinFormsApp1
         {
             if (e.Group.Key.Equals("4"))
             {
-                sfDataGrid1.Columns["РСВ"].Visible = true;
+                sfDataGrid1.Columns["РСВ"].Visible = false;
             }
         }
 
@@ -573,7 +573,7 @@ namespace SyncfusionWinFormsApp1
             
             if (e.Group.Key.Equals("4"))
             {
-                sfDataGrid1.Columns["РСВ"].Visible = false;
+                sfDataGrid1.Columns["РСВ"].Visible = true;
             }
         }
     }
