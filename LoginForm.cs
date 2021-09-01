@@ -272,7 +272,7 @@ namespace SyncfusionWinFormsApp1
             sfButtonCancel.Visible = true;
         }
 
-        private void sfButtonCancel_Click(object sender, EventArgs e)
+        private void Cancel()
         {
             //auth
             labelAuth.Visible = true;
@@ -322,6 +322,11 @@ namespace SyncfusionWinFormsApp1
             textBoxLoginAuth.Focus();
         }
 
+        private void sfButtonCancel_Click(object sender, EventArgs e)
+        {
+            Cancel();
+        }
+
         private void sfButtonSaveChanges_Click(object sender, EventArgs e)
         {
             DB dB = new DB();
@@ -349,6 +354,7 @@ namespace SyncfusionWinFormsApp1
                         if (number > 0)
                         {
                             MessageBoxAdv.Show("Ваш пароль изменён");
+                            Cancel();
                         }
 
                         else

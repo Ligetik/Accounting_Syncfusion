@@ -150,37 +150,37 @@ namespace SyncfusionWinFormsApp1
             }
         }
 
-        //#region ContextMenu Events
-        //private void sfDataGrid1_ContextMenuOpening(object sender, Syncfusion.WinForms.DataGrid.Events.ContextMenuOpeningEventArgs e)
-        //{
-        //    if (e.ColumnIndex == 2 || e.ColumnIndex == 3 || e.ColumnIndex == 12 || e.ColumnIndex == 13 ||
-        //        e.ColumnIndex == 14 || e.ColumnIndex == 15)
-        //    {
-        //        recordContextMenu.Items[0].Enabled = false;
-        //        recordContextMenu.Items[1].Enabled = false;
-        //        recordContextMenu.Items[2].Enabled = false;
-        //    }
-        //    else
-        //    {
-        //        recordContextMenu.Items[0].Enabled = true;
-        //        recordContextMenu.Items[1].Enabled = true;
-        //        recordContextMenu.Items[2].Enabled = true;
-        //    }
-        //}
-        //#endregion
+            //#region ContextMenu Events
+            //private void sfDataGrid1_ContextMenuOpening(object sender, Syncfusion.WinForms.DataGrid.Events.ContextMenuOpeningEventArgs e)
+            //{
+            //    if (e.ColumnIndex == 2 || e.ColumnIndex == 3 || e.ColumnIndex == 12 || e.ColumnIndex == 13 ||
+            //        e.ColumnIndex == 14 || e.ColumnIndex == 15)
+            //    {
+            //        recordContextMenu.Items[0].Enabled = false;
+            //        recordContextMenu.Items[1].Enabled = false;
+            //        recordContextMenu.Items[2].Enabled = false;
+            //    }
+            //    else
+            //    {
+            //        recordContextMenu.Items[0].Enabled = true;
+            //        recordContextMenu.Items[1].Enabled = true;
+            //        recordContextMenu.Items[2].Enabled = true;
+            //    }
+            //}
+            //#endregion
 
-        //save//
-        // try
-        //    {
-        //        организацияBindingSource.EndEdit();
-        //        организацияTableAdapter.Update(this.sqlDataSet.Организация);
+            //save//
+            // try
+            //    {
+            //        организацияBindingSource.EndEdit();
+            //        организацияTableAdapter.Update(this.sqlDataSet.Организация);
 
-        //MessageBox.Show("Данные успешно сохранены!", "Сохранение", MessageBoxButtons.OK);
-        //    }
-        //    catch (Exception f)
-        //    {
-        //        MessageBox.Show(f.Message);
-        //    }
+            //MessageBox.Show("Данные успешно сохранены!", "Сохранение", MessageBoxButtons.OK);
+            //    }
+            //    catch (Exception f)
+            //    {
+            //        MessageBox.Show(f.Message);
+            //    }
 
 
         #region ExcelExport 
