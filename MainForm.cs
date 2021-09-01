@@ -564,7 +564,12 @@ namespace SyncfusionWinFormsApp1
         {
             if (e.Group.Key.Equals("4"))
             {
-                sfDataGrid1.Columns["РСВ"].Visible = false;
+                sfDataGrid1.Columns["СЗВ-М III"].Visible = false;
+                sfDataGrid1.Columns["2НДФЛ"].Visible = false;
+                sfDataGrid1.Columns["УСН"].Visible = false;
+                sfDataGrid1.Columns["Баланс"].Visible = false;
+                sfDataGrid1.Columns["Статистика"].Visible = false;
+                sfDataGrid1.Columns["СЗВ-СТАЖ"].Visible = false;
             }
         }
 
@@ -573,7 +578,12 @@ namespace SyncfusionWinFormsApp1
             
             if (e.Group.Key.Equals("4"))
             {
-                sfDataGrid1.Columns["РСВ"].Visible = true;
+                sfDataGrid1.Columns["СЗВ-М III"].Visible = true;
+                sfDataGrid1.Columns["2НДФЛ"].Visible = true;
+                sfDataGrid1.Columns["УСН"].Visible = true;
+                sfDataGrid1.Columns["Баланс"].Visible = true;
+                sfDataGrid1.Columns["Статистика"].Visible = true;
+                sfDataGrid1.Columns["СЗВ-СТАЖ"].Visible = true;
             }
         }
     }
