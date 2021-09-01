@@ -72,6 +72,8 @@ namespace SyncfusionWinFormsApp1 {
         
         private global::System.Data.DataRelation relationСтатус_Организация_Статистика;
         
+        private global::System.Data.DataRelation _relationСтатус_Организация_СЗВ_Стаж;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -389,6 +391,7 @@ namespace SyncfusionWinFormsApp1 {
             this.relationСтатус_Организация_УСН = this.Relations["Статус_Организация_УСН"];
             this.relationСтатус_Организация_Баланс = this.Relations["Статус_Организация_Баланс"];
             this.relationСтатус_Организация_Статистика = this.Relations["Статус_Организация_Статистика"];
+            this._relationСтатус_Организация_СЗВ_Стаж = this.Relations["Статус_Организация_СЗВ-Стаж"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -481,6 +484,10 @@ namespace SyncfusionWinFormsApp1 {
                         this.tableСтатус.СтатусыColumn}, new global::System.Data.DataColumn[] {
                         this.tableОрганизация.СтатистикаColumn}, false);
             this.Relations.Add(this.relationСтатус_Организация_Статистика);
+            this._relationСтатус_Организация_СЗВ_Стаж = new global::System.Data.DataRelation("Статус_Организация_СЗВ-Стаж", new global::System.Data.DataColumn[] {
+                        this.tableСтатус.СтатусыColumn}, new global::System.Data.DataColumn[] {
+                        this.tableОрганизация._СЗВ_СТАЖColumn}, false);
+            this.Relations.Add(this._relationСтатус_Организация_СЗВ_Стаж);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -908,7 +915,7 @@ namespace SyncfusionWinFormsApp1 {
                         СтатусRow parentСтатусRowByСтатус_Организация_УСН, 
                         СтатусRow parentСтатусRowByСтатус_Организация_Баланс, 
                         СтатусRow parentСтатусRowByСтатус_Организация_Статистика, 
-                        string _СЗВ_СТАЖ) {
+                        СтатусRow _parentСтатусRowByСтатус_Организация_СЗВ_Стаж) {
                 ОрганизацияRow rowОрганизацияRow = ((ОрганизацияRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -931,7 +938,7 @@ namespace SyncfusionWinFormsApp1 {
                         null,
                         null,
                         null,
-                        _СЗВ_СТАЖ};
+                        null};
                 if ((parentСтатусRowByСтатус_Организация_Налоги != null)) {
                     columnValuesArray[2] = parentСтатусRowByСтатус_Организация_Налоги[0];
                 }
@@ -976,6 +983,9 @@ namespace SyncfusionWinFormsApp1 {
                 }
                 if ((parentСтатусRowByСтатус_Организация_Статистика != null)) {
                     columnValuesArray[19] = parentСтатусRowByСтатус_Организация_Статистика[0];
+                }
+                if ((_parentСтатусRowByСтатус_Организация_СЗВ_Стаж != null)) {
+                    columnValuesArray[20] = _parentСтатусRowByСтатус_Организация_СЗВ_Стаж[0];
                 }
                 rowОрганизацияRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowОрганизацияRow);
@@ -3491,6 +3501,17 @@ namespace SyncfusionWinFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public СтатусRow _СтатусRowByСтатус_Организация_СЗВ_Стаж {
+                get {
+                    return ((СтатусRow)(this.GetParentRow(this.Table.ParentRelations["Статус_Организация_СЗВ-Стаж"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Статус_Организация_СЗВ-Стаж"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsНазвание_организацииNull() {
                 return this.IsNull(this.tableОрганизация.Название_организацииColumn);
             }
@@ -3943,6 +3964,17 @@ namespace SyncfusionWinFormsApp1 {
                 }
                 else {
                     return ((ОрганизацияRow[])(base.GetChildRows(this.Table.ChildRelations["Статус_Организация_Статистика"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ОрганизацияRow[] _GetОрганизацияRowsByСтатус_Организация_СЗВ_Стаж() {
+                if ((this.Table.ChildRelations["Статус_Организация_СЗВ-Стаж"] == null)) {
+                    return new ОрганизацияRow[0];
+                }
+                else {
+                    return ((ОрганизацияRow[])(base.GetChildRows(this.Table.ChildRelations["Статус_Организация_СЗВ-Стаж"])));
                 }
             }
         }
