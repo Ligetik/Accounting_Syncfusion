@@ -112,41 +112,60 @@ namespace SyncfusionWinFormsApp1
         
         private void sfDataGrid1_QueryCellStyle(object sender, Syncfusion.WinForms.DataGrid.Events.QueryCellStyleEventArgs e)
         {
-            if (e.ColumnIndex == 5 | e.ColumnIndex == 6 | e.ColumnIndex == 7 | e.ColumnIndex == 8 | e.ColumnIndex == 9 |
-                e.ColumnIndex == 10 | e.ColumnIndex == 11 | e.ColumnIndex == 12 | e.ColumnIndex == 13 && e.DisplayText != null)
+            switch (e.ColumnIndex)
             {
-                string Cell_color = Convert.ToString(e.DisplayText);
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                case 10:
+                case 11:
+                case 12:
+                case 13:
+                case 16:
+                case 17:
+                case 18:
+                case 19:
+                case 20:
+                case 21:
+                case 22 when e.DisplayText != null:
+                    {
+                        string Cell_color = Convert.ToString(e.DisplayText);
 
-                switch (Cell_color)
-                {
-                    case "Подготовлено":
-                        //Color.Yellow;
-                        e.Style.BackColor = Color.FromArgb(238, 238, 0);
-                        e.Style.TextColor = Color.FromArgb(238, 238, 0);
+                        switch (Cell_color)
+                        {
+                            case "Подготовлено":
+                                //Color.Yellow;
+                                e.Style.BackColor = Color.FromArgb(238, 238, 0);
+                                e.Style.TextColor = Color.FromArgb(238, 238, 0);
+                                break;
+                            case "Нужно сдать":
+                                //Color.Red;
+                                e.Style.BackColor = Color.FromArgb(246, 71, 71);
+                                e.Style.TextColor = Color.FromArgb(246, 71, 71);
+                                break;
+                            case "Сдано":
+                                //Color.Green;
+                                e.Style.BackColor = Color.FromArgb(30, 130, 76);
+                                e.Style.TextColor = Color.FromArgb(30, 130, 76);
+                                break;
+                            case "Синий":
+                                //Color.DeepSkyBlue;
+                                e.Style.BackColor = Color.FromArgb(107, 185, 240);
+                                e.Style.TextColor = Color.FromArgb(107, 185, 240);
+                                break;
+                            case "Фиолетовый":
+                                //Color.MediumPurple;
+                                e.Style.BackColor = Color.FromArgb(155, 89, 182);
+                                e.Style.TextColor = Color.FromArgb(155, 89, 182);
+                                break;
+                            default:
+                                break;
+                        }
+
                         break;
-                    case "Нужно сдать":
-                        //Color.Red;
-                        e.Style.BackColor = Color.FromArgb(246, 71, 71);
-                        e.Style.TextColor = Color.FromArgb(246, 71, 71);
-                        break;
-                    case "Сдано":
-                        //Color.Green;
-                        e.Style.BackColor = Color.FromArgb(30, 130, 76);
-                        e.Style.TextColor = Color.FromArgb(30, 130, 76);
-                        break;
-                    case "Синий":
-                        //Color.DeepSkyBlue;
-                        e.Style.BackColor = Color.FromArgb(107, 185, 240);
-                        e.Style.TextColor = Color.FromArgb(107, 185, 240);
-                        break;
-                    case "Фиолетовый":
-                        //Color.MediumPurple;
-                        e.Style.BackColor = Color.FromArgb(155, 89, 182);
-                        e.Style.TextColor = Color.FromArgb(155, 89, 182);
-                        break;
-                    default:
-                        break;
-                }
+                    }
             }
         }
 
@@ -262,39 +281,61 @@ namespace SyncfusionWinFormsApp1
         }
         private void OnCellExporting(object sender, DataGridCellExcelExportingEventArgs e)
         {
-            if (e.ColumnName == "Налоги" || e.ColumnName == "СЗВ-М" || e.ColumnName == "ФСС" || e.ColumnName == "ЕНВД" ||
-                e.ColumnName == "НДС" || e.ColumnName == "Прибыль" || e.ColumnName == "РСВ" || e.ColumnName == "НДФЛ" && e.CellValue != null)
+            //            if (e.ColumnName == "Налоги" || e.ColumnName == "СЗВ-М I" || e.ColumnName == "СЗВ-М II" || e.ColumnName == "ФСС" || e.ColumnName == "ЕНВД" ||
+            //e.ColumnName == "НДС" || e.ColumnName == "Прибыль" || e.ColumnName == "РСВ" || e.ColumnName == "НДФЛ" || e.ColumnName == "СЗВ-М III" ||
+            //e.ColumnName == "2НДФЛ" || e.ColumnName == "УСН" || e.ColumnName == "Баланс" || e.ColumnName == "Статистика" || e.ColumnName == "СЗВ-СТАЖ" &&
+            //e.CellValue != null)
+            switch (e.ColumnName)
             {
-
-                string Cell_color = Convert.ToString(e.CellValue);
-                if (e.CellType == ExportCellType.RecordCell)
-                {
-                    switch (Cell_color)
+                case "Налоги":
+                case "СЗВ-М I":
+                case "СЗВ-М II":
+                case "ФСС":
+                case "ЕНВД":
+                case "НДС":
+                case "Прибыль":
+                case "РСВ":
+                case "НДФЛ":
+                case "СЗВ-М III":
+                case "2НДФЛ":
+                case "УСН":
+                case "Баланс":
+                case "Статистика":
+                case "СЗВ-СТАЖ" when e.CellValue != null:
                     {
-                        case "Подготовлено":
-                            e.Range.CellStyle.Color = Color.Yellow;
-                            e.Range.CellStyle.Font.Color = ExcelKnownColors.Yellow;
-                            break;
-                        case "Нужно сдать":
-                            e.Range.CellStyle.Color = Color.Red;
-                            e.Range.CellStyle.Font.Color = ExcelKnownColors.Red;
-                            break;
-                        case "Сдано":
-                            e.Range.CellStyle.Color = Color.Green;
-                            e.Range.CellStyle.Font.Color = ExcelKnownColors.Green;
-                            break;
-                        case "Синий":
-                            e.Range.CellStyle.Color = Color.Blue;
-                            e.Range.CellStyle.Font.Color = ExcelKnownColors.Blue;
-                            break;
-                        case "Фиолетовый":
-                            e.Range.CellStyle.Color = Color.Magenta;
-                            e.Range.CellStyle.Font.Color = ExcelKnownColors.Magenta;
-                            break;
-                        default:
-                            break;
+
+                        string Cell_color = Convert.ToString(e.CellValue);
+                        if (e.CellType == ExportCellType.RecordCell)
+                        {
+                            switch (Cell_color)
+                            {
+                                case "Подготовлено":
+                                    e.Range.CellStyle.Color = Color.Yellow;
+                                    e.Range.CellStyle.Font.Color = ExcelKnownColors.Yellow;
+                                    break;
+                                case "Нужно сдать":
+                                    e.Range.CellStyle.Color = Color.Red;
+                                    e.Range.CellStyle.Font.Color = ExcelKnownColors.Red;
+                                    break;
+                                case "Сдано":
+                                    e.Range.CellStyle.Color = Color.Green;
+                                    e.Range.CellStyle.Font.Color = ExcelKnownColors.Green;
+                                    break;
+                                case "Синий":
+                                    e.Range.CellStyle.Color = Color.Blue;
+                                    e.Range.CellStyle.Font.Color = ExcelKnownColors.Blue;
+                                    break;
+                                case "Фиолетовый":
+                                    e.Range.CellStyle.Color = Color.Magenta;
+                                    e.Range.CellStyle.Font.Color = ExcelKnownColors.Magenta;
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+
+                        break;
                     }
-                }
             }
         }
 
@@ -373,46 +414,64 @@ namespace SyncfusionWinFormsApp1
 
                 var cellStyle = new PdfGridCellStyle();
 
-                if (e.CellValue != null && (e.ColumnName == "Налоги" || e.ColumnName == "СЗВ-М I" || e.ColumnName == "СЗВ-М II" || e.ColumnName == "ФСС"
-                    || e.ColumnName == "ЕНВД" || e.ColumnName == "НДС" || e.ColumnName == "Прибыль" || e.ColumnName == "РСВ" || e.ColumnName == "НДФЛ"))
+                switch (e.ColumnName)
                 {
-                    if (e.CellType == ExportCellType.RecordCell)
-                    {
-                        string Cell_color = Convert.ToString(e.CellValue);
-                        switch (Cell_color)
+                    case "Налоги":
+                    case "СЗВ-М I":
+                    case "СЗВ-М II":
+                    case "ФСС":
+                    case "ЕНВД":
+                    case "НДС":
+                    case "Прибыль":
+                    case "РСВ":
+                    case "НДФЛ":
+                    case "СЗВ-М III":
+                    case "2НДФЛ":
+                    case "УСН":
+                    case "Баланс":
+                    case "Статистика":
+                    case "СЗВ-СТАЖ" when e.CellValue != null:
                         {
-                            case "Подготовлено":
-                                cellStyle.BackgroundBrush = PdfBrushes.Yellow;
-                                cellStyle.TextBrush = PdfBrushes.Black;
-                                e.PdfGridCell.Style = cellStyle;
+                            if (e.CellType == ExportCellType.RecordCell)
+                            {
+                                string Cell_color = Convert.ToString(e.CellValue);
+                                switch (Cell_color)
+                                {
+                                    case "Подготовлено":
+                                        cellStyle.BackgroundBrush = PdfBrushes.Yellow;
+                                        cellStyle.TextBrush = PdfBrushes.Black;
+                                        e.PdfGridCell.Style = cellStyle;
 
-                                break;
-                            case "Нужно сдать":
-                                cellStyle.BackgroundBrush = PdfBrushes.Red;
-                                cellStyle.TextBrush = PdfBrushes.White;
-                                e.PdfGridCell.Style = cellStyle;
-                                break;
-                            case "Сдано":
-                                cellStyle.BackgroundBrush = PdfBrushes.Green;
-                                cellStyle.TextBrush = PdfBrushes.White;
-                                e.PdfGridCell.Style = cellStyle;
-                                break;
-                            case "Синий":
-                                cellStyle.BackgroundBrush = PdfBrushes.Blue;
-                                cellStyle.TextBrush = PdfBrushes.White;
-                                e.PdfGridCell.Style = cellStyle;
-                                break;
-                            case "Фиолетовый":
-                                cellStyle.BackgroundBrush = PdfBrushes.Purple;
-                                cellStyle.TextBrush = PdfBrushes.White;
-                                e.PdfGridCell.Style = cellStyle;
-                                break;
-                            default:
-                                break;
+                                        break;
+                                    case "Нужно сдать":
+                                        cellStyle.BackgroundBrush = PdfBrushes.Red;
+                                        cellStyle.TextBrush = PdfBrushes.White;
+                                        e.PdfGridCell.Style = cellStyle;
+                                        break;
+                                    case "Сдано":
+                                        cellStyle.BackgroundBrush = PdfBrushes.Green;
+                                        cellStyle.TextBrush = PdfBrushes.White;
+                                        e.PdfGridCell.Style = cellStyle;
+                                        break;
+                                    case "Синий":
+                                        cellStyle.BackgroundBrush = PdfBrushes.Blue;
+                                        cellStyle.TextBrush = PdfBrushes.White;
+                                        e.PdfGridCell.Style = cellStyle;
+                                        break;
+                                    case "Фиолетовый":
+                                        cellStyle.BackgroundBrush = PdfBrushes.Purple;
+                                        cellStyle.TextBrush = PdfBrushes.White;
+                                        e.PdfGridCell.Style = cellStyle;
+                                        break;
+                                    default:
+                                        break;
+                                }
+                                PdfFont font = new PdfTrueTypeFont(new Font("TimesRoman Unicode MS", 8), true);
+                                e.PdfGridCell.Style.Font = font;
+                            }
+
+                            break;
                         }
-                        PdfFont font = new PdfTrueTypeFont(new Font("TimesRoman Unicode MS", 8), true);
-                        e.PdfGridCell.Style.Font = font;
-                    }
                 }
             }
             catch (Exception error)
