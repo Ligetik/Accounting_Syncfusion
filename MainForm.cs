@@ -59,7 +59,6 @@ namespace SyncfusionWinFormsApp1
         }
         private void MetroForm1_Load(object sender, EventArgs e)
         {
-
             try
             {
                 // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet1.Статус". При необходимости она может быть перемещена или удалена.
@@ -71,7 +70,7 @@ namespace SyncfusionWinFormsApp1
                 // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet1._3_НДФЛ1". При необходимости она может быть перемещена или удалена.
                 this._3_НДФЛ1TableAdapter.Fill(this.sqlDataSet1._3_НДФЛ1);
                 // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet1.Декларация1". При необходимости она может быть перемещена или удалена.
-                this.декларация1TableAdapter.Fill(this.sqlDataSet1.Декларация1);                
+                this.декларация1TableAdapter.Fill(this.sqlDataSet1.Декларация1);
             }
             catch (Exception error)
             {
@@ -634,6 +633,14 @@ namespace SyncfusionWinFormsApp1
                 sfDataGrid1.Columns["Баланс"].Visible = true;
                 sfDataGrid1.Columns["Статистика"].Visible = true;
                 sfDataGrid1.Columns["СЗВ-СТАЖ"].Visible = true;
+            }
+        }
+
+        private void sfButton1_Click(object sender, EventArgs e)
+        {
+            if (sfDataGrid1.CurrentCell != null)
+            {
+                sfDataGrid1.CurrentCell.ToString();
             }
         }
     }
