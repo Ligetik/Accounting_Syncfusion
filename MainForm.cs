@@ -1,14 +1,7 @@
 ﻿using Syncfusion.WinForms.Controls;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using Syncfusion.WinForms.DataGrid.Enums;
-using Syncfusion.Windows.Forms.Tools;
 using Syncfusion.Windows.Forms;
 using Syncfusion.WinForms.DataGridConverter;
 using Syncfusion.XlsIO;
@@ -17,7 +10,6 @@ using Syncfusion.WinForms.DataGridConverter.Events;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Windows.Forms.PdfViewer;
 using Syncfusion.Pdf;
-using Syncfusion.WinForms.DataGrid;
 using Syncfusion.Pdf.Grid;
 
 namespace SyncfusionWinFormsApp1
@@ -51,7 +43,6 @@ namespace SyncfusionWinFormsApp1
             #region DataGrid1 Styles
             this.sfDataGrid1.GroupCaptionTextFormat = "{ColumnName}: {Key}             Кол-во записей: {ItemsCount}";
             this.sfDataGrid1.ShowBusyIndicator = true;
-            
             #endregion
 
             //cellStyle = new PdfGridCellStyle();
