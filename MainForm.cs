@@ -43,6 +43,7 @@ namespace SyncfusionWinFormsApp1
             #region DataGrid1 Styles
             this.sfDataGrid1.GroupCaptionTextFormat = "{ColumnName}: {Key}             Кол-во записей: {ItemsCount}";
             this.sfDataGrid1.ShowBusyIndicator = true;
+
             #endregion
 
             //cellStyle = new PdfGridCellStyle();
@@ -71,6 +72,8 @@ namespace SyncfusionWinFormsApp1
                 this._3_НДФЛ1TableAdapter.Fill(this.sqlDataSet1._3_НДФЛ1);
                 // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet1.Декларация1". При необходимости она может быть перемещена или удалена.
                 this.декларация1TableAdapter.Fill(this.sqlDataSet1.Декларация1);
+
+                //this.sfDataGrid1.ExpandAllGroup();
             }
             catch (Exception error)
             {
@@ -222,7 +225,7 @@ namespace SyncfusionWinFormsApp1
                 }
 
                 //Message box confirmation to view the created workbook.
-                if (MessageBox.Show(this.sfDataGrid1, "Do you want to view the workbook?", "Workbook has been created",
+                if (MessageBox.Show(this.sfDataGrid1, "Вы действительно хотите посмотреть таблицу в Excel?", "Таблица Excel создана",
                                     MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
 
@@ -260,7 +263,7 @@ namespace SyncfusionWinFormsApp1
                 }
 
                 //Message box confirmation to view the created workbook.
-                if (MessageBox.Show(this.sfDataGrid2, "Do you want to view the workbook?", "Workbook has been created",
+                if (MessageBox.Show(this.sfDataGrid2, "Вы действительно хотите посмотреть таблицу в Excel?", "Таблица Excel создана",
                                     MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
 
@@ -336,6 +339,15 @@ namespace SyncfusionWinFormsApp1
         {
             try
             {
+                this.sfDataGrid1.ExpandAllGroup();
+                //this.sfDataGrid1.ExpandGroupsAtLevel(2);
+                sfDataGrid1.Columns["СЗВ-М III"].Visible = true;
+                sfDataGrid1.Columns["2НДФЛ"].Visible = true;
+                sfDataGrid1.Columns["УСН"].Visible = true;
+                sfDataGrid1.Columns["Баланс"].Visible = true;
+                sfDataGrid1.Columns["Статистика"].Visible = true;
+                sfDataGrid1.Columns["СЗВ-СТАЖ"].Visible = true;
+
                 PrintPreviewDialog printdialog = new PrintPreviewDialog();
 
                 //MemoryStream pdfstream = new MemoryStream();
@@ -387,6 +399,14 @@ namespace SyncfusionWinFormsApp1
                 printdialog.Document = pdfviewer.PrintDocument;
                 printdialog.PrintPreviewControl.Document.PrinterSettings.DefaultPageSettings.Landscape = pdfviewer.PrinterSettings.PageOrientation == Syncfusion.Windows.PdfViewer.PdfViewerPrintOrientation.Landscape;
                 printdialog.ShowDialog();
+
+                this.sfDataGrid1.CollapseAllGroup();
+                sfDataGrid1.Columns["СЗВ-М III"].Visible = false;
+                sfDataGrid1.Columns["2НДФЛ"].Visible = false;
+                sfDataGrid1.Columns["УСН"].Visible = false;
+                sfDataGrid1.Columns["Баланс"].Visible = false;
+                sfDataGrid1.Columns["Статистика"].Visible = false;
+                sfDataGrid1.Columns["СЗВ-СТАЖ"].Visible = false;
             }
             catch (Exception error)
             {
@@ -456,7 +476,7 @@ namespace SyncfusionWinFormsApp1
                                     default:
                                         break;
                                 }
-                                PdfFont font = new PdfTrueTypeFont(new Font("TimesRoman Unicode MS", 8), true);
+                                PdfFont font = new PdfTrueTypeFont(new Font("TimesRoman Unicode MS", 9), true);
                                 e.PdfGridCell.Style.Font = font;
                             }
 
@@ -521,6 +541,7 @@ namespace SyncfusionWinFormsApp1
             printdialog.Document = pdfviewer.PrintDocument;
             printdialog.PrintPreviewControl.Document.PrinterSettings.DefaultPageSettings.Landscape = pdfviewer.PrinterSettings.PageOrientation == Syncfusion.Windows.PdfViewer.PdfViewerPrintOrientation.Landscape;
             printdialog.ShowDialog();
+
         }
         #endregion
 
@@ -622,9 +643,8 @@ namespace SyncfusionWinFormsApp1
             }
         }
 
-        private void sfDataGrid1_GroupExpanding(object sender, Syncfusion.WinForms.DataGrid.Events.GroupChangingEventArgs e)
+        void sfDataGrid1_GroupExpanding(object sender, Syncfusion.WinForms.DataGrid.Events.GroupChangingEventArgs e)
         {
-            
             if (e.Group.Key.Equals("4"))
             {
                 sfDataGrid1.Columns["СЗВ-М III"].Visible = true;
