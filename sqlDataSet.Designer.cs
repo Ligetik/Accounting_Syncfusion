@@ -1386,6 +1386,8 @@ namespace SyncfusionWinFormsApp1 {
             
             private global::System.Data.DataColumn columnОператор;
             
+            private global::System.Data.DataColumn columnСумма;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public _3_НДФЛDataTable() {
@@ -1477,6 +1479,14 @@ namespace SyncfusionWinFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn СуммаColumn {
+                get {
+                    return this.columnСумма;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1512,7 +1522,7 @@ namespace SyncfusionWinFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public _3_НДФЛRow Add_3_НДФЛRow(int Id_Клиента, string Фамилия, string Имя, string Отчество, ДекларацияRow _parentДекларацияRowByДекларация_3_НДФЛ, System.DateTime Дата, string Оператор) {
+            public _3_НДФЛRow Add_3_НДФЛRow(int Id_Клиента, string Фамилия, string Имя, string Отчество, ДекларацияRow _parentДекларацияRowByДекларация_3_НДФЛ, System.DateTime Дата, string Оператор, string Сумма) {
                 _3_НДФЛRow row_3_НДФЛRow = ((_3_НДФЛRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id_Клиента,
@@ -1521,7 +1531,8 @@ namespace SyncfusionWinFormsApp1 {
                         Отчество,
                         null,
                         Дата,
-                        Оператор};
+                        Оператор,
+                        Сумма};
                 if ((_parentДекларацияRowByДекларация_3_НДФЛ != null)) {
                     columnValuesArray[4] = _parentДекларацияRowByДекларация_3_НДФЛ[0];
                 }
@@ -1561,6 +1572,7 @@ namespace SyncfusionWinFormsApp1 {
                 this.columnДекларация = base.Columns["Декларация"];
                 this.columnДата = base.Columns["Дата"];
                 this.columnОператор = base.Columns["Оператор"];
+                this.columnСумма = base.Columns["Сумма"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1580,6 +1592,8 @@ namespace SyncfusionWinFormsApp1 {
                 base.Columns.Add(this.columnДата);
                 this.columnОператор = new global::System.Data.DataColumn("Оператор", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnОператор);
+                this.columnСумма = new global::System.Data.DataColumn("Сумма", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnСумма);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId_Клиента}, true));
                 this.columnId_Клиента.AllowDBNull = false;
@@ -1589,6 +1603,7 @@ namespace SyncfusionWinFormsApp1 {
                 this.columnОтчество.MaxLength = 50;
                 this.columnДекларация.MaxLength = 50;
                 this.columnОператор.MaxLength = 50;
+                this.columnСумма.MaxLength = 50;
                 this.ExtendedProperties.Add("Generator_TableVarName", "_table3_НДФЛ");
                 this.ExtendedProperties.Add("Generator_UserTableName", "3-НДФЛ");
             }
@@ -1997,6 +2012,8 @@ namespace SyncfusionWinFormsApp1 {
             
             private global::System.Data.DataColumn columnОператор;
             
+            private global::System.Data.DataColumn columnСумма;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public _3_НДФЛ1DataTable() {
@@ -2088,6 +2105,14 @@ namespace SyncfusionWinFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn СуммаColumn {
+                get {
+                    return this.columnСумма;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2123,7 +2148,7 @@ namespace SyncfusionWinFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public _3_НДФЛ1Row Add_3_НДФЛ1Row(string Фамилия, string Имя, string Отчество, Декларация1Row _parentДекларация1RowByДекларация1_3_НДФЛ1, System.DateTime Дата, string Оператор) {
+            public _3_НДФЛ1Row Add_3_НДФЛ1Row(string Фамилия, string Имя, string Отчество, Декларация1Row _parentДекларация1RowByДекларация1_3_НДФЛ1, System.DateTime Дата, string Оператор, string Сумма) {
                 _3_НДФЛ1Row row_3_НДФЛ1Row = ((_3_НДФЛ1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2132,7 +2157,8 @@ namespace SyncfusionWinFormsApp1 {
                         Отчество,
                         null,
                         Дата,
-                        Оператор};
+                        Оператор,
+                        Сумма};
                 if ((_parentДекларация1RowByДекларация1_3_НДФЛ1 != null)) {
                     columnValuesArray[4] = _parentДекларация1RowByДекларация1_3_НДФЛ1[0];
                 }
@@ -2172,6 +2198,7 @@ namespace SyncfusionWinFormsApp1 {
                 this.columnДекларация = base.Columns["Декларация"];
                 this.columnДата = base.Columns["Дата"];
                 this.columnОператор = base.Columns["Оператор"];
+                this.columnСумма = base.Columns["Сумма"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2191,6 +2218,8 @@ namespace SyncfusionWinFormsApp1 {
                 base.Columns.Add(this.columnДата);
                 this.columnОператор = new global::System.Data.DataColumn("Оператор", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnОператор);
+                this.columnСумма = new global::System.Data.DataColumn("Сумма", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnСумма);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId_Клиента}, true));
                 this.columnId_Клиента.AutoIncrement = true;
@@ -2202,6 +2231,7 @@ namespace SyncfusionWinFormsApp1 {
                 this.columnОтчество.MaxLength = 50;
                 this.columnДекларация.MaxLength = 50;
                 this.columnОператор.MaxLength = 50;
+                this.columnСумма.MaxLength = 50;
                 this.ExtendedProperties.Add("Generator_TableVarName", "_table3_НДФЛ1");
                 this.ExtendedProperties.Add("Generator_UserTableName", "3-НДФЛ1");
             }
@@ -3631,6 +3661,22 @@ namespace SyncfusionWinFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Сумма {
+                get {
+                    try {
+                        return ((string)(this[this._table3_НДФЛ.СуммаColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Сумма\' в таблице \'3-НДФЛ\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._table3_НДФЛ.СуммаColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public ДекларацияRow ДекларацияRow {
                 get {
                     return ((ДекларацияRow)(this.GetParentRow(this.Table.ParentRelations["Декларация_3-НДФЛ"])));
@@ -3710,6 +3756,18 @@ namespace SyncfusionWinFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetОператорNull() {
                 this[this._table3_НДФЛ.ОператорColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsСуммаNull() {
+                return this.IsNull(this._table3_НДФЛ.СуммаColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetСуммаNull() {
+                this[this._table3_НДФЛ.СуммаColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3873,6 +3931,22 @@ namespace SyncfusionWinFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Сумма {
+                get {
+                    try {
+                        return ((string)(this[this._table3_НДФЛ1.СуммаColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Сумма\' в таблице \'3-НДФЛ1\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._table3_НДФЛ1.СуммаColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public Декларация1Row Декларация1Row {
                 get {
                     return ((Декларация1Row)(this.GetParentRow(this.Table.ParentRelations["Декларация1_3-НДФЛ1"])));
@@ -3952,6 +4026,18 @@ namespace SyncfusionWinFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetОператорNull() {
                 this[this._table3_НДФЛ1.ОператорColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsСуммаNull() {
+                return this.IsNull(this._table3_НДФЛ1.СуммаColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetСуммаNull() {
+                this[this._table3_НДФЛ1.СуммаColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -5897,10 +5983,11 @@ SELECT [Id Организация], [Название организации], �
             tableMapping.ColumnMappings.Add("Декларация", "Декларация");
             tableMapping.ColumnMappings.Add("Дата", "Дата");
             tableMapping.ColumnMappings.Add("Оператор", "Оператор");
+            tableMapping.ColumnMappings.Add("Сумма", "Сумма");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[3-НДФЛ] WHERE (([Id Клиента] = @Original_Id_Клиента) AND ((@IsNull_Фамилия = 1 AND [Фамилия] IS NULL) OR ([Фамилия] = @Original_Фамилия)) AND ((@IsNull_Имя = 1 AND [Имя] IS NULL) OR ([Имя] = @Original_Имя)) AND ((@IsNull_Отчество = 1 AND [Отчество] IS NULL) OR ([Отчество] = @Original_Отчество)) AND ((@IsNull_Декларация = 1 AND [Декларация] IS NULL) OR ([Декларация] = @Original_Декларация)) AND ((@IsNull_Дата = 1 AND [Дата] IS NULL) OR ([Дата] = @Original_Дата)) AND ((@IsNull_Оператор = 1 AND [Оператор] IS NULL) OR ([Оператор] = @Original_Оператор)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [3-НДФЛ] WHERE (([Id Клиента] = @Original_Id_Клиента) AND ((@IsNull_Фамилия = 1 AND [Фамилия] IS NULL) OR ([Фамилия] = @Original_Фамилия)) AND ((@IsNull_Имя = 1 AND [Имя] IS NULL) OR ([Имя] = @Original_Имя)) AND ((@IsNull_Отчество = 1 AND [Отчество] IS NULL) OR ([Отчество] = @Original_Отчество)) AND ((@IsNull_Декларация = 1 AND [Декларация] IS NULL) OR ([Декларация] = @Original_Декларация)) AND ((@IsNull_Дата = 1 AND [Дата] IS NULL) OR ([Дата] = @Original_Дата)) AND ((@IsNull_Оператор = 1 AND [Оператор] IS NULL) OR ([Оператор] = @Original_Оператор)) AND ((@IsNull_Сумма = 1 AND [Сумма] IS NULL) OR ([Сумма] = @Original_Сумма)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Клиента", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id Клиента", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Фамилия", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Фамилия", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -5915,10 +6002,12 @@ SELECT [Id Организация], [Название организации], �
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Дата", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Дата", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Оператор", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Оператор", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Оператор", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Оператор", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Сумма", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Сумма", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Сумма", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Сумма", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[3-НДФЛ] ([Id Клиента], [Фамилия], [Имя], [Отчество], [Декларация], [Дата], [Оператор]) VALUES (@Id_Клиента, @Фамилия, @Имя, @Отчество, @Декларация, @Дата, @Оператор);
-SELECT [Id Клиента], Фамилия, Имя, Отчество, Декларация, Дата, Оператор FROM [3-НДФЛ] WHERE ([Id Клиента] = @Id_Клиента)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [3-НДФЛ] ([Id Клиента], [Фамилия], [Имя], [Отчество], [Декларация], [Дата], [Оператор], [Сумма]) VALUES (@Id_Клиента, @Фамилия, @Имя, @Отчество, @Декларация, @Дата, @Оператор, @Сумма);
+SELECT [Id Клиента], Фамилия, Имя, Отчество, Декларация, Дата, Оператор, Сумма FROM [3-НДФЛ] WHERE ([Id Клиента] = @Id_Клиента)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Клиента", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id Клиента", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Фамилия", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Фамилия", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5927,10 +6016,11 @@ SELECT [Id Клиента], Фамилия, Имя, Отчество, Декла
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Декларация", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Декларация", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Дата", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Дата", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Оператор", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Оператор", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Сумма", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Сумма", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[3-НДФЛ] SET [Id Клиента] = @Id_Клиента, [Фамилия] = @Фамилия, [Имя] = @Имя, [Отчество] = @Отчество, [Декларация] = @Декларация, [Дата] = @Дата, [Оператор] = @Оператор WHERE (([Id Клиента] = @Original_Id_Клиента) AND ((@IsNull_Фамилия = 1 AND [Фамилия] IS NULL) OR ([Фамилия] = @Original_Фамилия)) AND ((@IsNull_Имя = 1 AND [Имя] IS NULL) OR ([Имя] = @Original_Имя)) AND ((@IsNull_Отчество = 1 AND [Отчество] IS NULL) OR ([Отчество] = @Original_Отчество)) AND ((@IsNull_Декларация = 1 AND [Декларация] IS NULL) OR ([Декларация] = @Original_Декларация)) AND ((@IsNull_Дата = 1 AND [Дата] IS NULL) OR ([Дата] = @Original_Дата)) AND ((@IsNull_Оператор = 1 AND [Оператор] IS NULL) OR ([Оператор] = @Original_Оператор)));
-SELECT [Id Клиента], Фамилия, Имя, Отчество, Декларация, Дата, Оператор FROM [3-НДФЛ] WHERE ([Id Клиента] = @Id_Клиента)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [3-НДФЛ] SET [Id Клиента] = @Id_Клиента, [Фамилия] = @Фамилия, [Имя] = @Имя, [Отчество] = @Отчество, [Декларация] = @Декларация, [Дата] = @Дата, [Оператор] = @Оператор, [Сумма] = @Сумма WHERE (([Id Клиента] = @Original_Id_Клиента) AND ((@IsNull_Фамилия = 1 AND [Фамилия] IS NULL) OR ([Фамилия] = @Original_Фамилия)) AND ((@IsNull_Имя = 1 AND [Имя] IS NULL) OR ([Имя] = @Original_Имя)) AND ((@IsNull_Отчество = 1 AND [Отчество] IS NULL) OR ([Отчество] = @Original_Отчество)) AND ((@IsNull_Декларация = 1 AND [Декларация] IS NULL) OR ([Декларация] = @Original_Декларация)) AND ((@IsNull_Дата = 1 AND [Дата] IS NULL) OR ([Дата] = @Original_Дата)) AND ((@IsNull_Оператор = 1 AND [Оператор] IS NULL) OR ([Оператор] = @Original_Оператор)) AND ((@IsNull_Сумма = 1 AND [Сумма] IS NULL) OR ([Сумма] = @Original_Сумма)));
+SELECT [Id Клиента], Фамилия, Имя, Отчество, Декларация, Дата, Оператор, Сумма FROM [3-НДФЛ] WHERE ([Id Клиента] = @Id_Клиента)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Клиента", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id Клиента", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Фамилия", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Фамилия", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5939,6 +6029,7 @@ SELECT [Id Клиента], Фамилия, Имя, Отчество, Декла
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Декларация", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Декларация", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Дата", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Дата", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Оператор", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Оператор", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Сумма", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Сумма", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Клиента", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id Клиента", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Фамилия", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Фамилия", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Фамилия", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Фамилия", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -5952,6 +6043,8 @@ SELECT [Id Клиента], Фамилия, Имя, Отчество, Декла
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Дата", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Дата", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Оператор", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Оператор", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Оператор", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Оператор", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Сумма", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Сумма", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Сумма", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Сумма", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5967,8 +6060,8 @@ SELECT [Id Клиента], Фамилия, Имя, Отчество, Декла
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [Id Клиента], Фамилия, Имя, Отчество, Декларация, Дата, Оператор FROM dbo." +
-                "[3-НДФЛ]";
+            this._commandCollection[0].CommandText = "SELECT   [Id Клиента], Фамилия, Имя, Отчество, Декларация, Дата, Оператор, Сумма\r" +
+                "\nFROM      [3-НДФЛ]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6029,7 +6122,7 @@ SELECT [Id Клиента], Фамилия, Имя, Отчество, Декла
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id_Клиента, string Original_Фамилия, string Original_Имя, string Original_Отчество, string Original_Декларация, global::System.Nullable<global::System.DateTime> Original_Дата, string Original_Оператор) {
+        public virtual int Delete(int Original_Id_Клиента, string Original_Фамилия, string Original_Имя, string Original_Отчество, string Original_Декларация, global::System.Nullable<global::System.DateTime> Original_Дата, string Original_Оператор, string Original_Сумма) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id_Клиента));
             if ((Original_Фамилия == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -6079,6 +6172,14 @@ SELECT [Id Клиента], Фамилия, Имя, Отчество, Декла
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_Оператор));
             }
+            if ((Original_Сумма == null)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_Сумма));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6099,7 +6200,7 @@ SELECT [Id Клиента], Фамилия, Имя, Отчество, Декла
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Id_Клиента, string Фамилия, string Имя, string Отчество, string Декларация, global::System.Nullable<global::System.DateTime> Дата, string Оператор) {
+        public virtual int Insert(int Id_Клиента, string Фамилия, string Имя, string Отчество, string Декларация, global::System.Nullable<global::System.DateTime> Дата, string Оператор, string Сумма) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id_Клиента));
             if ((Фамилия == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -6137,6 +6238,12 @@ SELECT [Id Клиента], Фамилия, Имя, Отчество, Декла
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Оператор));
             }
+            if ((Сумма == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Сумма));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6157,7 +6264,23 @@ SELECT [Id Клиента], Фамилия, Имя, Отчество, Декла
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Id_Клиента, string Фамилия, string Имя, string Отчество, string Декларация, global::System.Nullable<global::System.DateTime> Дата, string Оператор, int Original_Id_Клиента, string Original_Фамилия, string Original_Имя, string Original_Отчество, string Original_Декларация, global::System.Nullable<global::System.DateTime> Original_Дата, string Original_Оператор) {
+        public virtual int Update(
+                    int Id_Клиента, 
+                    string Фамилия, 
+                    string Имя, 
+                    string Отчество, 
+                    string Декларация, 
+                    global::System.Nullable<global::System.DateTime> Дата, 
+                    string Оператор, 
+                    string Сумма, 
+                    int Original_Id_Клиента, 
+                    string Original_Фамилия, 
+                    string Original_Имя, 
+                    string Original_Отчество, 
+                    string Original_Декларация, 
+                    global::System.Nullable<global::System.DateTime> Original_Дата, 
+                    string Original_Оператор, 
+                    string Original_Сумма) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id_Клиента));
             if ((Фамилия == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -6195,54 +6318,68 @@ SELECT [Id Клиента], Фамилия, Имя, Отчество, Декла
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Оператор));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Id_Клиента));
-            if ((Original_Фамилия == null)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            if ((Сумма == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Фамилия));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Сумма));
+            }
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Id_Клиента));
+            if ((Original_Фамилия == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Фамилия));
             }
             if ((Original_Имя == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Имя));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Имя));
             }
             if ((Original_Отчество == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Отчество));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Отчество));
             }
             if ((Original_Декларация == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Декларация));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Декларация));
             }
             if ((Original_Дата.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((System.DateTime)(Original_Дата.Value));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((System.DateTime)(Original_Дата.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             if ((Original_Оператор == null)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Оператор));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_Оператор));
+            }
+            if ((Original_Сумма == null)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_Сумма));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6264,8 +6401,8 @@ SELECT [Id Клиента], Фамилия, Имя, Отчество, Декла
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Фамилия, string Имя, string Отчество, string Декларация, global::System.Nullable<global::System.DateTime> Дата, string Оператор, int Original_Id_Клиента, string Original_Фамилия, string Original_Имя, string Original_Отчество, string Original_Декларация, global::System.Nullable<global::System.DateTime> Original_Дата, string Original_Оператор) {
-            return this.Update(Original_Id_Клиента, Фамилия, Имя, Отчество, Декларация, Дата, Оператор, Original_Id_Клиента, Original_Фамилия, Original_Имя, Original_Отчество, Original_Декларация, Original_Дата, Original_Оператор);
+        public virtual int Update(string Фамилия, string Имя, string Отчество, string Декларация, global::System.Nullable<global::System.DateTime> Дата, string Оператор, string Сумма, int Original_Id_Клиента, string Original_Фамилия, string Original_Имя, string Original_Отчество, string Original_Декларация, global::System.Nullable<global::System.DateTime> Original_Дата, string Original_Оператор, string Original_Сумма) {
+            return this.Update(Original_Id_Клиента, Фамилия, Имя, Отчество, Декларация, Дата, Оператор, Сумма, Original_Id_Клиента, Original_Фамилия, Original_Имя, Original_Отчество, Original_Декларация, Original_Дата, Original_Оператор, Original_Сумма);
         }
     }
     
@@ -6706,10 +6843,11 @@ SELECT [Id Клиента], Фамилия, Имя, Отчество, Декла
             tableMapping.ColumnMappings.Add("Декларация", "Декларация");
             tableMapping.ColumnMappings.Add("Дата", "Дата");
             tableMapping.ColumnMappings.Add("Оператор", "Оператор");
+            tableMapping.ColumnMappings.Add("Сумма", "Сумма");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[3-НДФЛ] WHERE (([Id Клиента] = @Original_Id_Клиента) AND ((@IsNull_Фамилия = 1 AND [Фамилия] IS NULL) OR ([Фамилия] = @Original_Фамилия)) AND ((@IsNull_Имя = 1 AND [Имя] IS NULL) OR ([Имя] = @Original_Имя)) AND ((@IsNull_Отчество = 1 AND [Отчество] IS NULL) OR ([Отчество] = @Original_Отчество)) AND ((@IsNull_Декларация = 1 AND [Декларация] IS NULL) OR ([Декларация] = @Original_Декларация)) AND ((@IsNull_Дата = 1 AND [Дата] IS NULL) OR ([Дата] = @Original_Дата)) AND ((@IsNull_Оператор = 1 AND [Оператор] IS NULL) OR ([Оператор] = @Original_Оператор)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [3-НДФЛ] WHERE (([Id Клиента] = @Original_Id_Клиента) AND ((@IsNull_Фамилия = 1 AND [Фамилия] IS NULL) OR ([Фамилия] = @Original_Фамилия)) AND ((@IsNull_Имя = 1 AND [Имя] IS NULL) OR ([Имя] = @Original_Имя)) AND ((@IsNull_Отчество = 1 AND [Отчество] IS NULL) OR ([Отчество] = @Original_Отчество)) AND ((@IsNull_Декларация = 1 AND [Декларация] IS NULL) OR ([Декларация] = @Original_Декларация)) AND ((@IsNull_Дата = 1 AND [Дата] IS NULL) OR ([Дата] = @Original_Дата)) AND ((@IsNull_Оператор = 1 AND [Оператор] IS NULL) OR ([Оператор] = @Original_Оператор)) AND ((@IsNull_Сумма = 1 AND [Сумма] IS NULL) OR ([Сумма] = @Original_Сумма)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Клиента", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id Клиента", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Фамилия", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Фамилия", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -6724,10 +6862,12 @@ SELECT [Id Клиента], Фамилия, Имя, Отчество, Декла
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Дата", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Дата", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Оператор", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Оператор", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Оператор", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Оператор", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Сумма", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Сумма", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Сумма", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Сумма", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[3-НДФЛ] ([Id Клиента], [Фамилия], [Имя], [Отчество], [Декларация], [Дата], [Оператор]) VALUES (@Id_Клиента, @Фамилия, @Имя, @Отчество, @Декларация, @Дата, @Оператор);
-SELECT [Id Клиента], Фамилия, Имя, Отчество, Декларация, Дата, Оператор FROM [3-НДФЛ] WHERE ([Id Клиента] = @Id_Клиента)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [3-НДФЛ] ([Id Клиента], [Фамилия], [Имя], [Отчество], [Декларация], [Дата], [Оператор], [Сумма]) VALUES (@Id_Клиента, @Фамилия, @Имя, @Отчество, @Декларация, @Дата, @Оператор, @Сумма);
+SELECT [Id Клиента], Фамилия, Имя, Отчество, Декларация, Дата, Оператор, Сумма FROM [3-НДФЛ] WHERE ([Id Клиента] = @Id_Клиента)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Клиента", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id Клиента", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Фамилия", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Фамилия", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6736,10 +6876,11 @@ SELECT [Id Клиента], Фамилия, Имя, Отчество, Декла
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Декларация", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Декларация", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Дата", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Дата", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Оператор", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Оператор", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Сумма", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Сумма", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[3-НДФЛ] SET [Id Клиента] = @Id_Клиента, [Фамилия] = @Фамилия, [Имя] = @Имя, [Отчество] = @Отчество, [Декларация] = @Декларация, [Дата] = @Дата, [Оператор] = @Оператор WHERE (([Id Клиента] = @Original_Id_Клиента) AND ((@IsNull_Фамилия = 1 AND [Фамилия] IS NULL) OR ([Фамилия] = @Original_Фамилия)) AND ((@IsNull_Имя = 1 AND [Имя] IS NULL) OR ([Имя] = @Original_Имя)) AND ((@IsNull_Отчество = 1 AND [Отчество] IS NULL) OR ([Отчество] = @Original_Отчество)) AND ((@IsNull_Декларация = 1 AND [Декларация] IS NULL) OR ([Декларация] = @Original_Декларация)) AND ((@IsNull_Дата = 1 AND [Дата] IS NULL) OR ([Дата] = @Original_Дата)) AND ((@IsNull_Оператор = 1 AND [Оператор] IS NULL) OR ([Оператор] = @Original_Оператор)));
-SELECT [Id Клиента], Фамилия, Имя, Отчество, Декларация, Дата, Оператор FROM [3-НДФЛ] WHERE ([Id Клиента] = @Id_Клиента)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [3-НДФЛ] SET [Id Клиента] = @Id_Клиента, [Фамилия] = @Фамилия, [Имя] = @Имя, [Отчество] = @Отчество, [Декларация] = @Декларация, [Дата] = @Дата, [Оператор] = @Оператор, [Сумма] = @Сумма WHERE (([Id Клиента] = @Original_Id_Клиента) AND ((@IsNull_Фамилия = 1 AND [Фамилия] IS NULL) OR ([Фамилия] = @Original_Фамилия)) AND ((@IsNull_Имя = 1 AND [Имя] IS NULL) OR ([Имя] = @Original_Имя)) AND ((@IsNull_Отчество = 1 AND [Отчество] IS NULL) OR ([Отчество] = @Original_Отчество)) AND ((@IsNull_Декларация = 1 AND [Декларация] IS NULL) OR ([Декларация] = @Original_Декларация)) AND ((@IsNull_Дата = 1 AND [Дата] IS NULL) OR ([Дата] = @Original_Дата)) AND ((@IsNull_Оператор = 1 AND [Оператор] IS NULL) OR ([Оператор] = @Original_Оператор)) AND ((@IsNull_Сумма = 1 AND [Сумма] IS NULL) OR ([Сумма] = @Original_Сумма)));
+SELECT [Id Клиента], Фамилия, Имя, Отчество, Декларация, Дата, Оператор, Сумма FROM [3-НДФЛ] WHERE ([Id Клиента] = @Id_Клиента)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Клиента", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id Клиента", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Фамилия", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Фамилия", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6748,6 +6889,7 @@ SELECT [Id Клиента], Фамилия, Имя, Отчество, Декла
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Декларация", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Декларация", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Дата", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Дата", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Оператор", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Оператор", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Сумма", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Сумма", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Клиента", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id Клиента", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Фамилия", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Фамилия", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Фамилия", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Фамилия", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -6761,6 +6903,8 @@ SELECT [Id Клиента], Фамилия, Имя, Отчество, Декла
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Дата", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Дата", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Оператор", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Оператор", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Оператор", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Оператор", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Сумма", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Сумма", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Сумма", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Сумма", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6776,8 +6920,8 @@ SELECT [Id Клиента], Фамилия, Имя, Отчество, Декла
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [Id Клиента], Фамилия, Имя, Отчество, Декларация, Дата, Оператор FROM dbo." +
-                "[3-НДФЛ]";
+            this._commandCollection[0].CommandText = "SELECT   [Id Клиента], Фамилия, Имя, Отчество, Декларация, Дата, Оператор, Сумма\r" +
+                "\nFROM      [3-НДФЛ]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6838,7 +6982,7 @@ SELECT [Id Клиента], Фамилия, Имя, Отчество, Декла
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id_Клиента, string Original_Фамилия, string Original_Имя, string Original_Отчество, string Original_Декларация, global::System.Nullable<global::System.DateTime> Original_Дата, string Original_Оператор) {
+        public virtual int Delete(int Original_Id_Клиента, string Original_Фамилия, string Original_Имя, string Original_Отчество, string Original_Декларация, global::System.Nullable<global::System.DateTime> Original_Дата, string Original_Оператор, string Original_Сумма) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id_Клиента));
             if ((Original_Фамилия == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -6888,6 +7032,14 @@ SELECT [Id Клиента], Фамилия, Имя, Отчество, Декла
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_Оператор));
             }
+            if ((Original_Сумма == null)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_Сумма));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6908,7 +7060,7 @@ SELECT [Id Клиента], Фамилия, Имя, Отчество, Декла
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Id_Клиента, string Фамилия, string Имя, string Отчество, string Декларация, global::System.Nullable<global::System.DateTime> Дата, string Оператор) {
+        public virtual int Insert(int Id_Клиента, string Фамилия, string Имя, string Отчество, string Декларация, global::System.Nullable<global::System.DateTime> Дата, string Оператор, string Сумма) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id_Клиента));
             if ((Фамилия == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -6946,6 +7098,12 @@ SELECT [Id Клиента], Фамилия, Имя, Отчество, Декла
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Оператор));
             }
+            if ((Сумма == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Сумма));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6966,7 +7124,23 @@ SELECT [Id Клиента], Фамилия, Имя, Отчество, Декла
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Id_Клиента, string Фамилия, string Имя, string Отчество, string Декларация, global::System.Nullable<global::System.DateTime> Дата, string Оператор, int Original_Id_Клиента, string Original_Фамилия, string Original_Имя, string Original_Отчество, string Original_Декларация, global::System.Nullable<global::System.DateTime> Original_Дата, string Original_Оператор) {
+        public virtual int Update(
+                    int Id_Клиента, 
+                    string Фамилия, 
+                    string Имя, 
+                    string Отчество, 
+                    string Декларация, 
+                    global::System.Nullable<global::System.DateTime> Дата, 
+                    string Оператор, 
+                    string Сумма, 
+                    int Original_Id_Клиента, 
+                    string Original_Фамилия, 
+                    string Original_Имя, 
+                    string Original_Отчество, 
+                    string Original_Декларация, 
+                    global::System.Nullable<global::System.DateTime> Original_Дата, 
+                    string Original_Оператор, 
+                    string Original_Сумма) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id_Клиента));
             if ((Фамилия == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -7004,54 +7178,68 @@ SELECT [Id Клиента], Фамилия, Имя, Отчество, Декла
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Оператор));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Id_Клиента));
-            if ((Original_Фамилия == null)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            if ((Сумма == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Фамилия));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Сумма));
+            }
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Id_Клиента));
+            if ((Original_Фамилия == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Фамилия));
             }
             if ((Original_Имя == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Имя));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Имя));
             }
             if ((Original_Отчество == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Отчество));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Отчество));
             }
             if ((Original_Декларация == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Декларация));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Декларация));
             }
             if ((Original_Дата.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((System.DateTime)(Original_Дата.Value));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((System.DateTime)(Original_Дата.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             if ((Original_Оператор == null)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Оператор));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_Оператор));
+            }
+            if ((Original_Сумма == null)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_Сумма));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7073,8 +7261,8 @@ SELECT [Id Клиента], Фамилия, Имя, Отчество, Декла
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Фамилия, string Имя, string Отчество, string Декларация, global::System.Nullable<global::System.DateTime> Дата, string Оператор, int Original_Id_Клиента, string Original_Фамилия, string Original_Имя, string Original_Отчество, string Original_Декларация, global::System.Nullable<global::System.DateTime> Original_Дата, string Original_Оператор) {
-            return this.Update(Original_Id_Клиента, Фамилия, Имя, Отчество, Декларация, Дата, Оператор, Original_Id_Клиента, Original_Фамилия, Original_Имя, Original_Отчество, Original_Декларация, Original_Дата, Original_Оператор);
+        public virtual int Update(string Фамилия, string Имя, string Отчество, string Декларация, global::System.Nullable<global::System.DateTime> Дата, string Оператор, string Сумма, int Original_Id_Клиента, string Original_Фамилия, string Original_Имя, string Original_Отчество, string Original_Декларация, global::System.Nullable<global::System.DateTime> Original_Дата, string Original_Оператор, string Original_Сумма) {
+            return this.Update(Original_Id_Клиента, Фамилия, Имя, Отчество, Декларация, Дата, Оператор, Сумма, Original_Id_Клиента, Original_Фамилия, Original_Имя, Original_Отчество, Original_Декларация, Original_Дата, Original_Оператор, Original_Сумма);
         }
     }
     

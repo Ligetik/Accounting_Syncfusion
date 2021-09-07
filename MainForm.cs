@@ -356,6 +356,8 @@ namespace SyncfusionWinFormsApp1
                 PdfExportingOptions options = new PdfExportingOptions();
                 //cellStyle = new PdfGridCellStyle();
                 //cellStyle.StringFormat = new PdfStringFormat() { Alignment = PdfTextAlignment.Right };
+
+
                 options.AutoColumnWidth = true;
                 options.AutoRowHeight = true;
                 options.RepeatHeaders = true;
@@ -476,7 +478,7 @@ namespace SyncfusionWinFormsApp1
                                     default:
                                         break;
                                 }
-                                PdfFont font = new PdfTrueTypeFont(new Font("TimesRoman Unicode MS", 9), true);
+                                PdfFont font = new PdfTrueTypeFont(new Font("TimesRoman Unicode MS", 14), true);
                                 e.PdfGridCell.Style.Font = font;
                             }
 

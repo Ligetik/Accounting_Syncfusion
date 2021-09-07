@@ -8,11 +8,11 @@
   <Shapes>
     <Shape ID="DesignTable:Организация" ZOrder="11" X="302" Y="207" Height="482" Width="237" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="408" />
     <Shape ID="DesignTable:Квартал" ZOrder="9" X="22" Y="388" Height="105" Width="205" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="50" />
-    <Shape ID="DesignTable:3-НДФЛ" ZOrder="4" X="9" Y="5" Height="230" Width="206" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="175" />
-    <Shape ID="DesignTable:Декларация" ZOrder="3" X="3" Y="261" Height="105" Width="232" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="50" />
-    <Shape ID="DesignTable:3-НДФЛ1" ZOrder="7" X="583" Y="17" Height="230" Width="214" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="175" />
-    <Shape ID="DesignTable:Декларация1" ZOrder="6" X="239" Y="-5" Height="105" Width="240" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="50" />
-    <Shape ID="DesignTable:Статус" ZOrder="2" X="745" Y="389" Height="125" Width="193" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="70" />
+    <Shape ID="DesignTable:3-НДФЛ" ZOrder="5" X="16" Y="-11" Height="251" Width="206" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="196" />
+    <Shape ID="DesignTable:Декларация" ZOrder="4" X="3" Y="261" Height="105" Width="232" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="50" />
+    <Shape ID="DesignTable:3-НДФЛ1" ZOrder="1" X="583" Y="17" Height="251" Width="214" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="196" />
+    <Shape ID="DesignTable:Декларация1" ZOrder="7" X="239" Y="-5" Height="105" Width="240" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="50" />
+    <Shape ID="DesignTable:Статус" ZOrder="3" X="745" Y="389" Height="125" Width="193" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="70" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:Квартал_Организация" ZOrder="10" LineWidth="11">
@@ -30,16 +30,16 @@
     <Connector ID="DesignRelation:Декларация_3-НДФЛ" ZOrder="8" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>108</X>
+          <X>119</X>
           <Y>261</Y>
         </Point>
         <Point>
-          <X>108</X>
-          <Y>235</Y>
+          <X>119</X>
+          <Y>240</Y>
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:Декларация1_3-НДФЛ1" ZOrder="5" LineWidth="11">
+    <Connector ID="DesignRelation:Декларация1_3-НДФЛ1" ZOrder="6" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>479</X>
@@ -51,7 +51,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:Статус_Организация_Налоги" ZOrder="1" LineWidth="11">
+    <Connector ID="DesignRelation:Статус_Организация_Налоги" ZOrder="2" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>745</X>
