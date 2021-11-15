@@ -67,18 +67,25 @@ namespace SyncfusionWinFormsApp1
             Syncfusion.WinForms.DataGrid.GridDateTimeColumn gridDateTimeColumn1 = new Syncfusion.WinForms.DataGrid.GridDateTimeColumn();
             Syncfusion.WinForms.DataGrid.GridTextColumn gridTextColumn8 = new Syncfusion.WinForms.DataGrid.GridTextColumn();
             Syncfusion.WinForms.DataGrid.GridTextColumn gridTextColumn9 = new Syncfusion.WinForms.DataGrid.GridTextColumn();
+            this.статусBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sqlDataSet1 = new SyncfusionWinFormsApp1.sqlDataSet();
+            this.кварталBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sqlDataSet = new SyncfusionWinFormsApp1.sqlDataSet();
+            this.декларация1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControlAdv1 = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.tabPageAdv1 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.sfButton2 = new Syncfusion.WinForms.Controls.SfButton();
             this.pdfViewerControl1 = new Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.sfDataGrid1 = new Syncfusion.WinForms.DataGrid.SfDataGrid();
+            this.организацияBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sfButtonPrinting1 = new Syncfusion.WinForms.Controls.SfButton();
             this.sfButtonExcel1 = new Syncfusion.WinForms.Controls.SfButton();
             this.tabPageAdv2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.sfButtonPrinting2 = new Syncfusion.WinForms.Controls.SfButton();
             this.sfButtonExcel2 = new Syncfusion.WinForms.Controls.SfButton();
             this.sfDataGrid2 = new Syncfusion.WinForms.DataGrid.SfDataGrid();
+            this.нДФЛ1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contextMenuStripEx1 = new Syncfusion.Windows.Forms.Tools.ContextMenuStripEx();
             this.подготовленоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -89,13 +96,6 @@ namespace SyncfusionWinFormsApp1
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.статусBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sqlDataSet1 = new SyncfusionWinFormsApp1.sqlDataSet();
-            this.кварталBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sqlDataSet = new SyncfusionWinFormsApp1.sqlDataSet();
-            this.организацияBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.декларация1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.нДФЛ1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.организацияTableAdapter = new SyncfusionWinFormsApp1.sqlDataSetTableAdapters.ОрганизацияTableAdapter();
             this.кварталTableAdapter = new SyncfusionWinFormsApp1.sqlDataSetTableAdapters.КварталTableAdapter();
             this.статусTableAdapter = new SyncfusionWinFormsApp1.sqlDataSetTableAdapters.СтатусTableAdapter();
@@ -103,37 +103,62 @@ namespace SyncfusionWinFormsApp1
             this.декларация1TableAdapter = new SyncfusionWinFormsApp1.sqlDataSetTableAdapters.Декларация1TableAdapter();
             this._3_НДФЛ1TableAdapter = new SyncfusionWinFormsApp1.sqlDataSetTableAdapters._3_НДФЛ1TableAdapter();
             this.sqlDataSet2 = new SyncfusionWinFormsApp1.sqlDataSet();
-            ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv1)).BeginInit();
-            this.tabControlAdv1.SuspendLayout();
-            this.tabPageAdv1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sfDataGrid1)).BeginInit();
-            this.tabPageAdv2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sfDataGrid2)).BeginInit();
-            this.contextMenuStripEx1.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.статусBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sqlDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.кварталBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sqlDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.организацияBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.декларация1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv1)).BeginInit();
+            this.tabControlAdv1.SuspendLayout();
+            this.tabPageAdv1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sfDataGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.организацияBindingSource)).BeginInit();
+            this.tabPageAdv2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sfDataGrid2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.нДФЛ1BindingSource)).BeginInit();
+            this.contextMenuStripEx1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sqlDataSet2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // статусBindingSource
+            // 
+            this.статусBindingSource.DataMember = "Статус";
+            this.статусBindingSource.DataSource = this.sqlDataSet1;
+            // 
+            // sqlDataSet1
+            // 
+            this.sqlDataSet1.DataSetName = "sqlDataSet";
+            this.sqlDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // кварталBindingSource
+            // 
+            this.кварталBindingSource.DataMember = "Квартал";
+            this.кварталBindingSource.DataSource = this.sqlDataSet;
+            // 
+            // sqlDataSet
+            // 
+            this.sqlDataSet.DataSetName = "sqlDataSet";
+            this.sqlDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // декларация1BindingSource
+            // 
+            this.декларация1BindingSource.DataMember = "Декларация1";
+            this.декларация1BindingSource.DataSource = this.sqlDataSet1;
             // 
             // tabControlAdv1
             // 
             this.tabControlAdv1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(1920, 1098);
+            this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(1920, 1106);
             this.tabControlAdv1.Controls.Add(this.tabPageAdv1);
             this.tabControlAdv1.Controls.Add(this.tabPageAdv2);
             this.tabControlAdv1.FocusOnTabClick = false;
             this.tabControlAdv1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tabControlAdv1.Location = new System.Drawing.Point(-1, 0);
             this.tabControlAdv1.Name = "tabControlAdv1";
-            this.tabControlAdv1.Size = new System.Drawing.Size(1920, 1098);
+            this.tabControlAdv1.Size = new System.Drawing.Size(1920, 1106);
             this.tabControlAdv1.TabIndex = 0;
             this.tabControlAdv1.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
             this.tabControlAdv1.ThemeName = "TabRendererMetro";
@@ -154,7 +179,7 @@ namespace SyncfusionWinFormsApp1
             this.tabPageAdv1.Location = new System.Drawing.Point(1, 39);
             this.tabPageAdv1.Name = "tabPageAdv1";
             this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(1917, 1057);
+            this.tabPageAdv1.Size = new System.Drawing.Size(1917, 1065);
             this.tabPageAdv1.TabIndex = 1;
             this.tabPageAdv1.Text = "Клиенты";
             this.tabPageAdv1.ThemesEnabled = false;
@@ -429,7 +454,7 @@ namespace SyncfusionWinFormsApp1
             this.sfDataGrid1.PreviewRowHeight = 30;
             this.sfDataGrid1.ShowBusyIndicator = true;
             this.sfDataGrid1.ShowRowHeader = true;
-            this.sfDataGrid1.Size = new System.Drawing.Size(1068, 434);
+            this.sfDataGrid1.Size = new System.Drawing.Size(1068, 442);
             sortColumnDescription1.ColumnName = "Год";
             sortColumnDescription2.ColumnName = "Квартал";
             this.sfDataGrid1.SortColumnDescriptions.Add(sortColumnDescription1);
@@ -456,6 +481,11 @@ namespace SyncfusionWinFormsApp1
             this.sfDataGrid1.GroupCollapsing += new Syncfusion.WinForms.DataGrid.Events.GroupChangingEventHandler(this.sfDataGrid1_GroupCollapsing);
             this.sfDataGrid1.GroupExpanding += new Syncfusion.WinForms.DataGrid.Events.GroupChangingEventHandler(this.sfDataGrid1_GroupExpanding);
             this.sfDataGrid1.CurrentCellEndEdit += new Syncfusion.WinForms.DataGrid.Events.CurrentCellEndEditEventHandler(this.sfDataGrid1_CurrentCellEndEdit);
+            // 
+            // организацияBindingSource
+            // 
+            this.организацияBindingSource.DataMember = "Организация";
+            this.организацияBindingSource.DataSource = this.sqlDataSet;
             // 
             // sfButtonPrinting1
             // 
@@ -503,7 +533,7 @@ namespace SyncfusionWinFormsApp1
             this.tabPageAdv2.Location = new System.Drawing.Point(1, 39);
             this.tabPageAdv2.Name = "tabPageAdv2";
             this.tabPageAdv2.ShowCloseButton = true;
-            this.tabPageAdv2.Size = new System.Drawing.Size(1917, 1057);
+            this.tabPageAdv2.Size = new System.Drawing.Size(1917, 1063);
             this.tabPageAdv2.TabIndex = 2;
             this.tabPageAdv2.Text = "3-НДФЛ";
             this.tabPageAdv2.ThemesEnabled = false;
@@ -645,6 +675,11 @@ namespace SyncfusionWinFormsApp1
             this.sfDataGrid2.Text = "sfDataGrid2";
             this.sfDataGrid2.CurrentCellEndEdit += new Syncfusion.WinForms.DataGrid.Events.CurrentCellEndEditEventHandler(this.sfDataGrid2_CurrentCellEndEdit);
             // 
+            // нДФЛ1BindingSource
+            // 
+            this.нДФЛ1BindingSource.DataMember = "3-НДФЛ1";
+            this.нДФЛ1BindingSource.DataSource = this.sqlDataSet1;
+            // 
             // contextMenuStripEx1
             // 
             this.contextMenuStripEx1.ImageScalingSize = new System.Drawing.Size(18, 18);
@@ -714,41 +749,6 @@ namespace SyncfusionWinFormsApp1
             // 
             this.printDialog1.UseEXDialog = true;
             // 
-            // статусBindingSource
-            // 
-            this.статусBindingSource.DataMember = "Статус";
-            this.статусBindingSource.DataSource = this.sqlDataSet1;
-            // 
-            // sqlDataSet1
-            // 
-            this.sqlDataSet1.DataSetName = "sqlDataSet";
-            this.sqlDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // кварталBindingSource
-            // 
-            this.кварталBindingSource.DataMember = "Квартал";
-            this.кварталBindingSource.DataSource = this.sqlDataSet;
-            // 
-            // sqlDataSet
-            // 
-            this.sqlDataSet.DataSetName = "sqlDataSet";
-            this.sqlDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // организацияBindingSource
-            // 
-            this.организацияBindingSource.DataMember = "Организация";
-            this.организацияBindingSource.DataSource = this.sqlDataSet;
-            // 
-            // декларация1BindingSource
-            // 
-            this.декларация1BindingSource.DataMember = "Декларация1";
-            this.декларация1BindingSource.DataSource = this.sqlDataSet1;
-            // 
-            // нДФЛ1BindingSource
-            // 
-            this.нДФЛ1BindingSource.DataMember = "3-НДФЛ1";
-            this.нДФЛ1BindingSource.DataSource = this.sqlDataSet1;
-            // 
             // организацияTableAdapter
             // 
             this.организацияTableAdapter.ClearBeforeFill = true;
@@ -782,7 +782,7 @@ namespace SyncfusionWinFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 523);
+            this.ClientSize = new System.Drawing.Size(1064, 541);
             this.Controls.Add(this.tabControlAdv1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -795,21 +795,21 @@ namespace SyncfusionWinFormsApp1
             this.Text = "Бухгалтерия";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MetroForm1_FormClosing);
             this.Load += new System.EventHandler(this.MetroForm1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv1)).EndInit();
-            this.tabControlAdv1.ResumeLayout(false);
-            this.tabPageAdv1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.sfDataGrid1)).EndInit();
-            this.tabPageAdv2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.sfDataGrid2)).EndInit();
-            this.contextMenuStripEx1.ResumeLayout(false);
-            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.статусBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sqlDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.кварталBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sqlDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.организацияBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.декларация1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv1)).EndInit();
+            this.tabControlAdv1.ResumeLayout(false);
+            this.tabPageAdv1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.sfDataGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.организацияBindingSource)).EndInit();
+            this.tabPageAdv2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.sfDataGrid2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.нДФЛ1BindingSource)).EndInit();
+            this.contextMenuStripEx1.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sqlDataSet2)).EndInit();
             this.ResumeLayout(false);
 

@@ -26,7 +26,9 @@ namespace SyncfusionWinFormsApp1.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-7VG9T54;Initial Catalog=sql;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\Program Files\\Microsoft S" +
+            "QL Server\\MSSQL15.MSSQLSERVER\\MSSQL\\DATA\\sql.mdf\";Integrated Security=True;Conne" +
+            "ct Timeout=30")]
         public string sqlConnectionString {
             get {
                 return ((string)(this["sqlConnectionString"]));
