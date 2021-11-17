@@ -18,7 +18,6 @@ namespace SyncfusionWinFormsApp1
     {
         //ContextMenuStrip recordContextMenu;
         //PdfGridCellStyle cellStyle;
-        //ddd
         public MetroForm1()
         {
             InitializeComponent();
