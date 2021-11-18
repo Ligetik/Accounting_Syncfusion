@@ -187,9 +187,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Project_Readme.html" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Images\excel.png" />
   </ItemGroup>
   <ItemGroup>
