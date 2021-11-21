@@ -403,7 +403,7 @@ namespace SyncfusionWinFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(296, 380);
+            this.ClientSize = new System.Drawing.Size(296, 384);
             this.Controls.Add(this.labelAuth);
             this.Controls.Add(this.LineGray);
             this.Controls.Add(this.LineBlue);

@@ -123,9 +123,9 @@ namespace SyncfusionWinFormsApp1
                 case 21:
                 case 22 when e.DisplayText != null:
                     {
-                        string Cell_color = Convert.ToString(e.DisplayText);
+                        string cellColor = Convert.ToString(e.DisplayText);
 
-                        switch (Cell_color)
+                        switch (cellColor)
                         {
                             case "Подготовлено":
                                 //Color.Yellow;
@@ -296,10 +296,10 @@ namespace SyncfusionWinFormsApp1
                 case "СЗВ-СТАЖ" when e.CellValue != null:
                     {
 
-                        string Cell_color = Convert.ToString(e.CellValue);
+                        string cellColor = Convert.ToString(e.CellValue);
                         if (e.CellType == ExportCellType.RecordCell)
                         {
-                            switch (Cell_color)
+                            switch (cellColor)
                             {
                                 case "Подготовлено":
                                     e.Range.CellStyle.Color = Color.Yellow;
@@ -445,14 +445,13 @@ namespace SyncfusionWinFormsApp1
                         {
                             if (e.CellType == ExportCellType.RecordCell)
                             {
-                                string Cell_color = Convert.ToString(e.CellValue);
-                                switch (Cell_color)
+                                string cellColor = Convert.ToString(e.CellValue);
+                                switch (cellColor)
                                 {
                                     case "Подготовлено":
                                         cellStyle.BackgroundBrush = PdfBrushes.Yellow;
                                         cellStyle.TextBrush = PdfBrushes.Black;
                                         e.PdfGridCell.Style = cellStyle;
-
                                         break;
                                     case "Нужно сдать":
                                         cellStyle.BackgroundBrush = PdfBrushes.Red;
@@ -490,6 +489,7 @@ namespace SyncfusionWinFormsApp1
                 MessageBox.Show(error.Message);
             }
         }
+
         private void sfButtonPrinting2_Click(object sender, EventArgs e)
         {
             PrintPreviewDialog printdialog = new PrintPreviewDialog();
@@ -552,6 +552,7 @@ namespace SyncfusionWinFormsApp1
         }
 
         #region SaveChanges
+
         private void SaveChangesSfDataGrid1()
         {
             try

@@ -151,14 +151,14 @@ namespace SyncfusionWinFormsApp1
             this.tabControlAdv1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(1920, 1110);
+            this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(1920, 1116);
             this.tabControlAdv1.Controls.Add(this.tabPageAdv1);
             this.tabControlAdv1.Controls.Add(this.tabPageAdv2);
             this.tabControlAdv1.FocusOnTabClick = false;
             this.tabControlAdv1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tabControlAdv1.Location = new System.Drawing.Point(-1, 0);
             this.tabControlAdv1.Name = "tabControlAdv1";
-            this.tabControlAdv1.Size = new System.Drawing.Size(1920, 1110);
+            this.tabControlAdv1.Size = new System.Drawing.Size(1920, 1116);
             this.tabControlAdv1.TabIndex = 0;
             this.tabControlAdv1.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
             this.tabControlAdv1.ThemeName = "TabRendererMetro";
@@ -179,7 +179,7 @@ namespace SyncfusionWinFormsApp1
             this.tabPageAdv1.Location = new System.Drawing.Point(1, 39);
             this.tabPageAdv1.Name = "tabPageAdv1";
             this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(1917, 1069);
+            this.tabPageAdv1.Size = new System.Drawing.Size(1917, 1075);
             this.tabPageAdv1.TabIndex = 1;
             this.tabPageAdv1.Text = "Клиенты";
             this.tabPageAdv1.ThemesEnabled = false;
@@ -454,7 +454,7 @@ namespace SyncfusionWinFormsApp1
             this.sfDataGrid1.PreviewRowHeight = 30;
             this.sfDataGrid1.ShowBusyIndicator = true;
             this.sfDataGrid1.ShowRowHeader = true;
-            this.sfDataGrid1.Size = new System.Drawing.Size(1068, 446);
+            this.sfDataGrid1.Size = new System.Drawing.Size(1068, 452);
             sortColumnDescription1.ColumnName = "Год";
             sortColumnDescription2.ColumnName = "Квартал";
             this.sfDataGrid1.SortColumnDescriptions.Add(sortColumnDescription1);
@@ -533,7 +533,7 @@ namespace SyncfusionWinFormsApp1
             this.tabPageAdv2.Location = new System.Drawing.Point(1, 39);
             this.tabPageAdv2.Name = "tabPageAdv2";
             this.tabPageAdv2.ShowCloseButton = true;
-            this.tabPageAdv2.Size = new System.Drawing.Size(1917, 1069);
+            this.tabPageAdv2.Size = new System.Drawing.Size(1917, 1073);
             this.tabPageAdv2.TabIndex = 2;
             this.tabPageAdv2.Text = "3-НДФЛ";
             this.tabPageAdv2.ThemesEnabled = false;
@@ -653,7 +653,7 @@ namespace SyncfusionWinFormsApp1
             this.sfDataGrid2.PreviewRowHeight = 30;
             this.sfDataGrid2.ShowBusyIndicator = true;
             this.sfDataGrid2.ShowRowHeader = true;
-            this.sfDataGrid2.Size = new System.Drawing.Size(1065, 434);
+            this.sfDataGrid2.Size = new System.Drawing.Size(1065, 438);
             this.sfDataGrid2.Style.AddNewRowStyle.Font.Bold = true;
             this.sfDataGrid2.Style.AddNewRowStyle.Font.Facename = "Segoe UI";
             this.sfDataGrid2.Style.AddNewRowStyle.Font.Size = 12F;
@@ -782,7 +782,7 @@ namespace SyncfusionWinFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 549);
+            this.ClientSize = new System.Drawing.Size(1064, 561);
             this.Controls.Add(this.tabControlAdv1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -812,7 +812,6 @@ namespace SyncfusionWinFormsApp1
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sqlDataSet2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
